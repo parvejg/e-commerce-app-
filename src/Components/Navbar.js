@@ -10,13 +10,12 @@ export const Navbar = () => {
         <ul className="unorderedList-wrapper">
           <li>Login</li>
           <li>Sin Up</li>
-        </ul>
-        <ul className="navbar-icons-wrapper">
           <li>Cart</li>
           <BsCart className="cart-icon" />
           <li>Wishlist</li>
           <AiOutlineHeart className="wishlist-icon" />
         </ul>
+
       </nav>
     </div>
   );
