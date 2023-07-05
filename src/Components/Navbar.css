@@ -1,0 +1,48 @@
+.navbar-wrapper{
+    display: flex;
+    width: 100%;
+    height: 2.9rem;
+    background-color: #2a8a2a;
+    box-shadow: 0 0 3px 4px #6fe76f;
+}
+.navbar-input{
+    position: absolute;
+    padding: 5px 5rem;
+    overflow: hidden;
+    top: 5px;
+    left: 40rem;
+}
+.unorderedList-wrapper{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding:  0 18px;
+    position: relative;
+    left: 60rem;
+    gap: 1rem;
+    bottom: 7px;
+    color: white;
+    font-weight: 600;
+}
+.flipcart-logo{
+    color: white;
+    text-decoration:underline;
+    position: relative;
+    bottom: 7px;
+    padding-left: 1rem;
+    
+}
+.cart-icon{
+    padding-right: 1px;
+    font-size: large;
+    font-weight: 600;
+}
+.wishlist-icon{
+    padding-right: 1px;
+    font-size: large;
+    font-weight: 600;
+
+}
+.navbar-icons-wrapper{
+    
+}
