@@ -1,0 +1,20 @@
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  padding: 5rem 0;
+    background-color: gainsboro;
+}
+.footer-links-wrapper{
+    display: flex;
+    gap: 1rem;
+    font-size: larger;
+    justify-content: center;
+align-items: center ;
+}
+.footer-links{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

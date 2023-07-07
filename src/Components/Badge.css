@@ -1,0 +1,35 @@
+.cart-icon-wrapper{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+.unitOfCart{
+    position: absolute;
+    bottom: 1.3rem;
+    font-size: small;
+    background-color: hsl(120, 55%, 44%);
+    border-radius: 50%;
+    font-weight: bold;
+    left: 16px;
+    border: solid white 2px;
+    color: black;
+
+}
+
+.wishlist-icon-wrapper{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+.unitOfWishlist{
+    position: absolute;
+    bottom: 1.2rem;
+    font-size: small;
+    background-color: hsl(120, 55%, 44%);
+    border-radius: 50%;
+    font-weight: bold;
+    left: 21px;
+    border: solid white 2px;
+    color: black;
+
+}

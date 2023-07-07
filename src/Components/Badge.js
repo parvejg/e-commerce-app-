@@ -1,5 +1,6 @@
 import { AiOutlineHeart } from "react-icons/ai";
 import {BsCart} from "react-icons/bs";
+import "./Badge.css";
 export const Cart =()=> {
   return (
     <span>
@@ -12,7 +13,7 @@ export const Cart =()=> {
     </span>
   );
 };
-export const wishlist = () => {
+export const Wishlist = () => {
     return (
       <span>
        <a className="navbar-links" href="/">

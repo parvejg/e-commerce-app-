@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { ImSearch } from "react-icons/im";
 import { BsCart } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Cart, Wishlist } from "./Badge";
 export const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
@@ -21,22 +22,8 @@ export const Navbar = () => {
           </a>{" "}
         </li>{" "}
         <div className="navbar-icon-links-wrapper">
-          <li>
-            <a className="navbar-links" href="/">
-              <BsCart className="cart-icon" />
-              <small className="cart-icon-wrapper">
-                <span className="unitOfCart">15</span>
-              </small>
-            </a>{" "}
-          </li>{" "}
-          <li>
-            <a className="navbar-links" href="/">
-              <AiOutlineHeart className="wishlist-icon" />
-              <small className="wishlist-icon-wrapper">
-                <span className="unitOfWishlist">13</span>
-              </small>
-            </a>{" "}
-          </li>{" "}
+          <Wishlist />
+          <Cart />
         </div>{" "}
       </div>{" "}
     </nav>
