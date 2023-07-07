@@ -8,11 +8,11 @@
     .navbar-wrapper {
         display: flex;
         align-items: center;
-        padding-right: 1rem;
+        padding-right: .1rem;
     }
     .navbar-links-wrapper{
         display: flex;
-        padding-left: 100px
+        padding-left: 90px
     }
    
     

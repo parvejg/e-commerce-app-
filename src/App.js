@@ -8,8 +8,8 @@ import logo from "./logo.png";
 function App() {
   return (
     <div className="App">
-{/* <Layout/> */}
-<Sidebar/>
+<Layout/>
+{/* <Sidebar/> */}
     </div>
   );
 }
