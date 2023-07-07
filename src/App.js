@@ -1,18 +1,19 @@
 import "./App.css";
-import { Footer, WebFooter } from "./Components/Footer";
 import { Layout } from "./Components/Layout";
-import { Navbar } from "./Components/Navbar";
-import { Sidebar } from "./Components/Sidebar";
-import logo from "./logo.png";
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-<Layout/>
-{/* <Sidebar/> */}
+      <Router>
+        <Routes>
+          <Route path="/" Component={Layout} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
-  

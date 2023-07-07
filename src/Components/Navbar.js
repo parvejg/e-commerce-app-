@@ -8,7 +8,11 @@ export const Navbar = () => {
     <nav className="navbar-wrapper">
       <h3 className="flipcart-text"> Flipcart </h3>{" "}
       <div className="navbar-input-wrapper">
-        <input className="navbar-input" type="text" />
+        <input
+          placeholder="Seach Flipcart.."
+          className="navbar-input"
+          type="text"
+        />
         <span className="search-icon-wrapper">
           <a className="search-icon" href="/">
             <ImSearch />

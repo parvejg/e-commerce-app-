@@ -6,3 +6,6 @@
 .layout-content{
     width: fit-content;
 }
+.layout-wrapper{
+    height: 100vh;
+}

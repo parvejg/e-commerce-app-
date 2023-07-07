@@ -3,13 +3,16 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 5rem 0;
+  padding: 4rem 0;
+  flex-basis: 5rem;
   background-color: gainsboro;
 }
 .footer-links-wrapper {
+  
   display: flex;
-  gap: 1rem;
   font-size: larger;
+  gap: 1rem;
+
   justify-content: center;
   align-items: center;
 }
@@ -23,14 +26,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 5rem 0;
+  flex-basis: 4rem;
+  padding: 4rem 0;
   background-color: gainsboro;
 }
 .webfooter-links-wrapper {
   display: flex;
-  gap: 1rem;
   font-size: xx-large;
   justify-content: center;
+  gap: 1rem;
   align-items: center;
 }
 .webfooter-links {
