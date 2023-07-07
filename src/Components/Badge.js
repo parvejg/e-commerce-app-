@@ -1,6 +1,6 @@
 import { AiOutlineHeart } from "react-icons/ai";
 import {BsCart} from "react-icons/bs";
-export const Cart = () => {
+export const Cart =()=> {
   return (
     <span>
       <a className="navbar-links" href="/">
