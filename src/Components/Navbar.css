@@ -20,13 +20,13 @@
   display: flex;
   width: 100%;
   flex-basis: 4rem;
-  background-color: hsl(120, 55%, 44%);
-  box-shadow: 0 0 2px 2px hsl(120, 59%, 67%);
+  background-color: var(--primary);
+  box-shadow: 0 0 2px 2px var(--primary);
   justify-content: space-between;
 }
 
 .flipcart-text {
-  color: white;
+  color: var(--secondary);
   text-decoration: underline;
   padding-left: 2rem;
   font-size: 1.5rem;
@@ -46,17 +46,17 @@
   width: inherit;
   border-radius: 4px;
   overflow: hidden;
-  border: solid white 1px;
+  border: solid 1px var(--secondary);
 }
 
 .navbar-input:active {
-  border: solid white 1px;
+  border: solid  1px var(--secondary);
 }
 
 .navbar-links {
   text-decoration: none;
   font-size: larger;
-  color: white;
+  color: var(--secondary);
   text-align: center;
 }
 
@@ -79,20 +79,20 @@
 
 .cart-icon {
   font-size: larger;
-  color: white;
+  color: var(--secondary);
   font-size: xx-large;
 }
 
 .wishlist-icon {
   font-size: xx-large;
-  color: white;
+  color: var(--secondary);
 }
 .search-icon-wrapper {
   position: relative;
 }
 .search-icon {
   font-size: larger;
-  color: green;
+  color: var(--primary);
   position: absolute;
   width: 1rem;
   top: -12px;

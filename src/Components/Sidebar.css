@@ -9,10 +9,10 @@
     display: flex;
     flex-direction: column;
     width: 13rem;
-    border-right:  solid  2px gray;
+    border-right:  solid  2px var(--quaternary);
     padding: 3px 0;
     font-size: large;
     text-decoration: none;
-    color: black;
+    color: var(--secondary);
     height: 100%;
 }

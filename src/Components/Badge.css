@@ -7,12 +7,12 @@
     position: absolute;
     bottom: 1.3rem;
     font-size: small;
-    background-color: hsl(120, 55%, 44%);
+    background-color: var(--primary);
     border-radius: 50%;
     font-weight: bold;
     left: 16px;
-    border: solid white 2px;
-    color: black;
+    border: solid  2px var(--secondary);
+    color: var(--tertiary);
 
 }
 
@@ -25,11 +25,11 @@
     position: absolute;
     bottom: 1.2rem;
     font-size: small;
-    background-color: hsl(120, 55%, 44%);
+    background-color: var(--primary);
     border-radius: 50%;
     font-weight: bold;
     left: 21px;
-    border: solid white 2px;
-    color: black;
+    border: solid  2px var(--secondary);
+    color: var(--tertiary);
 
 }

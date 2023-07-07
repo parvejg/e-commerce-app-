@@ -5,7 +5,7 @@
   width: 100%;
   padding: 4rem 0;
   flex-basis: 5rem;
-  background-color: gainsboro;
+  background-color: var(--quaternary);
 }
 .footer-links-wrapper {
   
@@ -18,7 +18,7 @@
 }
 .footer-links {
   text-decoration: none;
-  color: black;
+  color: var(--tertiary);
   font-weight: bold;
 }
 .webfooter-wrapper {
@@ -28,7 +28,7 @@
   width: 100%;
   flex-basis: 4rem;
   padding: 4rem 0;
-  background-color: gainsboro;
+  background-color: var(--quaternary);
 }
 .webfooter-links-wrapper {
   display: flex;
@@ -38,5 +38,5 @@
   align-items: center;
 }
 .webfooter-links {
-  color: black;
+  color: var(--tertiary)
 }
