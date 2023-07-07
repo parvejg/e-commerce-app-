@@ -1,38 +1,38 @@
-.footer-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   padding: 5rem 0;
-    background-color: gainsboro;
+  background-color: gainsboro;
 }
-.footer-links-wrapper{
-    display: flex;
-    gap: 1rem;
-    font-size: larger;
-    justify-content: center;
-align-items: center ;
+.footer-links-wrapper {
+  display: flex;
+  gap: 1rem;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
 }
-.footer-links{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+.footer-links {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
-.webfooter-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.webfooter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   padding: 5rem 0;
-    background-color: gainsboro;
+  background-color: gainsboro;
 }
-.webfooter-links-wrapper{
-    display: flex;
-    gap: 1rem;
-    font-size: xx-large;
-    justify-content: center;
-align-items: center ;
+.webfooter-links-wrapper {
+  display: flex;
+  gap: 1rem;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
 }
-.webfooter-links{
-    color: black;
+.webfooter-links {
+  color: black;
 }
