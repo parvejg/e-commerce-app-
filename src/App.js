@@ -1,15 +1,16 @@
 import "./App.css";
-import { Footer } from "./Components/Footer";
+import { Footer, WebFooter } from "./Components/Footer";
 import { Navbar } from "./Components/Navbar";
 import logo from "./logo.png";
 
 function App() {
   return (
     <div className="App">
-{/* <Navbar/>     */}
-<Footer/>   
+<Navbar/>    
+<WebFooter/>   
     </div>
   );
 }
 
 export default App;
+  
