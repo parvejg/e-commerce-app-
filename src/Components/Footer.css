@@ -1,3 +1,9 @@
+@media (max-width: 600px){
+  .webfooter-wrapper {
+    padding-left: 1.6rem;
+}
+}
+
 .footer-wrapper {
   display: flex;
   align-items: center;

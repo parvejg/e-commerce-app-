@@ -8,44 +8,75 @@
   .navbar-wrapper {
     display: flex;
     align-items: center;
-    padding-right: 0.1rem;
+    padding-right: 2rem;
   }
   .navbar-links-wrapper {
     display: flex;
-    padding-left: 90px;
-  }
-  .navbar-bottom-links{
-    gap: 3px;
-  }
-  .navbarLinks-wrapper{
-    font-size: small;
-    width: inherit;
-    padding: 0 2px;
+    padding-left: 1.6rem;
+    
     justify-content: center;
   }
-  .e{
-    display: none;
+  .webfooter-wrapper{
+    padding-left: ;
   }
-  .beauty{
-    display: none;
+  
+  .navbarLinks-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: .4rem;
+    padding-left: 1.6rem;
+
   }
-  .fashion{
-    display: none;
+  .navbar-bottom-links{
+    text-decoration: none;
+    color: var(--tertiary);
+.layout-content{
+  width: fit-content;
+}
   }
   .plant{
-    display: none;
+    display: none  !important;
   }
+  .fashion{
+    display: none  !important;
+  }
+  .electronics{
+    display: none  !important;
+  }
+  .beauty{
+    display: none  !important;
+  }
+  
+  
   
 }
 
 .navbar-wrapper {
   display: flex;
   width: 100%;
-  flex-basis: 4rem;
   background-color: var(--primary);
   justify-content: space-between;
   position: relative;
 }
+.navbarLinks-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+  width: 100%;
+  position: relative;
+  color: var(--tertiary);
+  font-size: large;
+  background-color: var(--quaternary);
+  box-shadow: #cfc5c5 0 0px 2px 2px;
+}
+.navbar-bottom-links{
+  display: flex;
+  justify-content: center;
+  color: var(--tertiary);
+  text-decoration: none;
+}
+
 
 .flipcart-text {
   color: var(--secondary);
@@ -87,7 +118,7 @@
   list-style: none;
   gap: 1rem;
   align-items: center;
-  margin-right: 5rem;
+  padding-right: 2rem;
   text-wrap: nowrap;
 }
 .navbar-icon-links-wrapper {
@@ -120,23 +151,4 @@
   top: -12px;
   right: 0.5rem;
 }
-.navbarLinks-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 3rem;
-  position: absolute;
-  padding: .3rem 0;
-  color: var(--tertiary);
-  font-size: large;
-  background-color: var(--quaternary);
-  box-shadow: #cfc5c5 0 0px 2px 2px;
-  
-}
-.navbar-bottom-links{
-  text-decoration: none;
-  color: var(--tertiary);
-  font-size: large;
 
-}

@@ -1,11 +1,17 @@
 .layout-body{
     display: flex;
-    height: 100%;
+    height: 100vh;
+    
+
+
 }
 
 .layout-content{
+    display: flex;
     width: fit-content;
+    flex-grow: 1;
 }
 .layout-wrapper{
-    height: 100vh;
+        height: 100vh;
+        margin: 0;
 }
