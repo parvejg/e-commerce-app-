@@ -3,6 +3,7 @@ import { ImSearch } from "react-icons/im";
 import { BsCart } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Cart, Wishlist } from "./Badge";
+import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
@@ -33,3 +34,17 @@ export const Navbar = () => {
     </nav>
   );
 };
+export  const NavbarLinks=()=>{
+  return <div className="navbarLinks-wrapper">
+<Link className="navbar-bottom-links" to="/Brand-page" >Brand</Link>
+<Link className="navbar-bottom-links" to="/Men-page" >Men</Link>
+<Link className="navbar-bottom-links" to="/Women-page" >Women</Link>
+<Link className="navbar-bottom-links" to="/Kids-page" >Kids</Link>
+<Link className="navbar-bottom-links" to="/Mobile-page" >Mobile</Link>
+<Link className="navbar-bottom-links e" to="/Electronics-page" >Electronics</Link>
+<Link className="navbar-bottom-links beauty" to="/Beauty-page" >Beauty</Link>
+<Link className="navbar-bottom-links fashion" to="/Fashion-page" >Fashion</Link>
+<Link className="navbar-bottom-links plant" to="/Plant-page" >Plant</Link>
+
+  </div>
+}

@@ -3,6 +3,7 @@ import { Layout } from "./Components/Layout";
 
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { NavbarLinks } from "./Components/Navbar";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" Component={Layout} />
         </Routes>
       </Router>
+      
     </div>
   );
 }
