@@ -8,31 +8,27 @@
   .navbar-wrapper {
     display: flex;
     align-items: center;
-    padding-right: 2rem;
+    flex-basis: 2rem;
+    padding: 1rem 1rem 0 0;
   }
   .navbar-links-wrapper {
     display: flex;
-    padding-left: 1.6rem;
-    
+    padding: 0.5rem 0.5rem 0 0;
+    flex-basis: 1rem;
     justify-content: center;
   }
-  .webfooter-wrapper{
-    padding-left: ;
-  }
-  
+
   .navbarLinks-wrapper{
     display: flex;
     justify-content: center;
-    padding: .4rem;
-    padding-left: 1.6rem;
+    flex-basis: 1rem;
+    padding: .5rem .5rem 0 0;
+
 
   }
   .navbar-bottom-links{
     text-decoration: none;
     color: var(--tertiary);
-.layout-content{
-  width: fit-content;
-}
   }
   .plant{
     display: none  !important;
@@ -53,6 +49,8 @@
 
 .navbar-wrapper {
   display: flex;
+  flex-basis: 2rem;
+  padding: 1rem 1rem 0 0 ;
   width: 100%;
   background-color: var(--primary);
   justify-content: space-between;

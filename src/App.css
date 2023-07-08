@@ -1,8 +1,9 @@
 :root {
   --primary: hsl(120, 55%, 44%);
-  --secondary: #ffffff;
+  --secondary: #ffff;
   --tertiary: black;
   --quaternary: gainsboro;
+  --quinary: gray;
 }
 .App {
   text-align: center;

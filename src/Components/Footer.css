@@ -33,7 +33,7 @@
   justify-content: center;
   width: 100%;
   flex-basis: 4rem;
-  padding: 4rem 0;
+  padding: 2rem 2rem 0 0;
   background-color: var(--quaternary);
 }
 .webfooter-links-wrapper {
