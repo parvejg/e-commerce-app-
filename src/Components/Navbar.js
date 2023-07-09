@@ -68,6 +68,31 @@ export const NavbarLinks = () => {
 
   );
 };
+export const ResponsiveNavbar = ()=>{
+  return (
+  <nav className="responsiveNavbar-wrapper">
+  <h3 className="flipcart-text"> Flipcart </h3>{" "}
+ 
+  <div className="responsiveNavbar-links-wrapper">
+      <a className="responsiveProfile-link " href="https://iconscout.com/lottie/profile-5810350">
+        Sign In
+      </a>
+  </div>
+   <div className="responsiveNavbar-input-wrapper">
+    <input
+      placeholder="Seach Flipcart.."
+      className="responsiveNavbar-input"
+      type="text"
+    />
+    <span className="search-icon-wrapper">
+      <a className="search-icon" href="/">
+        <ImSearch />
+      </a>
+    </span>
+  </div>
+</nav>
+  )
+}
 
 
    

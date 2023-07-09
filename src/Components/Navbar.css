@@ -18,49 +18,45 @@
     justify-content: center;
   }
 
-  .navbarLinks-wrapper{
+  .navbarLinks-wrapper {
     display: flex;
     justify-content: center;
     flex-basis: 1rem;
-    padding: .5rem .5rem 0 0;
-
-
+    padding: 0.5rem 0.5rem 0 0;
+    width: 100vh;
   }
-  .navbar-bottom-links{
+  .navbar-bottom-links {
     text-decoration: none;
     color: var(--tertiary);
+    padding: 0 3px;
   }
-  .plant{
-    display: none  !important;
+  .plant {
+    display: none !important;
   }
-  .fashion{
-    display: none  !important;
+  .fashion {
+    display: none !important;
   }
-  .electronics{
-    display: none  !important;
+  .electronics {
+    display: none !important;
   }
-  .beauty{
-    display: none  !important;
+  .beauty {
+    display: none !important;
   }
-  
-  
-  
 }
 
 .navbar-wrapper {
   display: flex;
   flex-basis: 2rem;
-  padding: 1rem 1rem 0 0 ;
+  padding: 1rem 1rem 0 0;
   width: 100%;
   background-color: var(--primary);
   justify-content: space-between;
-  position: relative;
 }
-.navbarLinks-wrapper{
+.navbarLinks-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 19px;
+  gap: 4px;
   width: 100%;
   position: relative;
   color: var(--tertiary);
@@ -68,13 +64,13 @@
   background-color: var(--quaternary);
   box-shadow: #cfc5c5 0 0px 2px 2px;
 }
-.navbar-bottom-links{
+.navbar-bottom-links {
   display: flex;
   justify-content: center;
   color: var(--tertiary);
   text-decoration: none;
+  width: 100vh;
 }
-
 
 .flipcart-text {
   color: var(--secondary);
@@ -101,7 +97,7 @@
 }
 
 .navbar-input:active {
-  border: solid  1px var(--secondary);
+  border: solid 1px var(--secondary);
 }
 
 .navbar-links {
@@ -149,4 +145,20 @@
   top: -12px;
   right: 0.5rem;
 }
-
+.responsiveNavbar-wrapper{
+  display: flex;
+  flex-basis: 50px;
+  padding: 10px;
+  width: 100%;
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+.flipcart-text{
+  padding-left: 1rem;
+  font-size: 20px;
+  color: var(--secondary);
+}
+.responsiveNavbar-links-wrapper{
+  display: flex;
+  align-items: flex-end;
+}
