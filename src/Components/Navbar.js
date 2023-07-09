@@ -73,7 +73,6 @@ export const ResponsiveNavbar = () => {
   return (
     <nav className="responsiveNavbar">
       <h3 className="flipcart-text"> Flipcart </h3>
-  
 
       <div className="responsiveNavbar-input-wrapper">
         <input

@@ -1,5 +1,5 @@
 :root {
-  --primary: #F96739;
+  --primary: #f96739;
   --secondary: #ffff;
   --tertiary: black;
   --quaternary: gainsboro;
@@ -8,9 +8,9 @@
 .App {
   text-align: center;
 }
-body{
+body {
   position: relative;
-margin: 0;
+  margin: 0;
 }
 .App-logo {
   height: 40vmin;

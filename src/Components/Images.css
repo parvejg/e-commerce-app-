@@ -2,7 +2,7 @@
   background-image: url("https://www.maxblush.com/content/images/site/sliders/slider2.jpg");
   width: 100%;
   background-size: 100% 100%;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   height: 250px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   animation: changeImage 20s alternate infinite;
@@ -32,11 +32,10 @@
   padding-top: 2rem;
   object-fit: cover;
   overflow: hidden;
-  
 }
 @media (max-width: 600px) {
-    .slider-img-wrapper {
-        padding-left: 2.4rem;
-        width: 90%;
-    }
+  .slider-img-wrapper {
+    padding-left: 2.4rem;
+    width: 90%;
+  }
 }
