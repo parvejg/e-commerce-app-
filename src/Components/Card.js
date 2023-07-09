@@ -34,7 +34,7 @@ export const ProductDemoCard2 = () => {
       <div className="productCard2-wrapper">
         <div className="productCard2">
           <img
-            className="cycle-img2"
+            className="cycle-img2" alt="productimag" 
             src="https://media.istockphoto.com/id/968910650/photo/world-environment-day-and-save-environment-concept-volunteer-women-holding-plant-growing.jpg?s=612x612&w=0&k=20&c=J8MU9G0KdD7Qs8wshJstRw15tV1dd9zIFGlHetehRj0="
           />
           <a href="/" className="product-categories">
