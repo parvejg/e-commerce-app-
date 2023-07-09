@@ -6,8 +6,8 @@ import { ProductDemoCard1, ProductDemoCard2, ProductDemoCard3 } from "./Card";
 export const Layout = ({ children }) => {
   return (
     <div className="layout-wrapper">
-      {/* <Navbar />
-      <NavbarLinks/> */}
+      <Navbar />
+      <NavbarLinks/>
       <ResponsiveNavbar/>
       <TopWebShoesImg/>
       <ProductDemoCard2/>

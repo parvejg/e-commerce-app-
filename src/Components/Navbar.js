@@ -1,7 +1,6 @@
 import "./Navbar.css";
 import { ImSearch } from "react-icons/im";
-import { BsCart } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
+import { CiUser } from "react-icons/ci";
 import { Cart, Wishlist } from "./Badge";
 import { Link } from "react-router-dom";
 export const Navbar = () => {
@@ -36,7 +35,7 @@ export const Navbar = () => {
 };
 export const NavbarLinks = () => {
   return (
-       <div className="navbarLinks-wrapper">
+    <div className="navbarLinks-wrapper">
       <Link className="navbar-bottom-links" to="/Brand-page">
         Brand
       </Link>
@@ -52,7 +51,10 @@ export const NavbarLinks = () => {
       <Link className="navbar-bottom-links" to="/Mobile-page">
         Mobile
       </Link>
-      <Link className=" electronics navbar-bottom-links " to="/Electronics-page">
+      <Link
+        className=" electronics navbar-bottom-links "
+        to="/Electronics-page"
+      >
         Electronics
       </Link>
       <Link className=" beauty navbar-bottom-links " to="/Beauty-page">
@@ -65,34 +67,26 @@ export const NavbarLinks = () => {
         Plant
       </Link>
     </div>
-
   );
 };
-export const ResponsiveNavbar = ()=>{
+export const ResponsiveNavbar = () => {
   return (
-  <nav className="responsiveNavbar-wrapper">
-  <h3 className="flipcart-text"> Flipcart </h3>{" "}
- 
-  <div className="responsiveNavbar-links-wrapper">
-      <a className="responsiveProfile-link " href="https://iconscout.com/lottie/profile-5810350">
-        Sign In
-      </a>
-  </div>
-   <div className="responsiveNavbar-input-wrapper">
-    <input
-      placeholder="Seach Flipcart.."
-      className="responsiveNavbar-input"
-      type="text"
-    />
-    <span className="search-icon-wrapper">
-      <a className="search-icon" href="/">
-        <ImSearch />
-      </a>
-    </span>
-  </div>
-</nav>
-  )
-}
+    <nav className="responsiveNavbar">
+      <h3 className="flipcart-text"> Flipcart </h3>
+  
 
-
-   
+      <div className="responsiveNavbar-input-wrapper">
+        <input
+          placeholder="Seach Flipcart.."
+          className="responsiveNavbar-input"
+          type="text"
+        />
+        <span className="search-icon-wrapper">
+          <a className="search1-icon" href="/">
+            <ImSearch />
+          </a>
+        </span>
+      </div>
+    </nav>
+  );
+};
