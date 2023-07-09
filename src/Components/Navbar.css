@@ -4,7 +4,6 @@
   display: flex;
   flex-basis: 2rem;
   padding: 1rem 1rem 0 0;
-  width: 100%;
   background-color: var(--primary);
   justify-content: space-between;
 }
@@ -14,7 +13,6 @@
   justify-content: center;
   gap: 4px;
   width: 100%;
-  position: relative;
   color: var(--tertiary);
   font-size: large;
   background-color: var(--quaternary);

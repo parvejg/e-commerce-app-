@@ -1,3 +1,42 @@
-.shoes-image{
-    width: 50%;
+.slider-img {
+  background-image: url("https://www.maxblush.com/content/images/site/sliders/slider2.jpg");
+  width: 100%;
+  background-size: 100% 100%;
+  border-radius: .2rem;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  animation: changeImage 20s alternate infinite;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url("https://img.freepik.com/free-photo/young-beautiful-blonde-woman-jacket-blue-wall-with-mobile-phone-doing-online-shopping_496169-1447.jpg?w=360");
+  }
+  25% {
+    background-image: url("https://allianceinindia.com/assets/front/slider/1.jpg");
+  }
+  50% {
+    background-image: url("https://allianceinindia.com/assets/front/slider/5.jpg");
+  }
+  75% {
+    background-image: url("https://allianceinindia.com/assets/front/slider/2.jpg");
+  }
+  100% {
+    background-image: url("https://cheaperbazaar.com/wp-content/uploads/2019/03/girl-hair-female-pattern-model-spring-625342-pxhere.jpg");
+  }
+}
+.slider-img-wrapper {
+  margin: 0;
+  display: flex;
+  align-content: center;
+  padding-left: 3.6rem;
+  padding-top: 2rem;
+  object-fit: cover;
+  overflow: hidden;
+  
+}
+@media (max-width: 600px) {
+    .slider-img-wrapper {
+        padding-left: 2.4rem;
+        width: 90%;
+    }
 }
