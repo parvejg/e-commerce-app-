@@ -32,8 +32,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex-basis: 4rem;
-  padding: 2rem 2rem 0 0;
+  min-width: 100%;
+  flex-basis: 2rem;
+  padding: 1rem 0;
   background-color: var(--quaternary);
 }
 .webfooter-links-wrapper {

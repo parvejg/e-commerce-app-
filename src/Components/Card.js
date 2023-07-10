@@ -1,3 +1,4 @@
+import { AiOutlineStar } from "react-icons/ai";
 import "./Card.css";
 // export const ProductDemoCard1 = (props) => {
 //   const { src, alt } = props;
@@ -28,37 +29,28 @@ import "./Card.css";
 //   );
 // };
 
-export const ProductDemoCard2 = () => {
-  return (
-    <div className="card2-container">
-      <div className="productCard2-wrapper">
-        <div className="productCard2">
-          <img
-            className="cycle-img2" alt="productimag" 
-            src="https://media.istockphoto.com/id/968910650/photo/world-environment-day-and-save-environment-concept-volunteer-women-holding-plant-growing.jpg?s=612x612&w=0&k=20&c=J8MU9G0KdD7Qs8wshJstRw15tV1dd9zIFGlHetehRj0="
-          />
-          <a href="/" className="product-categories">
-            Annual plant
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
 export const ProductDemoCard3 = () => {
   return (
     <div className="card-container">
       <div className="productCard-wrapper">
         <div className="productCard">
           <img
-            className="cycle-img"
+            className="listing-img"
             src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
           />
           <p>Product name and brand</p>
+          <ul className="star-icon-container">
+           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
+           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
+           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
+           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
+           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
+          </ul>
           <h6 className="product-price">product price</h6>
           <a className="buyNow-btn" href="/">
             Buy Now
           </a>
+         
         </div>
       </div>
     </div>

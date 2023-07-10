@@ -1,15 +1,13 @@
-.layout-body{
-    display: flex;
-    flex-grow: 1;
+.layout-body {
+  flex-grow: 1;
 
 }
 
-.layout-content{
-    display: flex;
-    width: fit-content;
-    flex-grow: 1;
+.layout-content {
 }
-.layout-wrapper{
-        height: 100vh;
-        margin: 0;
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
 }

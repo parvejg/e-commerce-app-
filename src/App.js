@@ -1,18 +1,18 @@
 import "./App.css";
-import { Layout } from "./Components/Layout";
+import { LandingPage } from "./Components/LandingPage";
 
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Layout } from "./Components/Layout";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" Component={Layout} />
+          <Route path="/" Component={LandingPage} />
         </Routes>
       </Router>
-      
     </div>
   );
 }

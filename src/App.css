@@ -8,10 +8,7 @@
 .App {
   text-align: center;
 }
-body {
-  position: relative;
-  margin: 0;
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
