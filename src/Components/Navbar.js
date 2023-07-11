@@ -3,6 +3,7 @@ import { ImSearch } from "react-icons/im";
 import { CiUser } from "react-icons/ci";
 import { Cart, Wishlist } from "./Badge";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 export const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
@@ -34,12 +35,27 @@ export const Navbar = () => {
   );
 };
 export const NavbarLinks = () => {
+  const [firstapi, SetFirstApi] = useState([]);
+  const api = "/api/categories";
+  console.log(firstapi);
+  useEffect(() => {
+    fetch(api)
+      .then((res) => res.json())
+      .then((data) => {
+        SetFirstApi(data.categories);
+      });
+  }, []);
   return (
-    <div className="navbarLinks-wrapper">
-      <Link className="navbar-bottom-links" to="/Brand-page">
-        Brand
-      </Link>
-      <Link className="navbar-bottom-links" to="/Men-page">
+    <div className="navbarLinks-wrapper"> 
+      {firstapi.map((item) => {
+        return (
+          <Link className="navbar-bottom-links"  key={item.id} to="/Brand-page">
+            {item.categoryName}
+          </Link>
+        );
+      })}
+
+      {/* <Link className="navbar-bottom-links" to="/Men-page">
         Men
       </Link>
       <Link className="navbar-bottom-links" to="/Women-page">
@@ -65,7 +81,7 @@ export const NavbarLinks = () => {
       </Link>
       <Link className=" plant navbar-bottom-links " to="/Plant-page">
         Plant
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -50,9 +50,9 @@ export const ProductDemoCard3 = () => {
 export const DetailCard=()=>{
   return <div className="detail-card-wrapper">
   
-<img  className="detail-card-img" alt="detail-card" src="https://cdn07.nnnow.com/web-images/medium/styles/GQY0UZ8XH2K/1686824222902/1.jpg" />
+<img  className="detail-card-img" alt="detail-card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS53IAKzS5GMXU5LqySwR2zfikrYXhdBaUnkogB2COznNPC7OnN5zmfg3NENJjqaxNUoxs&usqp=CAU" />
 <div className="detail-cart-content">
-  <h3>Women Jackets - Buy Branded Jackets For Women Online in India </h3>
+  <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
   <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
 </div>
 </div>
@@ -60,9 +60,9 @@ export const DetailCard=()=>{
 export const DetailCard2=()=>{
   return <div className="detail-card-wrapper">
   
-<img  className="detail-card-img" alt="detail-card" src="https://cdn07.nnnow.com/web-images/medium/styles/GQY0UZ8XH2K/1686824222902/1.jpg" />
+<img  className="detail-card-img" alt="detail-card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKU9jiFmNyZlHrB8YcLImAt5KSDdPHGYM0Nw&usqp=CAU" />
 <div className="detail-cart-content">
-  <h3>Women Jackets - Buy Branded Jackets For Women Online in India </h3>
+  <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
   <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
 </div>
 </div>

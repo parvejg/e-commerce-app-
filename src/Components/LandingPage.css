@@ -1,3 +1,13 @@
-.detain-card-in-landing-page{
+.detail-card-in-landing-page{
     display: flex;
+    flex-wrap: wrap;
+    gap: 4rem
+}
+@media (max-width:600px) {
+    .detail-card-in-landing-page{
+        display: flex;
+        gap: 1rem;
+    }
+
+ 
 }

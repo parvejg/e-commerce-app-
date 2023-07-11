@@ -5,7 +5,10 @@
   .product-img {
     width: 50%;
   }
+
+
 }
+
 .product-demo-container {
   display: flex;
   flex-direction: column;
@@ -107,8 +110,6 @@
   width: 200px;
   padding-top: 1rem;
 }
-
-
 .productListingCard-text {
   display: flex;
   justify-content: center;
@@ -131,28 +132,19 @@
 }
 .detail-card-wrapper{
   display: flex;
-  flex-direction: column;
   background-color: rgb(255, 172, 158);
-  width: 700px;
+  width: 600px;
   height: 300px;
-  margin: 1rem 0 1rem  1rem  ;
-  position: relative;
-  
+  margin: 1rem;
 }
 .detail-card-img{
-  display: flex;
   width: 48%;
   height: 100%;
-  flex-direction: column;
 }
 .detail-cart-content{
-  display: flex;
-  align-content: end;
-  flex-direction: column;
-  flex-wrap: nowrap;
+flex-direction: column;
 width: 250px;
-height: 300px;
-position: absolute;
-padding-left: 20rem;
+height: 100%;
 color: var(--tertiary);
+padding-left: 2rem;
 }
