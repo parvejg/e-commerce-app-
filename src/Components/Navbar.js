@@ -80,7 +80,7 @@ export const ResponsiveNavbar = () => {
           className="responsiveNavbar-input"
           type="text"
         />
-        <span className="search-icon-wrapper">
+        <span className="search1-icon-wrapper">
           <a className="search1-icon" href="/">
             <ImSearch />
           </a>

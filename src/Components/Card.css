@@ -71,6 +71,15 @@
   font-size: 0.8rem;
   bottom: 2rem;
 }
+.buyNow-btn2 {
+  padding: 4px 4px;
+  background-color: var(--quinary);
+  color: var(--secondary);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px var(--quaternary);
+}
 .product-demo-text {
   display: flex;
   font-size: 1rem;
@@ -79,7 +88,14 @@
   flex-wrap: nowrap;
   right: 1rem;
 }
-.productCard-wrapper {
+
+
+.product-price2 {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+.productListingCard-wrapper {
   height: 350px;
   width: 220px;
   background-color: var(--quaternary);
@@ -91,41 +107,7 @@
   width: 200px;
   padding-top: 1rem;
 }
-.buyNow-btn {
-  padding: 4px 2rem;
-  background-color: var(--quinary);
-  color: var(--secondary);
-  text-align: center;
-  text-decoration: none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px var(--quaternary);
-  box-shadow: 0 0 15px var(--quinary);
-}
-.buyNow-btn:hover {
-  background-color: var(--secondary);
-  color: var(--tertiary);
-}
-.product-price {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-}
-
-.buyNow-btn2 {
-  padding: 4px 4px;
-  background-color: var(--quinary);
-  color: var(--secondary);
-  text-align: center;
-  text-decoration: none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px var(--quaternary);
-}
-.product-price2 {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-}
-.star-icon-container{
+.listingCard-star-icon-container{
   list-style: none;
   display: flex;
   justify-content: center;
@@ -136,11 +118,28 @@
   align-content: center;
 
 }
-.star-icon{
+.listingCard-star-icon{
   padding: 2px;
   color: var(--tertiary);
   font-size: 1.2rem;
 }
-.buyNow-btn{
-  margin-bottom: 2rem;
+.productListingCard-text {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+.listingCard-buyNow-btn {
+  padding: 4px 2rem;
+  background-color: var(--quinary);
+  color: var(--secondary);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px var(--quaternary);
+  box-shadow: 0 0 15px var(--quinary);
+}
+
+.listingCard-buyNow-btn:hover {
+  background-color: var(--secondary);
+  color: var(--tertiary);
 }

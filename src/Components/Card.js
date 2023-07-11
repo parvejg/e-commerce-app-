@@ -31,28 +31,52 @@ import "./Card.css";
 
 export const ProductDemoCard3 = () => {
   return (
-    <div className="card-container">
-      <div className="productCard-wrapper">
-        <div className="productCard">
-          <img
-            className="listing-img"
-            src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-          />
-          <p>Product name and brand</p>
-          <ul className="star-icon-container">
-           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
-           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
-           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
-           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
-           <li><a  className="star-icon"href="/"><AiOutlineStar/></a></li>
-          </ul>
-          <h6 className="product-price">product price</h6>
-          <a className="buyNow-btn" href="/">
-            Buy Now
+    <div className="productListingCard-wrapper">
+      <img
+        className="listing-img"
+        alt="listingCard-img"
+        src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      />
+      <p className="productListingCard-text">Product name and brand</p>
+      <ul className="listingCard-star-icon-container">
+        <li>
+          <a className="listingCard-star-icon" href="/">
+            <AiOutlineStar />
           </a>
-         
-        </div>
-      </div>
+        </li>
+        <li>
+          <a className="listingCard-star-icon" href="/">
+            <AiOutlineStar />
+          </a>
+        </li>
+        <li>
+          <a className="listingCard-star-icon" href="/">
+            <AiOutlineStar />
+          </a>
+        </li>
+        <li>
+          <a className="listingCard-star-icon" href="/">
+            <AiOutlineStar />
+          </a>
+        </li>
+        <li>
+          <a className="listingCard-star-icon" href="/">
+            <AiOutlineStar />
+          </a>
+        </li>
+      </ul>
+      <h6 className="productListingCard-text">product price</h6>
+      <a className="listingCard-buyNow-btn" href="/">
+        Buy Now
+      </a>
     </div>
   );
 };
+export const DetailCard=()=>{
+  return <div className="detail-card-wrapper">
+<div className="detail-card">
+  <img  className="detail-card-img" alt="detail-card" src="" />
+</div>
+  </div>
+
+}

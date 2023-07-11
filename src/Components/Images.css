@@ -32,10 +32,12 @@
   padding-top: 2rem;
   object-fit: cover;
   overflow: hidden;
+  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 @media (max-width: 600px) {
   .slider-img-wrapper {
-    padding-left: 2.4rem;
-    width: 90%;
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
   }
 }
