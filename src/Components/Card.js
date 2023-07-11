@@ -1,4 +1,5 @@
 import { AiOutlineStar } from "react-icons/ai";
+import {FiStar} from "react-icons/fi"
 import "./Card.css";
 // export const ProductDemoCard1 = (props) => {
 //   const { src, alt } = props;
@@ -38,33 +39,7 @@ export const ProductDemoCard3 = () => {
         src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
       />
       <p className="productListingCard-text">Product name and brand</p>
-      <ul className="listingCard-star-icon-container">
-        <li>
-          <a className="listingCard-star-icon" href="/">
-            <AiOutlineStar />
-          </a>
-        </li>
-        <li>
-          <a className="listingCard-star-icon" href="/">
-            <AiOutlineStar />
-          </a>
-        </li>
-        <li>
-          <a className="listingCard-star-icon" href="/">
-            <AiOutlineStar />
-          </a>
-        </li>
-        <li>
-          <a className="listingCard-star-icon" href="/">
-            <AiOutlineStar />
-          </a>
-        </li>
-        <li>
-          <a className="listingCard-star-icon" href="/">
-            <AiOutlineStar />
-          </a>
-        </li>
-      </ul>
+     
       <h6 className="productListingCard-text">product price</h6>
       <a className="listingCard-buyNow-btn" href="/">
         Buy Now
@@ -74,9 +49,21 @@ export const ProductDemoCard3 = () => {
 };
 export const DetailCard=()=>{
   return <div className="detail-card-wrapper">
-<div className="detail-card">
-  <img  className="detail-card-img" alt="detail-card" src="" />
+  
+<img  className="detail-card-img" alt="detail-card" src="https://cdn07.nnnow.com/web-images/medium/styles/GQY0UZ8XH2K/1686824222902/1.jpg" />
+<div className="detail-cart-content">
+  <h3>Women Jackets - Buy Branded Jackets For Women Online in India </h3>
+  <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
 </div>
-  </div>
-
+</div>
+}
+export const DetailCard2=()=>{
+  return <div className="detail-card-wrapper">
+  
+<img  className="detail-card-img" alt="detail-card" src="https://cdn07.nnnow.com/web-images/medium/styles/GQY0UZ8XH2K/1686824222902/1.jpg" />
+<div className="detail-cart-content">
+  <h3>Women Jackets - Buy Branded Jackets For Women Online in India </h3>
+  <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
+</div>
+</div>
 }
