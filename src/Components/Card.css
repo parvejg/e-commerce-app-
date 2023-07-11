@@ -5,7 +5,9 @@
   .product-img {
     width: 50%;
   }
-
+  .detail-cart-content{
+    padding-left: 1rem;
+  }
 
 }
 
@@ -133,7 +135,7 @@
 .detail-card-wrapper{
   display: flex;
   background-color: rgb(255, 172, 158);
-  width: 600px;
+  width: 640px;
   height: 300px;
   margin: 1rem;
 }
@@ -146,5 +148,14 @@ flex-direction: column;
 width: 250px;
 height: 100%;
 color: var(--tertiary);
-padding-left: 2rem;
+padding-left: 3rem;
+box-sizing: border-box;
+word-wrap: break-word;
+letter-spacing: 1px;
+text-indent: 1cm;
+text-transform:capitalize;
+text-shadow:4px 4px 8px var(--primary);
+}
+.cardDetail{
+word-wrap: break-word;
 }

@@ -63,7 +63,7 @@ export const DetailCard2=()=>{
 <img  className="detail-card-img" alt="detail-card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKU9jiFmNyZlHrB8YcLImAt5KSDdPHGYM0Nw&usqp=CAU" />
 <div className="detail-cart-content">
   <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
-  <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
+  <p className="cardDetail">Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
 </div>
 </div>
 }

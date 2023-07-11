@@ -1,7 +1,7 @@
 .detail-card-in-landing-page{
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem
+    gap: .1rem
 }
 @media (max-width:600px) {
     .detail-card-in-landing-page{
