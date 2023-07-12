@@ -1,13 +1,23 @@
 .detail-card-in-landing-page{
     display: flex;
-    flex-wrap: wrap;
-    gap: .1rem
+    gap: 2px
 }
-@media (max-width:600px) {
+@media (max-width:800px) {
     .detail-card-in-landing-page{
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem
     }
 
- 
+    .detail-card-in-landing-page{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: 0 7px;
+        padding-top: 7px;
+    }
+    .detail-card-content{
+        width: fit-content;
+        height: fit-content;
+        padding-right: .5rem;
+    }
 }
