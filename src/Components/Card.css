@@ -134,7 +134,7 @@
 }
 .detail-card-wrapper{
   display: flex;
-  background-color: rgb(255, 172, 158);
+  background-color: var(--sector);
   width: 45%px;
   height: 300px;
   margin: 6px;

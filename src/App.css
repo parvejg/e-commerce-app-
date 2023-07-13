@@ -4,6 +4,7 @@
   --tertiary: black;
   --quaternary: gainsboro;
   --quinary: rgb(230, 218, 218);
+  --sector: hwb(10 78% 0%);
 }
 .App {
   text-align: center;
