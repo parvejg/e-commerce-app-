@@ -32,17 +32,17 @@ import "./Card.css";
 
 export const ProductDemoCard3 = (props) => {
   const { cardDetail } = props;
-  const { title, price, categoryName, author } = cardDetail;
+  const { title, price, src, author } = cardDetail;
   return (
     <div className="productListingCard-wrapper">
       <img
         className="listing-img"
         alt="listingCard-img"
-        src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+        src={src}
       />
       <div className="listing-card-content">
-        <h3>{author}</h3>
-        <p>{title}</p>
+        <h3 className="listing-card-title">{title}</h3>
+        <p>{author}</p>
         <p className="productListingCard-text"><span className="listing-card-price">Price ₹</span> {price}</p>
         <a className="listingCard-buyNow-btn" href="/">
         Buy Now

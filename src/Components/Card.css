@@ -103,14 +103,16 @@
 .productListingCard-wrapper {
   height: 400px;
   width: 250px;
-  background-color: var(--quaternary);
-  box-shadow: 0 0 15px var(--quinary);
- 
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: rgb(253, 226, 221);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
   .listing-card-content {
     height: 40%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .listing-card-price{
   color: red;
@@ -125,6 +127,10 @@
   display: flex;
   justify-content: center;
   font-size: 15px;
+  font-weight: 600;
+}
+.listing-card-title{
+  padding-top: 1.6rem;
 }
 .listingCard-buyNow-btn {
   padding: 4px 2rem;
