@@ -46,21 +46,21 @@ export const Sidebar = () => {
       <div className="sidebar-rating-wrapper">
         <h3>Rating</h3>
         <label for="rating4-radio">
-          <input type="radio" id="rating4-radio" name="ratingBox" />4 Star
-          & above
+          <input type="radio" id="rating4-radio" name="ratingBox" />4 Star &
+          above
         </label>
 
         <label for="rating3-radio">
-          <input type="radio" id="rating3-radio" name="ratingBox" />3 Star
-          & above
+          <input type="radio" id="rating3-radio" name="ratingBox" />3 Star &
+          above
         </label>
         <label for="rating2-radio">
-          <input type="radio" id="rating2-radio" name="ratingBox" />2 Star
-          & above
+          <input type="radio" id="rating2-radio" name="ratingBox" />2 Star &
+          above
         </label>
         <label for="rating1-radio">
-          <input type="radio" id="rating1-radio" name="ratingBox" />1 Star
-          & above
+          <input type="radio" id="rating1-radio" name="ratingBox" />1 Star &
+          above
         </label>
       </div>
       <div className="sort-price-wrapper">
@@ -72,9 +72,9 @@ export const Sidebar = () => {
 
         <label for="high-to-low-radio">
           <input type="radio" id="high-to-low-radio" name="ratingBox" />3 Star
-      High to Low
+          High to Low
         </label>
-        </div>
+      </div>
     </div>
   );
 };
