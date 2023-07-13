@@ -1,7 +1,10 @@
-@media (min-width:1000px) {
+@media (min-width:800px) {
     .toggal-btn{
         display: none;
     }
+}
+.toggal-btn-wrapper{
+    display: flex;
 }
 .toggal-btn{
     width: 4rem;

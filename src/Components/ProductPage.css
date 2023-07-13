@@ -1,0 +1,20 @@
+.sidebar-and-productContent-wrapper{
+display: flex;
+gap: 1rem;
+width: 100%;
+}
+.product-content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-width: 80%;
+    min-height: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+@media (max-width:600px) {
+    .product-content-wrapper{
+        align-items: center;
+        justify-content: center;
+    }
+}

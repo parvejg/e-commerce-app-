@@ -30,7 +30,9 @@ import "./Card.css";
 //   );
 // };
 
-export const ProductDemoCard3 = () => {
+export const ProductDemoCard3 = (props) => {
+  const {cardDetail}= props;
+  const {title, price, categoryName, author}= cardDetail;
   return (
     <div className="productListingCard-wrapper">
       <img
@@ -38,9 +40,10 @@ export const ProductDemoCard3 = () => {
         alt="listingCard-img"
         src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
       />
-      <p className="productListingCard-text">Product name and brand</p>
-     
-      <h6 className="productListingCard-text">product price</h6>
+      <p className="productListingCard-text">{categoryName}</p>
+     <p>{author}</p>
+     <p>{title}</p>
+      <h6 className="productListingCard-text">{price}</h6>
       <a className="listingCard-buyNow-btn" href="/">
         Buy Now
       </a>

@@ -7,7 +7,7 @@ export const Layout = ({ children }) => {
   return (
     <div className="layout-wrapper">
       <Navbar />
-      <NavbarLinks/>
+      {/* <NavbarLinks/> */}
       <ResponsiveNavbar/>
       <div className="layout-body">
         <div className="layout-content">{children}</div>
