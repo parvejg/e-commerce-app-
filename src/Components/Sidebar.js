@@ -75,6 +75,7 @@ export const Sidebar = () => {
           High to Low
         </label>
       </div>
+
     </div>
   );
 };

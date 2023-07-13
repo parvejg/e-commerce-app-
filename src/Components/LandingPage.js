@@ -3,6 +3,7 @@ import "./LandingPage.css";
 import { TopWebShoesImg } from "./Images";
 import { Layout } from "./Layout";
 import { useEffect, useState } from "react";
+import { Sidebar } from "./Sidebar";
 
 export const LandingPage = () => {
 

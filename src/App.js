@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" Component={Layout} />
+          <Route path="/" Component={LandingPage} />
         </Routes>
       </Router>
     </div>

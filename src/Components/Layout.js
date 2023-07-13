@@ -9,8 +9,6 @@ export const Layout = ({ children }) => {
       <Navbar />
       <NavbarLinks/>
       <ResponsiveNavbar/>
-      <Sidebar/>
-      <ToggalBtn/>
       <div className="layout-body">
         <div className="layout-content">{children}</div>
       </div>

@@ -29,9 +29,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .sidebar-input {
-  padding: 7px 1rem;
+  width: 90%;
+  height: 1.5rem;
   border-radius: 7px;
   overflow: hidden;
   border: solid white 1px;
@@ -44,6 +46,7 @@
   bottom: -8px;
   left: -19px;
   color: var(--primary);
+  flex-wrap: wrap;
 }
 .sidebar-categories-wrapper {
   display: flex;
@@ -69,7 +72,7 @@
   font-size: larger;
   padding-left: 1rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .sidebar-wrapper{
         display: none;
     }
