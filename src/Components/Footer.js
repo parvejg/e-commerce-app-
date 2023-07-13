@@ -28,17 +28,15 @@ export const WebFooter = () => {
   return (
     <div className="webfooter-wrapper">
       <div className="webfooter-links-wrapper">
-        <a className="webfooter-links" href="/">
-          <FaFacebook />
-        </a>
-        <a className="webfooter-links" href="/">
-          <RiInstagramFill />
-        </a>
-        <a className="webfooter-links" href="/">
+    
+        <a className="webfooter-links" href="https://github.com/parvejg/e-commerce-app-">
           <FaGithub />
         </a>
-        <a className="webfooter-links" href="/">
+        <a className="webfooter-links" href="https://www.linkedin.com/in/md-parvez-6b6a5a259">
           <AiFillLinkedin />
+        </a>
+        <a className="webfooter-links" href="https://instagram.com/parvez321pg/">
+          <RiInstagramFill />
         </a>
       </div>
     </div>

@@ -66,12 +66,12 @@ export const Sidebar = () => {
       <div className="sort-price-wrapper">
         <h3>Sort by Price</h3>
         <label for="low-to-high-radio">
-          <input type="radio" id="low-to-high-radio" name="ratingBox" />4 Star
+          <input type="radio" id="low-to-high-radio" name="ratingBox" />
           Low to High
         </label>
 
         <label for="high-to-low-radio">
-          <input type="radio" id="high-to-low-radio" name="ratingBox" />3 Star
+          <input type="radio" id="high-to-low-radio" name="ratingBox" />
           High to Low
         </label>
       </div>
