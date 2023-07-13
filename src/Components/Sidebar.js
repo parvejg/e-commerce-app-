@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import "./Sidebar.css";
 import { ImSearch } from "react-icons/im";
 export const Sidebar = () => {

@@ -69,3 +69,8 @@
   font-size: larger;
   padding-left: 1rem;
 }
+@media (max-width: 600px) {
+    .sidebar-wrapper{
+        display: none;
+    }
+}
