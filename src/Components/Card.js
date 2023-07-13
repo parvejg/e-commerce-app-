@@ -1,5 +1,5 @@
 import { AiOutlineStar } from "react-icons/ai";
-import {FiStar} from "react-icons/fi"
+import { FiStar } from "react-icons/fi";
 import "./Card.css";
 // export const ProductDemoCard1 = (props) => {
 //   const { src, alt } = props;
@@ -31,8 +31,8 @@ import "./Card.css";
 // };
 
 export const ProductDemoCard3 = (props) => {
-  const {cardDetail}= props;
-  const {title, price, categoryName, author}= cardDetail;
+  const { cardDetail } = props;
+  const { title, price, categoryName, author } = cardDetail;
   return (
     <div className="productListingCard-wrapper">
       <img
@@ -40,33 +40,51 @@ export const ProductDemoCard3 = (props) => {
         alt="listingCard-img"
         src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGUlMjBjb21tZXJjZSUyMHByb2R1Y3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
       />
-      <p className="productListingCard-text">{categoryName}</p>
-     <p>{author}</p>
-     <p>{title}</p>
-      <h6 className="productListingCard-text">{price}</h6>
-      <a className="listingCard-buyNow-btn" href="/">
+      <div className="listing-card-content">
+        <h3>{author}</h3>
+        <p>{title}</p>
+        <p className="productListingCard-text"><span className="listing-card-price">Price ₹</span> {price}</p>
+        <a className="listingCard-buyNow-btn" href="/">
         Buy Now
       </a>
+      </div>
+
     </div>
   );
 };
-export const DetailCard=()=>{
-  return <div className="detail-card-wrapper">
-  
-<img  className="detail-card-img" alt="detail-card" src="https://media.istockphoto.com/id/1281328238/photo/studio-portrait-of-a-teen-girl.webp?b=1&s=170667a&w=0&k=20&c=JW_6p9c0PkdpM-MgdjXKXb1y6fubyjyM7-_whTe-LQo=" />
-<div className="detail-card-content">
-  <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
-  <p>Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
-</div>
-</div>
-}
-export const DetailCard2=()=>{
-  return <div className="detail-card-wrapper">
-  
-<img  className="detail-card-img" alt="detail-card" src="https://media.istockphoto.com/id/1085224370/photo/a-portrait-of-young-mother-with-a-small-daughter-in-autumn-nature-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=oIvisZG9Mq5VNlVtqWmAk5CiBgryDi77q3ZIVkxh2gY=" />
-<div className="detail-card-content">
-  <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
-  <p className="cardDetail">Specs: Spread collar Full button placket Two waist pocketsLong sleeves with buttoned cuffs Solid Country of Origin - India</p>
-</div>
-</div>
-}
+export const DetailCard = () => {
+  return (
+    <div className="detail-card-wrapper">
+      <img
+        className="detail-card-img"
+        alt="detail-card"
+        src="https://media.istockphoto.com/id/1281328238/photo/studio-portrait-of-a-teen-girl.webp?b=1&s=170667a&w=0&k=20&c=JW_6p9c0PkdpM-MgdjXKXb1y6fubyjyM7-_whTe-LQo="
+      />
+      <div className="detail-card-content">
+        <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
+        <p>
+          Specs: Spread collar Full button placket Two waist pocketsLong sleeves
+          with buttoned cuffs Solid Country of Origin - India
+        </p>
+      </div>
+    </div>
+  );
+};
+export const DetailCard2 = () => {
+  return (
+    <div className="detail-card-wrapper">
+      <img
+        className="detail-card-img"
+        alt="detail-card"
+        src="https://media.istockphoto.com/id/1085224370/photo/a-portrait-of-young-mother-with-a-small-daughter-in-autumn-nature-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=oIvisZG9Mq5VNlVtqWmAk5CiBgryDi77q3ZIVkxh2gY="
+      />
+      <div className="detail-card-content">
+        <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
+        <p className="cardDetail">
+          Specs: Spread collar Full button placket Two waist pocketsLong sleeves
+          with buttoned cuffs Solid Country of Origin - India
+        </p>
+      </div>
+    </div>
+  );
+};

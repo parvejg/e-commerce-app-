@@ -101,15 +101,24 @@
   font-size: 15px;
 }
 .productListingCard-wrapper {
-  height: 320px;
-  width: 220px;
+  height: 400px;
+  width: 250px;
   background-color: var(--quaternary);
   box-shadow: 0 0 15px var(--quinary);
-  margin-bottom: 10rem;
+ 
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+  .listing-card-content {
+    height: 40%;
+    width: 100%;
+}
+.listing-card-price{
+  color: red;
+  font-weight: 500;
 }
 .listing-img {
-  height: 130px;
-  width: 200px;
+  height: 50%;
+  width: 230px;
   padding-top: 1rem;
 }
 .productListingCard-text {
@@ -126,6 +135,7 @@
   border-radius: 3px;
   box-shadow: 0 0 15px var(--quaternary);
   box-shadow: 0 0 15px var(--quinary);
+  margin-bottom: 2rem;
 }
 
 .listingCard-buyNow-btn:hover {
