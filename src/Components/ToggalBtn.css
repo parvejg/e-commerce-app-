@@ -1,0 +1,16 @@
+@media (min-width:1000px) {
+    .toggal-btn{
+        display: none;
+    }
+}
+.toggal-btn{
+    width: 4rem;
+    margin-top: 0.4rem;
+    height: 2rem;
+    background-color: var(--secondary);
+    border: solid 1px var(--secondary);
+}
+.toggal-icon{
+    font-size: xx-large;
+    color: var(--primary);
+}

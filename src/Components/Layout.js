@@ -2,6 +2,7 @@ import { WebFooter } from "./Footer";
 import { Navbar, NavbarLinks, ResponsiveNavbar } from "./Navbar";
 import "./Layout.css";
 import { Sidebar } from "./Sidebar";
+import { ToggalBtn } from "./ToggalBtn";
 export const Layout = ({ children }) => {
   return (
     <div className="layout-wrapper">
@@ -9,6 +10,7 @@ export const Layout = ({ children }) => {
       <NavbarLinks/>
       <ResponsiveNavbar/>
       <Sidebar/>
+      <ToggalBtn/>
       <div className="layout-body">
         <div className="layout-content">{children}</div>
       </div>
