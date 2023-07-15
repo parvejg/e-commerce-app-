@@ -107,7 +107,7 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
   .listing-card-content {
-    height: 40%;
+   height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -147,6 +147,9 @@
 .listingCard-buyNow-btn:hover {
   background-color: var(--primary);
   color: var(--tertiary);
+}
+.listing-card-title, p{
+  margin: .75rem;
 }
 .detail-card-wrapper{
   display: flex;

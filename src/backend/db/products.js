@@ -54,5 +54,21 @@ export const products = [
     price: "1300",
     categoryName: "fiction",
   },
+  {
+    _id: uuid(),
+    src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
+    title: "COTTON BLUE SLIM SHIRT",
+    author: "Fabric: 100% Cotton Indigo",
+    price: "3000",
+    categoryName: "fiction",
+  },
+  {
+    _id: uuid(),
+    src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
+    title: "RUST & NAVY CHECKS sllim fit SHIRT",
+    author: "Button Down Collar",
+    price: "1200",
+    categoryName: "fiction",
+  },
 
 ];

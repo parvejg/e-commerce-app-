@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 export const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
-      <h3 className="flipcart-text"> Flipcart </h3>{" "}
+      <h3 className="flipcart-text"> Flipcart </h3>
+        <Link className="navbar-products-link">Products</Link>
       <div className="navbar-input-wrapper">
         <input
           placeholder="Seach Flipcart.."

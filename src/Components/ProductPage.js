@@ -12,7 +12,6 @@ export const ProductPage = () => {
     fetch(cardMockBeeAPI)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         SetCardAPI(data.products);
       });
   }, []);
