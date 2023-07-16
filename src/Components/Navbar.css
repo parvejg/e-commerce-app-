@@ -2,10 +2,11 @@
   box-shadow: var(--primary) 0px 2px 4px;
   display: flex;
   flex-basis: 2rem;
-  padding: 1rem  0;
+  padding: 1rem 0;
   background-color: var(--primary);
   justify-content: space-between;
 }
+
 .navbarLinks-wrapper {
   display: flex;
   align-items: center;
@@ -18,6 +19,7 @@
   background-color: var(--quaternary);
   box-shadow: #cfc5c5 0 0px 2px 2px;
 }
+
 .navbar-bottom-links {
   display: flex;
   justify-content: center;
@@ -34,20 +36,40 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.navbar-products-link-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
 .navbar-products-link {
-    font-size: 23px;
-    padding-right: 3rem;
-    margin-left: -40px;
-    margin-top: 14px;
-    text-align: center;
-    color: var(--secondary);
-    text-decoration: none;
+  display: flex;
+  padding-left: 4rem;
+  font-size: 23px;
+  padding-bottom: 2px;
+  text-align: center;
+  color: var(--secondary);
+  text-decoration: none;
+  position: absolute;
+  bottom: 9px;
+  font-weight: 700;
+}
+
+.navbar-products-link-ph{
+  font-family: bold;
+  padding-right: 1rem;
+  text-decoration: none;
 }
 
 .navbar-input-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 50%;
+  padding-top: 8px;
   align-items: center;
 }
 
@@ -78,6 +100,7 @@
   padding-right: 2rem;
   text-wrap: nowrap;
 }
+
 .navbar-icon-links-wrapper {
   display: flex;
   list-style: none;
@@ -106,54 +129,89 @@
   top: -12px;
   right: 0.5rem;
 }
+
 .responsiveNavbar {
   box-shadow: var(--primary) 0px 2px 4px;
   display: flex;
   flex-basis: 50px;
   min-width: 100%;
+  margin: 0;
   padding: 1rem 0;
   color: var(--secondary);
   background-color: var(--primary);
 }
-.flipcart-text {
-  padding-left: 1rem;
+
+.flipcart-text-ph {
   font-size: 20px;
   color: var(--secondary);
+  text-decoration: none;
+  text-align: center;
+  padding-left: 7px;
 }
-.responsiveNavbar-input-wrapper {
-  display: flex;
-  justify-content: center;
-  padding-left: 2rem;
+.navbar-products-link-ph{
+  font-size: 20px;
+  color:  var(--secondary);
+  text-decoration: none;
+  text-align: center;
+  padding-left: 7px;
+}
+
+.phn-view-input{
+  padding: 4px;
   align-items: center;
+  border-radius: 6px;
+  position: relative;
+ border: solid 1px var(--secondary);
 }
-.responsiveNavbar-input {
- height: 1.3rem;
-  border-radius: 5px;
-  overflow: hidden;
-  border: solid 2px var(--secondary);
+.phone-view-input-wrapper{
+  width: inherit;
+  height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-icon-ph-wrapper{
+  position: relative;
+
+}
+.search-icon-ph {
+  position: absolute;
+  color: red;
+  left: -24px;
+  top: -6px;
   text-align: center;
 }
 .search-icon-wrapper {
   position: relative;
 }
-.search1-icon-wrapper {
-  position: relative;
-}
-.search1-icon {
-  position: absolute;
-  color: var(--quinary);
-  left: -11rem;
-  top: -0.5rem;
-}
+
+
+
+
 
 @media (max-width: 1000px) {
   .navbar-wrapper {
     display: none;
   }
+
+  .flipcart-text {
+    padding-left: 1rem;
+    font-size: 20px;
+  }
+
+  .navbar-products-link {
+    font-size: 18px;
+
+  }
+  .navbar-products-link-wrapper {
+    bottom: -5px;
+  }
   .navbarLinks-wrapper {
     display: none;
   }
 }
+
 @media (min-width: 1000px) {
   .responsiveNavbar {
     display: none;

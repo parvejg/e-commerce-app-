@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { ImSearch } from "react-icons/im";
+import {getData} from "./reusableFunction";
 import { CiUser } from "react-icons/ci";
 import { Cart, Wishlist } from "./Badge";
 import { Link } from "react-router-dom";
@@ -7,8 +8,11 @@ import { useEffect, useState } from "react";
 export const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
-      <h3 className="flipcart-text"> Flipcart </h3>
-        <Link className="navbar-products-link">Products</Link>
+      <Link className="flipcart-text" to="/landing-page"> Flipcart </Link>
+      <div className="navbar-products-link-wrapper">
+      <Link className="navbar-products-link" to="/product-page">Products</Link>
+
+      </div>
       <div className="navbar-input-wrapper">
         <input
           placeholder="Seach Flipcart.."
@@ -36,19 +40,14 @@ export const Navbar = () => {
   );
 };
 export const NavbarLinks = () => {
-  const [firstapi, SetFirstApi] = useState([]);
-  const api = "/api/categories";
-  console.log(firstapi);
+  const [categoryApiUrl, setCategoryApiUrl] = useState({});
+  const categoryApi = "/api/categories";
   useEffect(() => {
-    fetch(api)
-      .then((res) => res.json())
-      .then((data) => {
-        SetFirstApi(data.categories);
-      });
+    getData(categoryApi, setCategoryApiUrl)
   }, []);
   return (
     <div className="navbarLinks-wrapper"> 
-      {firstapi.map((item) => {
+      {categoryApiUrl.categories?.map((item) => {
         return (
           <Link className="navbar-bottom-links"  key={item.id} to="/Brand-page">
             {item.categoryName}
@@ -89,19 +88,17 @@ export const NavbarLinks = () => {
 export const ResponsiveNavbar = () => {
   return (
     <nav className="responsiveNavbar">
-      <h3 className="flipcart-text"> Flipcart </h3>
-
-      <div className="responsiveNavbar-input-wrapper">
-        <input
-          placeholder="Seach Flipcart.."
-          className="responsiveNavbar-input"
-          type="text"
-        />
-        <span className="search1-icon-wrapper">
-          <a className="search1-icon" href="/">
-            <ImSearch />
-          </a>
-        </span>
+     
+     
+      <div className="phone-view-input-wrapper">
+      
+      <Link className="flipcart-text-ph" to="/landing-page"> Flipcart </Link>
+      <Link className="navbar-products-link-ph" to="/product-page">Products</Link>
+      <input type="text" placeholder="search flicart" className="phn-view-input" />
+      <span className="search-icon-ph-wrapper">
+       <ImSearch  className="search-icon-ph"/>
+        
+      </span>
       </div>
     </nav>
   );

@@ -1,7 +1,13 @@
-
+import { useEffect, useState } from "react";
 import "./Sidebar.css";
 import { ImSearch } from "react-icons/im";
+import { getData } from "./reusableFunction";
 export const Sidebar = () => {
+  const [categoryApiUrl, setCategoryApiUrl] = useState({});
+  const categoryApi = "/api/categories";
+  useEffect(() => {
+    getData(categoryApi, setCategoryApiUrl);
+  }, []);
   return (
     <div className="sidebar-wrapper">
       <div className="filter-wrapper">
@@ -18,30 +24,18 @@ export const Sidebar = () => {
       </div>
       <div className="sidebar-categories-wrapper">
         <h3>Categories</h3>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Men
-        </label>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Weman
-        </label>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Kids
-        </label>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Electronices
-        </label>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Mobile
-        </label>
-        <label for="categories-checkBox">
-          <input type="checkBox" id="categories-checkBox" name="categories" />
-          Plant
-        </label>
+        {categoryApiUrl.categories?.map((item) => {
+          return (
+              <label for="categories-checkBox" key={item.id}>
+                <input
+                  type="checkBox"
+                  id="categories-checkBox"
+                  name="categories"
+                />
+                {item.categoryName}
+              </label>
+          );
+        })}
       </div>
       <div className="sidebar-rating-wrapper">
         <h3>Rating</h3>
@@ -75,7 +69,6 @@ export const Sidebar = () => {
           High to Low
         </label>
       </div>
-
     </div>
   );
 };

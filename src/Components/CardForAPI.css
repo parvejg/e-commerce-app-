@@ -1,0 +1,7 @@
+.apicard-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    height: 10rem;
+    width: 5rem;
+}
