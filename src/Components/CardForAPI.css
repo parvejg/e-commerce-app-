@@ -1,7 +1,44 @@
-.apicard-wrapper{
+.apicard-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(220, 236, 76);
+  height: 360px;
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.apicard-img-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.apicard-img {
+  width: 100%;
+  height: 50%;
+}
+.apicard-item-name {
+  margin: 0.6rem;
+}
+.apicard-price {
+  margin: 0.6rem;
+}
+.apicard-btn {
+  padding: 4px 0;
+  background-color: white;
+  border: solid 1px black;
+}
+.apiCards{
     display: flex;
-    flex-direction: column;
-    background-color: gray;
-    height: 10rem;
-    width: 5rem;
+    
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p{
+  margin: .59rem;
 }

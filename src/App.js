@@ -17,11 +17,12 @@ import { CardForApiData } from "./Components/CardForAPI";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <CardForApiData/>
+      {/* <Router>
         <Routes>
           <Route path="/" Component={CardForApiData} />
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }

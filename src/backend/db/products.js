@@ -65,7 +65,7 @@ export const products = [
   {
     _id: uuid(),
     src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-    title: "RUST & NAVY CHECKS sllim fit SHIRT",
+    title: "RUST & NAVY CHECKS SHIRT",
     author: "Button Down Collar",
     price: "1200",
     categoryName: "fiction",
