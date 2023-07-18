@@ -167,11 +167,12 @@
   width: inherit;
   height: 3rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 .search-icon-ph-wrapper{
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 
 }

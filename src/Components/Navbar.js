@@ -27,7 +27,7 @@ export const Navbar = () => {
       </div>{" "}
       <div className="navbar-links-wrapper">
         <li>
-          <Link className="navbar-links sign-up" to="/signIn-page">
+          <Link className="navbar-links sign-up" to="/login-page">
             Sign In{" "}
           </Link>{" "}
         </li>{" "}
@@ -91,13 +91,11 @@ export const ResponsiveNavbar = () => {
      
      
       <div className="phone-view-input-wrapper">
-      
       <Link className="flipcart-text-ph" to="/landing-page"> Flipcart </Link>
       <Link className="navbar-products-link-ph" to="/product-page">Products</Link>
       <input type="text" placeholder="search flicart" className="phn-view-input" />
       <span className="search-icon-ph-wrapper">
        <ImSearch  className="search-icon-ph"/>
-        
       </span>
       </div>
     </nav>
