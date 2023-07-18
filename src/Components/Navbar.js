@@ -27,9 +27,9 @@ export const Navbar = () => {
       </div>{" "}
       <div className="navbar-links-wrapper">
         <li>
-          <a className="navbar-links sign-up" href="/">
+          <Link className="navbar-links sign-up" to="/signIn-page">
             Sign In{" "}
-          </a>{" "}
+          </Link>{" "}
         </li>{" "}
         <div className="navbar-icon-links-wrapper">
           <Wishlist />
