@@ -42,9 +42,7 @@ export const SignUp = () => {
               <button className="createAccount-btn">Create New Account</button>
             </div>
 
-              <Link className="already-account-link" >
-                Already have a Account
-              </Link>
+            <Link className="already-account-link">Already have a Account</Link>
           </div>
         </div>
       </div>
@@ -87,7 +85,9 @@ export const Login = () => {
               <button className="login-btn">Login</button>
             </div>
 
-              <Link className="createNewAccount-link" to="/createNewAccount-page">Create New Account</Link>
+            <Link className="createNewAccount-link" to="/createNewAccount-page">
+              Create New Account
+            </Link>
           </div>
         </div>
       </div>
