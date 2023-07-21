@@ -36,14 +36,7 @@ export const Navbar = () => {
           </Link>{" "}
         </li>{" "}
         <div className="navbar-icon-links-wrapper">
-          <Link to="/cart-page">
-          <Cart />{" "}
-           
-          </Link>
-          <Link to="/wishlist-page">
-            {" "}
-            <Wishlist />
-          </Link>
+          <Cart /> <Wishlist />
         </div>{" "}
       </div>{" "}
     </nav>
