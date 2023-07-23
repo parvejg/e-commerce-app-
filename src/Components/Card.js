@@ -42,11 +42,18 @@ export const ProductDemoCard3 = (props) => {
       />
       <div className="listing-card-content">
         <h3 className="listing-card-title">{title}</h3>
-        <p>{author}</p>
+        <p className="listingcard-detail">{author}</p>
         <p className="productListingCard-text"><span className="listing-card-price">Price ₹</span> {price}</p>
-        <a className="listingCard-buyNow-btn" href="/">
-        Buy Now
+       <div className="listingcard-btn-wrapper">
+   <a className="listingCard-buyNow-btn" href="/">
+        Add to cart
       </a>
+
+      <a className="listingCard-buyNow-btn" href="/">
+        Add to wishlist
+      </a>
+       </div>
+     
       </div>
 
     </div>

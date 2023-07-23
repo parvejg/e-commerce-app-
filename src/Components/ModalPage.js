@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
 import "./ModalPage.css";
 import { Layout } from "./Layout";
+import { useEffect, useState } from "react";
+import { postCall } from "./reusableFunction";
 export const SignUp = () => {
+  const SignUpAPI = "/api/auth/signup";
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setname] = useState("");
+  const signUpHandler = () => {
+    return requestBody;
+  };
+  const requestBody = {
+    email: email,
+    password: password,
+    name: name,
+  };
+  useEffect(() => {
+    (async () => {
+      const response = await postCall(SignUpAPI, requestBody);
+      console.log(response);
+    })();
+  }, []);
+
   return (
     <Layout>
       <div className="loginPage">
@@ -16,6 +37,7 @@ export const SignUp = () => {
                 type="text"
                 id="name-input"
                 placeholder="Enter your Name"
+                onChange={(e)=>setname(e.target.value)}
               />
             </div>
             <div>
@@ -26,6 +48,7 @@ export const SignUp = () => {
                 type="text"
                 id="email-input"
                 placeholder="Enter your Email"
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -36,10 +59,11 @@ export const SignUp = () => {
                 type="password"
                 id="password-input"
                 placeholder="Enter your Password"
+                onChange={(e)=>setPassword(e.target.value)}
               />
             </div>
             <div className="login-btn-wrapper">
-              <button className="createAccount-btn">Create New Account</button>
+              <button className="createAccount-btn" onClick={signUpHandler}>Create New Account</button>
             </div>
 
             <Link className="already-account-link">Already have a Account</Link>
@@ -51,6 +75,22 @@ export const SignUp = () => {
 };
 
 export const Login = () => {
+  const logingAPI = "/api/auth/login";
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const loginHandler = () => {
+    return requestBody;
+  };
+  const requestBody = {
+    email: email,
+    password: password,
+  };
+  useEffect(() => {
+    (async () => {
+      const response = await postCall(logingAPI, requestBody);
+      console.log(response);
+    })();
+  }, []);
   return (
     <Layout>
       <div className="loginPage">
@@ -65,6 +105,7 @@ export const Login = () => {
                 type="text"
                 id="email-input"
                 placeholder="Enter your Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -75,14 +116,16 @@ export const Login = () => {
                 type="password"
                 id="password-input"
                 placeholder="Enter your Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
-
               <a href="/" className="forget-password-link">
                 Forget Password
               </a>
             </div>
             <div className="login-btn-wrapper">
-              <button className="login-btn">Login</button>
+              <button className="login-btn" onClick={loginHandler}>
+                Login
+              </button>
             </div>
 
             <Link className="createNewAccount-link" to="/createNewAccount-page">

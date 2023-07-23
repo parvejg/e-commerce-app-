@@ -102,7 +102,7 @@
   font-size: 15px;
 }
 .productListingCard-wrapper {
-  height: 400px;
+  height: 420px;
   width: 250px;
   background-color: rgb(253, 226, 221);
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
@@ -129,12 +129,21 @@
   justify-content: center;
   font-size: 15px;
   font-weight: 600;
+  margin: .30rem;
 }
 .listing-card-title{
   padding-top: 1.6rem;
 }
+.listingcard-btn-wrapper{
+  margin: 0;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
 .listingCard-buyNow-btn {
-  padding: 4px 2rem;
+  padding: 5px 8px;
   background-color: var(--secondary);
   color: var(--tertiary);
   text-align: center;
@@ -142,9 +151,10 @@
   border-radius: 3px;
   box-shadow: 0 0 15px var(--quaternary);
   box-shadow: 0 0 15px var(--quinary);
-  margin-bottom: 2rem;
 }
-
+.listingcard-detail{
+  margin: .40rem;
+}
 .listingCard-buyNow-btn:hover {
   background-color: var(--primary);
   color: var(--tertiary);

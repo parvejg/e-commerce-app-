@@ -3,17 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
-import { CountContext } from "./Components/CountContex";
+import { appContext, AppContextProvider } from "./Components/CountContex";
 
 // Call make Server
 makeServer();
-
 ReactDOM.render(
   <React.StrictMode>
-    <CountContext>
+    <AppContextProvider>
     <App />
-
-    </CountContext>
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

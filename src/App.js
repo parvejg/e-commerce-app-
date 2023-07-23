@@ -1,16 +1,21 @@
 import "./App.css";
 import { LandingPage } from "./Components/LandingPage";
-import React, { StrictMode } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ProductPage } from "./Components/ProductPage";
 import { Login, SignUp } from "./Components/ModalPage";
 import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
+import { useEffect, useState } from "react";
+import { getData } from "./Components/reusableFunction";
 
 function App() {
+  const cartAPI = "/api/user/cart";
+  const [cartData, setCartData]= useState({})
+  useEffect(()=>{
+    getData(cartAPI, setCartData)
+  },[])
+
   return (
-    <StrictMode>
    <div className="App">
-    
     <Router>
       <Routes>
         <Route path="/" Component={LandingPage} />
@@ -18,13 +23,11 @@ function App() {
         <Route path="product-page" Component={ProductPage} />
         <Route path="login-page" Component={Login} />
         <Route path="createNewAccount-page" Component={SignUp} />
-
         <Route path="cart-page" Component={CartPage} />
         <Route path="wishlist-page" Component={WishlistPage} />
       </Routes>
     </Router>
   </div>
-    </StrictMode>
  
   );
 }

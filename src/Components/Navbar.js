@@ -43,14 +43,14 @@ export const Navbar = () => {
   );
 };
 export const NavbarLinks = () => {
-  const [categoryApiUrl, setCategoryApiUrl] = useState({});
+  const [categoryData, setCategoryData] = useState({});
   const categoryApi = "/api/categories";
   useEffect(() => {
-    getData(categoryApi, setCategoryApiUrl);
+    getData(categoryApi, setCategoryData);
   }, []);
   return (
     <div className="navbarLinks-wrapper">
-      {categoryApiUrl.categories?.map((item) => {
+      {categoryData.categories?.map((item) => {
         return (
           <Link className="navbar-bottom-links" key={item.id} to="/Brand-page">
             {item.categoryName}
