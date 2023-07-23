@@ -2,26 +2,22 @@ import { Link } from "react-router-dom";
 import "./ModalPage.css";
 import { Layout } from "./Layout";
 import { useEffect, useState } from "react";
-import { postCall } from "./reusableFunction";
+import { guestPostCall, postCall } from "./reusableFunction";
 export const SignUp = () => {
   const SignUpAPI = "/api/auth/signup";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setname] = useState("");
-  const signUpHandler = () => {
-    return requestBody;
+  const signUpHandler = async () => {
+    const response = await postCall(SignUpAPI, requestBody);
+    return response
   };
   const requestBody = {
     email: email,
     password: password,
     name: name,
   };
-  useEffect(() => {
-    (async () => {
-      const response = await postCall(SignUpAPI, requestBody);
-      console.log(response);
-    })();
-  }, []);
+
 
   return (
     <Layout>
@@ -37,7 +33,7 @@ export const SignUp = () => {
                 type="text"
                 id="name-input"
                 placeholder="Enter your Name"
-                onChange={(e)=>setname(e.target.value)}
+                onChange={(e) => setname(e.target.value)}
               />
             </div>
             <div>
@@ -48,7 +44,7 @@ export const SignUp = () => {
                 type="text"
                 id="email-input"
                 placeholder="Enter your Email"
-                onChange={(e)=>setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -59,14 +55,18 @@ export const SignUp = () => {
                 type="password"
                 id="password-input"
                 placeholder="Enter your Password"
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="login-btn-wrapper">
-              <button className="createAccount-btn" onClick={signUpHandler}>Create New Account</button>
+              <button className="createAccount-btn" to="/login-page" onClick={signUpHandler}>
+                Create New Account
+              </button>
             </div>
 
-            <Link className="already-account-link">Already have a Account</Link>
+            <Link className="already-account-link" to="/login-page">
+              Already have a Account
+            </Link>
           </div>
         </div>
       </div>
@@ -78,19 +78,24 @@ export const Login = () => {
   const logingAPI = "/api/auth/login";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const loginHandler = () => {
-    return requestBody;
+  const loginHandler = async () => {
+    const requestBody = {
+      email: email,
+      password: password,
+    };
+    const response = await postCall(logingAPI, requestBody);
+    return response;
   };
-  const requestBody = {
-    email: email,
-    password: password,
-  };
-  useEffect(() => {
-    (async () => {
-      const response = await postCall(logingAPI, requestBody);
-      console.log(response);
-    })();
-  }, []);
+
+  const guestLoginHandler = async ()=>{
+    const requestBody= {
+      name: "Balika",
+      email: "adarshbalika@gmail.com",
+      password: "adarshbalika",
+    }
+    const response = await guestPostCall(logingAPI, requestBody);
+   return response
+  }
   return (
     <Layout>
       <div className="loginPage">
@@ -122,11 +127,12 @@ export const Login = () => {
                 Forget Password
               </a>
             </div>
-            <div className="login-btn-wrapper">
-              <button className="login-btn" onClick={loginHandler}>
-                Login
-              </button>
-            </div>
+          </div>
+          <div className="login-btn-wrapper">
+            <button className="login-btn" to="/landing-page" onClick={loginHandler}>
+              Login
+            </button>
+            <Link className="login-btn-as-guest" to="/landing-page" onClick={guestLoginHandler}>Login as a Guest</Link>
 
             <Link className="createNewAccount-link" to="/createNewAccount-page">
               Create New Account

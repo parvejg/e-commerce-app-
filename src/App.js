@@ -23,6 +23,7 @@ function App() {
         <Route path="product-page" Component={ProductPage} />
         <Route path="login-page" Component={Login} />
         <Route path="createNewAccount-page" Component={SignUp} />
+        <Route path="signUp-page" Component={SignUp} />
         <Route path="cart-page" Component={CartPage} />
         <Route path="wishlist-page" Component={WishlistPage} />
       </Routes>
