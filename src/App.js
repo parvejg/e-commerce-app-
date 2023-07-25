@@ -4,15 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ProductPage } from "./Components/ProductPage";
 import { Login, SignUp } from "./Components/ModalPage";
 import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
-import { useEffect, useState } from "react";
-import { getData } from "./Components/reusableFunction";
 
 function App() {
-  const cartAPI = "/api/user/cart";
-  const [cartData, setCartData]= useState({})
-  useEffect(()=>{
-    getData(cartAPI, setCartData)
-  },[])
 
   return (
    <div className="App">
