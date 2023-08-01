@@ -1,7 +1,7 @@
 .sidebar-wrapper {
   display: flex;
   min-height: 100%;
-  width: 35%;
+  min-width: 18%;
   align-items: center;
   flex-direction: column;
   background-color: var(--quaternary);
@@ -73,7 +73,7 @@
   padding-left: 1rem;
 }
 @media (max-width: 800px) {
-    .sidebar-wrapper{
-        display: none;
-    }
+  .sidebar-wrapper {
+    display: none;
+  }
 }

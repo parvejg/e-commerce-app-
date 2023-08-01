@@ -3,6 +3,7 @@ import {FiStar} from "react-icons/fi";
 import "./Card.css";
 import {useEffect} from "react";
 import {getData} from "./reusableFunction";
+import axios from "axios";
 // export const ProductDemoCard1 = (props) => {
 // const { src, alt } = props;
 // return (
@@ -32,19 +33,43 @@ import {getData} from "./reusableFunction";
 // );
 // };
 
+
 export const ProductDemoCard3 = (props) => {
-    // const [wishlistData, setWishlistData] = ([])
-    // const wishlistUrl = " /api/user/wishlist"
-
-    // const WishlistHandler = () => {
-    //     useEffect(() => {
-    //         getData(wishlistUrl, setWishlistData)
-    //     })
-    //     console.log(wishlistData)
-    // }
-
     const {cardDetail} = props;
     const {title, price, src, author} = cardDetail;
+    const requestBody = {
+        product: cardDetail
+    }
+
+    const encodedToken = localStorage.getItem("encodedToken")
+    const headers = {
+        headers: {
+            authorization: encodedToken
+        }
+    }
+
+    const wishlistPostHandler = async () => {
+        const wishlistApiUrl = "/api/user/wishlist";
+        const response = await axios.post(wishlistApiUrl, requestBody, headers)
+        console.log(response);
+    }
+
+
+    const CartPostHandler = async () => {
+        const cartApiUrl = "/api/user/cart";
+        const requestBody = {
+            product: cardDetail
+        }
+
+        const encodedToken = localStorage.getItem("encodedToken")
+        const headers = {
+            headers: {
+                authorization: encodedToken
+            }
+        }
+        const response = await axios.post(cartApiUrl, requestBody, headers)
+        console.log(response);
+    }
     return (
         <div className="productListingCard-wrapper">
             <img className="listing-img" alt="listingCard-img"
@@ -58,11 +83,13 @@ export const ProductDemoCard3 = (props) => {
                     <span className="listing-card-price">Price ₹</span>
                     {price}</p>
                 <div className="listingcard-btn-wrapper">
-                    <a className="listingCard-buyNow-btn" href="/">
+                    <button className="listingCard-buyNow-btn"
+                        onClick={CartPostHandler}>
                         Add to cart
-                    </a>
+                    </button>
 
-                    <button className="listingCard-buyNow-btn">
+                    <button className="listingCard-buyNow-btn"
+                        onClick={wishlistPostHandler}>
                         Add to wishlist
                     </button>
                 </div>
@@ -80,7 +107,7 @@ export const DetailCard = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p>
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>
@@ -94,7 +121,7 @@ export const DetailCard2 = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p className="cardDetail">
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>

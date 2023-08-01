@@ -1,35 +1,35 @@
-.cart-icon-wrapper{
-    display: flex;
-    gap: 1rem;
-    position: relative;
+.cart-icon-wrapper {
+  display: flex;
+  gap: 1rem;
+  position: relative;
 }
-.unitOfCart{
-    position: absolute;
-    bottom: 1.3rem;
-    font-size: small;
-    background-color: var(--primary);
-    border-radius: 50%;
-    font-weight: bold;
-    left: 16px;
-    border: solid  2px var(--secondary);
-    color: var(--tertiary);
-
+.unitOfCart {
+  position: absolute;
+  bottom: 1.3rem;
+  font-size: small;
+  background-color: var(--primary);
+  border-radius: 50%;
+  font-weight: bold;
+  left: 16px;
+  border: solid 2px var(--secondary);
+  color: var(--tertiary);
+  padding: 4px;
 }
 
-.wishlist-icon-wrapper{
-    display: flex;
-    gap: 1rem;
-    position: relative;
+.wishlist-icon-wrapper {
+  display: flex;
+  gap: 1rem;
+  position: relative;
 }
-.unitOfWishlist{
-    position: absolute;
-    bottom: 1.2rem;
-    font-size: small;
-    background-color: var(--primary);
-    border-radius: 50%;
-    font-weight: bold;
-    left: 21px;
-    border: solid  2px var(--secondary);
-    color: var(--tertiary);
-
+.unitOfWishlist {
+  position: absolute;
+  bottom: 1.2rem;
+  font-size: small;
+  background-color: var(--primary);
+  border-radius: 50%;
+  font-weight: bold;
+  left: 21px;
+  border: solid 2px var(--secondary);
+  color: var(--tertiary);
+  padding: 4px;
 }
