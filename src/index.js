@@ -4,15 +4,12 @@ import {StrictMode} from 'react';
 import "./index.css";
 import App from "./App";
 import {makeServer} from "./server";
-import {AppContext, AppContextProvider} from "./Components/CountContex";
+import {AppContextProvider} from "./Components/UseContex";
 
 // Call make Server
 makeServer();
-ReactDOM.render (
-    <StrictMode>
-        <AppContextProvider>
-            <App/>
-        </AppContextProvider>
-    </StrictMode>,
-    document.getElementById("root")
-);
+ReactDOM.render (<StrictMode>
+    <AppContextProvider>
+        <App/>
+    </AppContextProvider>
+</StrictMode>, document.getElementById("root"));

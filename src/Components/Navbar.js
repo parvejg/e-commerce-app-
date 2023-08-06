@@ -1,56 +1,63 @@
 import "./Navbar.css";
 import {ImSearch} from "react-icons/im";
 import {getData} from "./reusableFunction";
-import {CiUser} from "react-icons/ci";
 import {Cart, Wishlist} from "./Badge";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {createContext, useEffect, useState} from "react";
 import axios from "axios";
-export const Navbar = () => {
-    const [wishlistItem, setWishlistItem] = useState(0)
-    const [cartItem, setCartItem] = useState(0)
+import {AppContext, useAppContex} from "./UseContex";
 
-    const wishlistApiUrl = "/api/user/wishlist"
-    const encodedToken = localStorage.getItem("encodedToken")
-    const headers = {
-        headers: {
-            authorization: encodedToken
-        }
-    }
-    const getWishlistHandler = async () => {
-        const response = await axios.get(wishlistApiUrl, headers)
-        setWishlistItem(response.data.wishlist.length);                   
+export const Navbar = (props) => {
+    // const contex = createContext(AppContext)
+    // const {state, dispatch} = contex
+    // const {cardDetail} = props;
+    // const requestBody = {
+    //     product: cardDetail
+    // }
 
-    }
+    // const [cartItem, setCartItem] = useState(0)
+    // const [wishlistItem, setWishlistItem] = useState(0)
 
-    useEffect(() => {
-        (async () => {
-            getWishlistHandler()
-        })();
+    // const getWishlistHandler = async () => {
 
-    }, []);
+    //     const wishlistApiUrl = "/api/user/wishlist"
+    //     const encodedToken = localStorage.getItem("encodedToken")
+    //     const headers = {
+    //         headers: {
+    //             authorization: encodedToken
+    //         }
+    //     }
+    //     const response = await axios.get(wishlistApiUrl, headers)
+    //     if (response.status === 200 || 201) {
+    //         const response = await axios.post(wishlistApiUrl, requestBody, headers)
+    //         setWishlistItem(response.data.wishlist.length)
+    //     }
+    // }
+    // useEffect(() => {
+    //     getWishlistHandler()
+    // }, [])
+    // const getCartHandler = async () => {
+    //     const cartApiUrl = "/api/user/cart"
+    //     const encodedToken = localStorage.getItem("encodedToken")
+    //     const headers = {
+    //         headers: {
+    //             authorization: encodedToken
+    //         }
+    //     }
+    //     const response = await axios.get(cartApiUrl, headers)
+    //     if (response.status === 200 || 201) {
+    //         const response = await axios.post(cartApiUrl, requestBody, headers)
+    //         setCartItem(response.data.cart.length)
+    //     }
 
-    const getCartHandler = async () => {
-        const cartApiUrl = "/api/user/cart"
-        const encodedToken = localStorage.getItem("encodedToken")
-        const headers = {
-            headers: {
-                authorization: encodedToken
-            }
-        }
-        const response = await axios.get(cartApiUrl, headers)
-        setCartItem(response.data.cart.length)
+    // }
+    // useEffect(() => {
+    //     (async () => {
+    //         getCartHandler()
+    //     })();
 
-    }
-    useEffect(() => {
-        (async () => {
-            const getCart = getCartHandler()
-        })();
-
-    }, []);
+    // }, []);
     return (
-
-
         <nav className="navbar-wrapper">
             <Link className="flipcart-text" to="/landing-page">
                 {" "}
@@ -76,8 +83,8 @@ export const Navbar = () => {
                     {" "} </li>
                 {" "}
                 <div className="navbar-icon-links-wrapper">
-                    <Cart cartItem={cartItem}/>
-                    <Wishlist wishlistItem={wishlistItem}/>
+                    <Cart/>
+                    <Wishlist/>
                 </div>
                 {" "} </div>
             {" "} </nav>

@@ -1,9 +1,9 @@
 import {AiOutlineStar} from "react-icons/ai";
 import {FiStar} from "react-icons/fi";
 import "./Card.css";
-import {useEffect} from "react";
-import {getData} from "./reusableFunction";
+import {createContext, useContext, useEffect, useState} from "react";
 import axios from "axios";
+import {AppContext, useAppContex} from "./UseContex";
 // export const ProductDemoCard1 = (props) => {
 // const { src, alt } = props;
 // return (
@@ -35,27 +35,46 @@ import axios from "axios";
 
 
 export const ProductDemoCard3 = (props) => {
+    const context = useContext(AppContext)
+    const {dispatch} = context
     const {cardDetail} = props;
-    const {title, price, src, author} = cardDetail;
-    const requestBody = {
-        product: cardDetail
-    }
 
-    const encodedToken = localStorage.getItem("encodedToken")
-    const headers = {
-        headers: {
-            authorization: encodedToken
-        }
-    }
+    const {
+        title,
+        price,
+        src,
+        author,
+        _id
+    } = cardDetail;
+
+    const [btnName, setBtnName] = useState("Add to Wishlist")
 
     const wishlistPostHandler = async () => {
+        const requestBody = {
+            product: cardDetail
+        }
+        const encodedToken = localStorage.getItem("encodedToken")
+        const headers = {
+            headers: {
+                authorization: encodedToken
+            }
+
+        }
         const wishlistApiUrl = "/api/user/wishlist";
         const response = await axios.post(wishlistApiUrl, requestBody, headers)
-        console.log(response);
+        if (response.status === 200 || 201) {
+            const response = await axios.get(wishlistApiUrl, headers)
+            dispatch({type: "Get_wishItem", payload: response.data.wishlist.length})
+            setBtnName("Remove from Wishlist")
+
+        }
+        // if (response.status === 200 || 201) {
+        //     const response = await axios.delete(deleteWishlistApiUrl, headers)
+        // }
     }
 
+    const cartPostHandler = async () => {
 
-    const CartPostHandler = async () => {
         const cartApiUrl = "/api/user/cart";
         const requestBody = {
             product: cardDetail
@@ -68,8 +87,28 @@ export const ProductDemoCard3 = (props) => {
             }
         }
         const response = await axios.post(cartApiUrl, requestBody, headers)
-        console.log(response);
+        if (response.status === 200 || 201) {
+            const response = await axios.get(cartApiUrl, headers)
+            dispatch({type: "Get_cartItem", payload: response.data.cart.length})
+        }
     }
+
+    const deleteWishlistHandler = async () => {
+        const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`
+        const encodedToken = localStorage.getItem("encodedToken")
+        const headers = {
+            headers: {
+                authorization: encodedToken
+            }
+        }
+        const response = await axios.delete(deleteWishlistApiUrl, headers)
+
+        if (response.status === 200 || 201) {
+            dispatch({type: "Get_wishItem", payload: response.data.wishlist.length})
+        }
+    }
+
+
     return (
         <div className="productListingCard-wrapper">
             <img className="listing-img" alt="listingCard-img"
@@ -84,14 +123,15 @@ export const ProductDemoCard3 = (props) => {
                     {price}</p>
                 <div className="listingcard-btn-wrapper">
                     <button className="listingCard-buyNow-btn"
-                        onClick={CartPostHandler}>
+                        onClick={cartPostHandler}>
                         Add to cart
                     </button>
 
                     <button className="listingCard-buyNow-btn"
                         onClick={wishlistPostHandler}>
-                        Add to wishlist
-                    </button>
+
+                        {btnName} </button>
+
                 </div>
 
             </div>
@@ -107,7 +147,7 @@ export const DetailCard = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p>
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>
@@ -121,7 +161,7 @@ export const DetailCard2 = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p className="cardDetail">
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>

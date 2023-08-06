@@ -1,13 +1,10 @@
-import axios from "axios";
 import {Layout} from "./Layout";
 import "./WishlistAndCartPage.css";
-import {useEffect} from "react";
 export const CartPage = () => {
 
 
     return <Layout>
         <div className="cartPage-wrapper">
-
             <div className="cart-wrapper">
                 <h2 className="cart-text">cart</h2>
 
