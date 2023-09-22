@@ -3,11 +3,18 @@ import {ImSearch} from "react-icons/im";
 import {getData} from "./reusableFunction";
 import {Cart, Wishlist} from "./Badge";
 import {Link} from "react-router-dom";
-import {createContext, useEffect, useState} from "react";
-import axios from "axios";
-import {AppContext, useAppContex} from "./UseContex";
+import {useContext, useEffect, useState} from "react";
+import {AppContext} from "./UseContex";
 
-export const Navbar = (props) => {
+
+export const Navbar = ({cardDetail}) => {
+    const contex = useContext(AppContext)
+    const {dispatch} = contex
+
+    const inputValueHandler = (e) => {
+        dispatch({type: "search_query", payload: e.target.value})
+    }
+
     // const contex = createContext(AppContext)
     // const {state, dispatch} = contex
     // const {cardDetail} = props;
@@ -59,6 +66,7 @@ export const Navbar = (props) => {
     // }, []);
     return (
         <nav className="navbar-wrapper">
+
             <Link className="flipcart-text" to="/landing-page">
                 {" "}
                 Flipcart{" "} </Link>
@@ -68,7 +76,10 @@ export const Navbar = (props) => {
                 </Link>
             </div>
             <div className="navbar-input-wrapper">
-                <input placeholder="Seach Flipcart.." className="navbar-input" type="text"/>
+                <input placeholder="Seach Flipcart.." className="navbar-input" type="text"
+                    onChange={
+                        (e) => inputValueHandler(e)
+                    }/>
                 <span className="search-icon-wrapper">
                     <a className="search-icon" href="/">
                         <ImSearch/>
@@ -143,6 +154,11 @@ export const NavbarLinks = () => {
     );
 };
 export const ResponsiveNavbar = () => {
+    const contex = useContext(AppContext)
+    const {dispatch} = contex
+    const inputValueHandler = (e) => {
+        dispatch({type: "search_query", payload: e.target.value})
+    }
     return (
         <nav className="responsiveNavbar">
             <div className="phone-view-input-wrapper">
@@ -152,7 +168,10 @@ export const ResponsiveNavbar = () => {
                 <Link className="navbar-products-link-ph" to="/product-page">
                     Products
                 </Link>
-                <input type="text" placeholder="search flicart" className="phn-view-input"/>
+                <input type="text" placeholder="search flicart" className="phn-view-input"
+                    onChange={
+                        (e) => inputValueHandler(e)
+                    }/>
                 <span className="search-icon-ph-wrapper">
                     <ImSearch className="search-icon-ph"/>
                 </span>

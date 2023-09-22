@@ -8,7 +8,6 @@ import {useContext} from "react";
 export const Cart = () => {
     const contex = useContext(AppContext)
     const {state} = contex
-    console.log(state.cartItemCount);
 
     return (
 
@@ -31,7 +30,6 @@ export const Cart = () => {
 export const Wishlist = () => {
     const contex = useContext(AppContext)
     const {state} = contex
-    console.log(state.countWishItem);
     return (
         <span>
             <Link to="/wishlist-page" className="navbar-links" href="/">

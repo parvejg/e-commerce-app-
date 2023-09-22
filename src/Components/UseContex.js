@@ -19,6 +19,17 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 deleteWishListItem: action.payload
+            };
+        case "search_query":
+            return {
+                ...state,
+                searchQuery: action.payload
+
+            };
+        case "low-to-high":
+            return {
+                ...state,
+                searchPrice: action.payload
             }
         default:
             return state
@@ -27,7 +38,9 @@ const reducer = (state, action) => {
 const initialState = {
     countWishItem: 0,
     cartItemCount: 0,
-    deleteWishListItem: 0
+    deleteWishListItem: 0,
+    searchQuery: "",
+    searchPrice: ""
 }
 
 export const AppContextProvider = ({children}) => {

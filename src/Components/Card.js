@@ -83,9 +83,6 @@ export const ProductDemoCard3 = (props) => {
                 setBtnName("Add to Wishlist");
             }
         }
-        // if (response.status === 200 || 201) {
-        //     const response = await axios.delete(deleteWishlistApiUrl, headers)
-        // }
     };
 
     const cartPostHandler = async () => {
@@ -100,12 +97,15 @@ export const ProductDemoCard3 = (props) => {
                 authorization: encodedToken
             }
         };
-        const response = await axios.post(cartApiUrl, requestBody, headers);
-        if (response.status === 200 || 201) {
-            const response = await axios.get(cartApiUrl, headers);
-            dispatch({type: "Get_cartItem", payload: response.data.cart.length});
-            setCartBtnName("Remove from Cart");
+        if (cartBtnName === "Add to Cart") {
+            const response = await axios.post(cartApiUrl, requestBody, headers);
+            if (response.status === 200 || 201) {
+                const response = await axios.get(cartApiUrl, headers);
+                dispatch({type: "Get_cartItem", payload: response.data.cart.length});
+                setCartBtnName("Remove from Cart");
+            }
         }
+
         if (cartBtnName === "Remove from Cart") {
             const deleteCartApiUrl = `/api/user/cart/${_id}`;
             const encodedToken = localStorage.getItem("encodedToken");
@@ -122,22 +122,6 @@ export const ProductDemoCard3 = (props) => {
             }
         }
     };
-
-    // const deleteWishlistHandler = async () => {
-    //     const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`
-    //     const encodedToken = localStorage.getItem("encodedToken")
-    //     const headers = {
-    //         headers: {
-    //             authorization: encodedToken
-    //         }
-    //     }
-    //     const response = await axios.delete(deleteWishlistApiUrl, headers)
-
-    //     if (response.status === 200 || 201) {
-    //         dispatch({type: "Get_wishItem", payload: response.data.wishlist.length})
-    //     }
-    // }
-
     return (
         <div className="productListingCard-wrapper">
             <img className="listing-img" alt="listingCard-img"
@@ -173,7 +157,7 @@ export const DetailCard = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p>
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                              with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                          with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>
@@ -187,7 +171,7 @@ export const DetailCard2 = () => {
                 <h3>Women Jackets - Buy Branded Jackets For Women.</h3>
                 <p className="cardDetail">
                     Specs: Spread collar Full button placket Two waist pocketsLong sleeves
-                                                                                                              with buttoned cuffs Solid Country of Origin - India
+                                                                                                                                                                          with buttoned cuffs Solid Country of Origin - India
                 </p>
             </div>
         </div>

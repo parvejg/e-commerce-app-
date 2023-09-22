@@ -13,7 +13,8 @@
   left: 16px;
   border: solid 2px var(--secondary);
   color: var(--tertiary);
-  padding: 4px;
+  width: 17px;
+  height: 17px;
 }
 
 .wishlist-icon-wrapper {
@@ -31,5 +32,6 @@
   left: 21px;
   border: solid 2px var(--secondary);
   color: var(--tertiary);
-  padding: 4px;
+  width: 17px;
+  height: 17px;
 }
