@@ -1,4 +1,4 @@
-import {v4 as uuid} from "uuid";
+import { v4 as uuid } from "uuid";
 
 /**
  * Product Database can be added here.
@@ -6,150 +6,214 @@ import {v4 as uuid} from "uuid";
  * */
 
 export const products = [
-    {
-        _id: uuid(),
-        src: "https://5.imimg.com/data5/AL/RS/MY-2325220/men-ankle-length-jeans-500x500.jpg",
-        title: "Men Ankle Length Jeans",
-        author: "Stylox",
-        price: "700",
-        categoryName: "non-fiction"
-    },
-    {
-        _id: uuid(),
-        src: "https://mywebstoreshopping.com/cdn/shop/products/pants-men-streetwear-jeans-men-new-fashion-casual-straight-denim-slim-hole-jeans-blue-38-457.jpg?v=1637536242&width=713",
-        title: "Denim Slim Hole Jeans",
-        author: "Levis: Men New Fashion",
-        price: "3000",
-        categoryName: "horror"
-    },
-    {
-        _id: uuid(),
-        src: "https://getketchadmin.getketch.com/product/8907787958000/660/HLJN000877_6.jpg",
-        title: "Highlander",
-        author: "Tapered Fit Stretchable Jeans",
-        price: "599",
-        categoryName: "fiction"
-    },
-    {
-        _id: uuid(),
-        src: "https://mywebstoreshopping.com/cdn/shop/files/bdf5c137-3965-4304-8124-51328d673031.jpg?v=1686835462&width=713",
-        title: "Zip Printed Polo Shirt",
-        author: "T-shirt is a high-quality stylish",
-        price: "6000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://mywebstoreshopping.com/cdn/shop/files/bdf5c137-3965-4304-8124-51328d673031.jpg?v=1686835462&width=713",
-        title: "Slim-fit Jeans",
-        author: "Levis Slim Fit Mens Jeans",
-        price: "999",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
-        title: "Blue Ripped Jeans",
-        author: "Men's Ripped Printed Baggy",
-        price: "1300",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
-        title: "COTTON BLUE SLIM SHIRT",
-        author: "Fabric: 100% Cotton Indigo",
-        price: "3000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-        title: "RUST & NAVY CHECKS SHIRT",
-        author: "Button Down Collar",
-        price: "1200",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
-        title: "Blue Ripped Jeans",
-        author: "Men's Ripped Printed Baggy",
-        price: "1300",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
-        title: "COTTON BLUE SLIM SHIRT",
-        author: "Fabric: 100% Cotton Indigo",
-        price: "3000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-        title: "RUST & NAVY CHECKS SHIRT",
-        author: "Button Down Collar",
-        price: "1200",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
-        title: "Blue Ripped Jeans",
-        author: "Men's Ripped Printed Baggy",
-        price: "1300",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
-        title: "COTTON BLUE SLIM SHIRT",
-        author: "Fabric: 100% Cotton Indigo",
-        price: "3000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-        title: "RUST & NAVY CHECKS SHIRT",
-        author: "Button Down Collar",
-        price: "1200",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
-        title: "Blue Ripped Jeans",
-        author: "Men's Ripped Printed Baggy",
-        price: "1300",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
-        title: "COTTON BLUE SLIM SHIRT",
-        author: "Fabric: 100% Cotton Indigo",
-        price: "3000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-        title: "RUST & NAVY CHECKS SHIRT",
-        author: "Button Down Collar",
-        price: "1200",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
-        title: "Blue Ripped Jeans",
-        author: "Men's Ripped Printed Baggy",
-        price: "1300",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
-        title: "COTTON BLUE SLIM SHIRT",
-        author: "Fabric: 100% Cotton Indigo",
-        price: "3000",
-        categoryName: "fiction"
-    }, {
-        _id: uuid(),
-        src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
-        title: "RUST & NAVY CHECKS SHIRT",
-        author: "Button Down Collar",
-        price: "1200",
-        categoryName: "fiction"
-    },
+  {
+    _id: uuid(),
+    src: "https://5.imimg.com/data5/AL/RS/MY-2325220/men-ankle-length-jeans-500x500.jpg",
+    title: "Men Ankle Length Jeans",
+    author: "Stylox",
+    price: "700",
+    categoryName: "Men",
+    rating: 2,
+  },
+  {
+    _id: uuid(),
+    src: "https://5.imimg.com/data5/ECOM/Default/2023/6/317045628/NK/DW/FF/9422220/pants-men-streetwear-jeans-men-new-fashion-casual-straight-denim-slim-hole-jeans-men-602-500x500.jpg",
+    title: "Denim Slim Hole Jeans",
+    author: "Levis: Men New Fashion",
+    price: "3000",
+    categoryName: "Men",
+    rating: 4,
+  },
+  {
+    _id: uuid(),
+    src: "https://getketchadmin.getketch.com/product/8907787958000/660/HLJN000877_6.jpg",
+    title: "Highlander",
+    author: "Tapered Fit Stretchable Jeans",
+    price: "599",
+    categoryName: "Men",
+    rating: 3,
+  },
+  {
+    _id: uuid(),
+    src: "https://m.media-amazon.com/images/I/81aM5v4SdZL._AC_UY1100_.jpg",
+    title: "Zip Printed Polo Shirt",
+    author: "T-shirt is a high-quality stylish",
+    price: "6000",
+    categoryName: "Men",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230602/xc7B/64796ce442f9e729d71404b7/-473Wx593H-462137740-grey-MODEL.jpg",
+    title: "Slim-fit Jeans",
+    author: "Levis Slim Fit Mens Jeans",
+    price: "999",
+    categoryName: "Men",
+    rating: 3,
+  },
+  {
+    _id: uuid(),
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmERFJuBtWleRx1Rr3GjNvESs0adznuNHTnQ&usqp=CAU",
+    title: "Blue Ripped Jeans",
+    author: "Men's Ripped Printed Baggy",
+    price: "1300",
+    categoryName: "Men",
+    rating: 4,
+  },
 
+  {
+    _id: uuid(),
+    src: "https://thebearhouse.com/cdn/shop/products/TBH-TONIC-RT1_1800x1800.jpg?v=1667988066",
+    title: "RUST & NAVY CHECKS SHIRT",
+    author: "Button Down Collar",
+    price: "1200",
+    categoryName: "Men",
+    rating: 3,
+  },
 
+  {
+    _id: uuid(),
+    src: "https://turtle.in/cdn/shop/products/CLQ-8340_1800x1800.jpg?v=1657705393",
+    title: "COTTON BLUE SLIM SHIRT",
+    author: "Fabric: 100% Cotton Indigo",
+    price: "3000",
+    categoryName: "Men",
+    rating: 4,
+  },
+
+  {
+    _id: uuid(),
+    src: "https://www.jiomart.com/images/product/500x630/rvyexbhncb/gosriki-women-s-cotton-blend-pink-straight-printed-kurta-with-trousers-product-images-rvyexbhncb-0-202302182123.jpg",
+    title: "Embroidered Round-Neck A-line Kurta",
+    author: "Pink",
+    price: "3000",
+    categoryName: "Women",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230714/hnkp/64b13700a9b42d15c953e92f/-473Wx593H-466306232-white-MODEL.jpg",
+    title: "Geometric Print Fit & Flare Dress",
+    author: "White",
+    price: "4000",
+    categoryName: "Women",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230706/ZZG0/64a5c838a9b42d15c9395d67/-473Wx593H-466336976-blue-MODEL.jpg",
+    title: "Floral Print Fit & Flare Dress",
+    author: "Blue",
+    price: "500",
+    categoryName: "Women",
+    rating: 3,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230727/tAns/64c29d84a9b42d15c975d209/-473Wx593H-466394136-black-MODEL4.jpg",
+    title: "Animal Print Top & Pants Set",
+    author: "Black",
+    price: "500",
+    categoryName: "Kids",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230516/m2bu/6462a7b142f9e729d789f4f6/-288Wx360H-466155833-orange-MODEL.jpg",
+    title: "Striped Fit & Flare Dress with Bow Accent",
+    author: "BlTIOR",
+    price: "600",
+    categoryName: "Kids",
+    rating: 2,
+  },
+  {
+    _id: uuid(),
+    src: "https://rukminim1.flixcart.com/image/850/1000/ks4yz680/kids-t-shirt/j/h/k/3-4-years-thsirt2-combo96-kavee-original-imag5rjskyb2ggzc.jpeg?q=90",
+    title: "Pack of 3 Typographic Print Crew-Neck T-Shirts",
+    author: "Pink",
+    price: "400",
+    categoryName: "Kids",
+    rating: 1,
+  },
+  {
+    _id: uuid(),
+    src: "https://www.jiomart.com/images/product/original/rvj2wpbwdj/portronics-sound-drum-p-20w-portable-bluetooth-speaker-black-por-1578-product-images-orvj2wpbwdj-p593796316-0-202209160139.jpg?im=Resize=(420,420)",
+    title: "20W Portable Bluetooth Speaker",
+    author: "PORTRONICS",
+    price: "1400",
+    categoryName: "Electronics",
+    rating: 1,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20220820/xlUc/62ffe307aeb269176189c990/-473Wx593H-469219312-black-MODEL.jpg",
+    title: "Twins True Wireless Earpods",
+    author: "Black",
+    price: "1200",
+    categoryName: "Electronics",
+    rating: 3,
+  },
+  {
+    _id: uuid(),
+    src: "https://assets.ajio.com/medias/sys_master/root/20230224/F4Kw/63f8e947f997dde6f4c610da/-1117Wx1400H-460977302-blue-MODEL.jpg",
+    title: "Men FCUK007B Universal Smart Watch",
+    author: "Blue",
+    price: "2,400",
+    categoryName: "Electronics",
+    rating: 3,
+  },
+  {
+    _id: uuid(),
+    src: "https://image01.realme.net/general/20231002/16962460060228b0707202768428c9571577dd332d19a.jpg.webp",
+    title: "Realme c53",
+    author: "Black",
+    price: " 10,999",
+    categoryName: "Mobile",
+    rating: 4,
+  },
+  {
+    _id: uuid(),
+    src: "https://m.media-amazon.com/images/I/71J8tz0UeJL.jpg",
+    title: "Samsung S22 Ultra 5G 512 ",
+    author: "Brown",
+    price: " 142,999",
+    categoryName: "Mobile",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/screenshot_2023-05-27_at_5.03.09_pm-sixteen_nine.png?VersionId=XPWzv0Wb4xNqHT_ewiwcjEI_5pWWvOCC&size=690:388",
+    title: "Apple I Phone 15 pro max",
+    author: "Blue",
+    price: "1,40,900.00",
+    categoryName: "Mobile",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://nurserynisarga.in/wp-content/uploads/2019/09/main-4.webp",
+    title: "Gulmohar (Delonix Regia)",
+    author: "its brilliant flowers.",
+    price: "2750.00 ",
+    categoryName: "Plant",
+    rating: 4,
+  },
+  {
+    _id: uuid(),
+    src: "https://i.pinimg.com/474x/a7/9e/a3/a79ea3fe45b753abff6d6a766044a524.jpg",
+    title: "Chinese evergreen plant",
+    author: "Best For Bathroom",
+    price: " 2500",
+    categoryName: "Plant",
+    rating: 5,
+  },
+  {
+    _id: uuid(),
+    src: "https://www.ikea.com/in/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0614197_pe686822_s5.jpg",
+    title: "FEJKA Artificial potted plant - in/outdoor ",
+    author: "FEJKA",
+    price: " 2000",
+    categoryName: "Plant",
+    rating: 4,
+  },
 ];

@@ -11,12 +11,14 @@ export const categories = [
     categoryName: "Men",
     description:
       "literature in the form of prose, especially novels, that describes imaginary events and people",
+    lowToHighPrice: "Low to High",
   },
   {
     _id: uuid(),
     categoryName: "Women",
     description:
       "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    highToLowPrice: "High to Low",
   },
   {
     _id: uuid(),
@@ -26,16 +28,17 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Electronices",
+    categoryName: "Electronics",
     description:
       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
   },
   {
     _id: uuid(),
-    categoryName: "Moblie",
+    categoryName: "Mobile",
     description:
       "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
-  },  {
+  },
+  {
     _id: uuid(),
     categoryName: "Plant",
     description:
