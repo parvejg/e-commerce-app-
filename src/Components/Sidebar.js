@@ -71,7 +71,7 @@ export const Sidebar = () => {
             type="radio"
             id="rating5-radio"
             name="ratingBox"
-            value="five-start"
+            value={5}
             onChange={(e) => setSortRatingHandler(e)}
           />
           5 Star & above
@@ -81,7 +81,7 @@ export const Sidebar = () => {
             type="radio"
             id="rating4-radio"
             name="ratingBox"
-            value="four-star"
+            value={4}
             onChange={(e) => setSortRatingHandler(e)}
           />
           4 Star & above
@@ -92,7 +92,7 @@ export const Sidebar = () => {
             type="radio"
             id="rating3-radio"
             name="ratingBox"
-            value="three-star"
+            value={3}
             onChange={(e) => setSortRatingHandler(e)}
           />
           3 Star & above
@@ -102,7 +102,7 @@ export const Sidebar = () => {
             type="radio"
             id="rating2-radio"
             name="ratingBox"
-            value="two-star"
+            value={2}
             onChange={(e) => setSortRatingHandler(e)}
           />
           2 Star & above
@@ -112,7 +112,7 @@ export const Sidebar = () => {
             type="radio"
             id="rating1-radio"
             name="ratingBox"
-            value="one-star"
+            value={1}
             onChange={(e) => setSortRatingHandler(e)}
           />
           1 Star & above

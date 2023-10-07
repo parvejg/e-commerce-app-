@@ -48,7 +48,6 @@ const reducer = (state, action) => {
         ...state,
         selectedRating: action.payload,
       };
-
     default:
       return state;
   }
@@ -62,7 +61,7 @@ const initialState = {
   selectCategory: "",
   selectedCategories: [],
   sortQuery: "",
-  selectedRating: "",
+  selectedRating: null,
 };
 
 export const AppContextProvider = ({ children }) => {

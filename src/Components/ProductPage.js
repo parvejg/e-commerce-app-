@@ -36,6 +36,9 @@ export const ProductPage = () => {
     ? sortProductByPriceHandler()
     : productList;
 
+  const productListsortedByRating = productListSortedByPrice?.filter((item) => {
+    return item.rating >= state.selectedRating;
+  });
   const productAPIUrl = "/api/products";
   useEffect(() => {
     // fetch(productAPIUrl)
@@ -52,7 +55,7 @@ export const ProductPage = () => {
       <div className="sidebar-and-productContent-wrapper">
         <Sidebar />
         <div className="product-content-wrapper">
-          {productListSortedByPrice?.map((cardDetail) => {
+          {productListsortedByRating?.map((cardDetail) => {
             return (
               <div key={cardDetail.id}>
                 <ProductDemoCard3 cardDetail={cardDetail} />
