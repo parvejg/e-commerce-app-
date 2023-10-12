@@ -167,7 +167,7 @@ p {
 .detail-card-wrapper {
   display: flex;
   background-color: var(--sector);
-  width: 45%px;
+  width: 45%;
   height: 300px;
   margin: 6px;
 }
