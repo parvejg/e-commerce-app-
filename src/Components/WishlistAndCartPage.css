@@ -80,3 +80,45 @@
   font-size: large;
   font-weight: 400;
 }
+.price-details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 25%;
+  height: 65%;
+  background-color: var(--sector);
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+}
+.cart-price-text {
+  margin-right: 5px;
+}
+.priceInWords {
+  margin-left: 5px;
+  width: 100%;
+  height: 100%;
+  color: green;
+}
+.cartPrice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartTotalPrice-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.proceedTo-shipping-btn {
+  width: 60%;
+  padding: 8px 0;
+  align-items: center;
+  font-weight: bold;
+  background-color: floralwhite;
+  border: solid 1px wheat;
+}
+.proceedTo-shipping-btn:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}

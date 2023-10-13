@@ -1,28 +1,68 @@
+import axios from "axios";
 import { Layout } from "./Layout";
 import "./WishlistAndCartPage.css";
+import { useEffect, useState } from "react";
 export const CartPage = () => {
+  const [cartItem, setCartItem] = useState([]);
+  const cartApiUrl = "/api/user/cart";
+  const encodedToken = localStorage.getItem("encodedToken");
+  const headers = {
+    headers: {
+      authorization: encodedToken,
+    },
+  };
+  useEffect(() => {
+    async function getCartData() {
+      const response = await axios.get(cartApiUrl, headers);
+      const cartData = response.data.cart;
+      setCartItem(cartData);
+      console.log(cartData);
+    }
+    getCartData();
+  }, []);
   return (
     <Layout>
-      <div className="cartPage-container">
-        <div className="cart-img-container">
-          <img
-            className="cartPage-img"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmyc4SRtcqPPJBgBEci3rzPAj-_yZU02gw_A&usqp=CAU"
-          />
-        </div>
-        <div className="cart-info">
-          <h2>Title</h2>
-          <h3>Sub Title</h3>
-          <p>Price</p>
-          <p className="quantity-text">
-            Quantity <button className="cart-inc-dec-btn">-</button> 0{" "}
-            <button className="cart-inc-dec-btn">+</button>
-          </p>
-          <div className="cartBtn-container">
-            <button className="cartBtn">Remove from Cart</button>
-            <button className="cartBtn">Add to Wishlist</button>
+      {cartItem?.map((cartItems) => {
+        return (
+          <div className="cartPage-container">
+            <div className="cart-img-container">
+              <img
+                alt="cartOfImg"
+                className="cartPage-img"
+                src={cartItems.src}
+              />{" "}
+            </div>
+            <div className="cart-info">
+              <h2>{cartItems.title}</h2>
+              <h3>{cartItems.author}</h3>
+              <p>{cartItems.price}</p>
+              <p className="quantity-text">
+                Quantity <button className="cart-inc-dec-btn">-</button>
+                {cartItems.qty} <button className="cart-inc-dec-btn">+</button>
+              </p>
+              <div className="cartBtn-container">
+                <button className="cartBtn">Remove from Cart</button>
+                <button className="cartBtn">Add to Wishlist</button>
+              </div>
+            </div>
           </div>
+        );
+      })}
+
+      <div className="price-details-container">
+        <h2>PRICE DETAILS</h2>
+
+        <div className="cartPrice-container">
+          <h2 className="cart-price-text">
+            Price <span className="priceInWords">78</span>
+          </h2>
         </div>
+        <div className="cartTotalPrice-container">
+          <h2 className="cart-price-text">
+            Total Price <span className="priceInWords">00</span>
+          </h2>
+        </div>
+        <button className="proceedTo-shipping-btn">PROCEED TO SHIPPING</button>
       </div>
     </Layout>
   );

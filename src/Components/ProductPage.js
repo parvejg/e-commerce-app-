@@ -41,11 +41,6 @@ export const ProductPage = () => {
   });
   const productAPIUrl = "/api/products";
   useEffect(() => {
-    // fetch(productAPIUrl)
-    // .then((res) => res.json())
-    // .then((data) => {
-    //     SetCardAPI(data.products);
-    // });
     getData(productAPIUrl, SetCardAPI);
   }, []);
 
