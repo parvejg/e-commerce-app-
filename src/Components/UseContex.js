@@ -48,6 +48,22 @@ const reducer = (state, action) => {
         ...state,
         selectedRating: action.payload,
       };
+    case "Complete_cart_Data":
+      return {
+        ...state,
+        completeCartData: action.payload,
+      };
+    case "total_price":
+      return {
+        ...state,
+        TotalCartItemPrice: action.payload,
+      };
+    case "cart-price":
+      return {
+        ...state,
+        cartItemPrice: action.payload,
+      };
+
     default:
       return state;
   }
@@ -62,6 +78,9 @@ const initialState = {
   selectedCategories: [],
   sortQuery: "",
   selectedRating: null,
+  TotalCartItemPrice: [],
+  completeCartData: [],
+  cartItemPrice: [],
 };
 
 export const AppContextProvider = ({ children }) => {
