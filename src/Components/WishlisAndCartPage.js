@@ -24,6 +24,7 @@ export const CartPage = (props) => {
     };
     const response = await axios.delete(deleteCartApiUrl, headers);
   }
+  useEffect(() => {});
   useEffect(() => {
     async function getCartData() {
       const response = await axios.get(cartApiUrl, headers);
@@ -40,6 +41,7 @@ export const CartPage = (props) => {
           {cartItem?.map((cartItems) => {
             return (
               <CartProductsCard
+                setCartItem={setCartItem}
                 cartItems={cartItems}
                 deleteCartHandler={() => deleteCartHandler(cartItems._id)}
               />

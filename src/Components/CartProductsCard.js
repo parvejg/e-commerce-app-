@@ -1,8 +1,11 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { AppContext } from "./UseContex";
 
 export const CartProductsCard = (props) => {
-  const { cartItems, deleteCartHandler } = props;
+  const context = useContext(AppContext);
+  const { dispatch, state } = context;
+  const { cartItems, deleteCartHandler, setCartItem } = props;
   async function cartQtyHandler(_id, type) {
     const cartPostendPoint = `/api/user/cart/${_id}`;
     const encodedToken = localStorage.getItem("encodedToken");
@@ -17,9 +20,21 @@ export const CartProductsCard = (props) => {
       },
     };
     const response = await axios.post(cartPostendPoint, requestBody, headers);
+    setCartItem(response.data.cart);
   }
-  useEffect(() => {});
-
+  useEffect(() => {
+    const cartGetEndPoin = "/api/user/cart";
+    const encodedToken = localStorage.getItem("encodedToken");
+    const headers = {
+      headers: {
+        authorization: encodedToken,
+      },
+    };
+    async function cartdat() {
+      const response = await axios.get(cartGetEndPoin, headers);
+      dispatch({ type: "cart_Data", payload: response.data.cart });
+    }
+  });
   return (
     <div className="cartPage-container">
       <div className="cart-img-container">
@@ -32,6 +47,7 @@ export const CartProductsCard = (props) => {
         <p className="quantity-text">
           Quantity
           <button
+            disabled={cartItems.qty === 1}
             className="cart-inc-dec-btn"
             onClick={() => {
               cartQtyHandler(cartItems._id, "decrement");

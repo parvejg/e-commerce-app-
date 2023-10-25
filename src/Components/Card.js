@@ -42,7 +42,6 @@ export const ProductDemoCard3 = (props) => {
 
   const [btnName, setBtnName] = useState("Add to Wishlist");
   const [cartBtnName, setCartBtnName] = useState("Add to Cart");
-
   const wishlistPostHandler = async () => {
     const requestBody = {
       product: cardDetail,
@@ -102,6 +101,12 @@ export const ProductDemoCard3 = (props) => {
       if (response.status === 200 || 201) {
         const response = await axios.get(cartApiUrl, headers);
         dispatch({ type: "Get_cartItem", payload: response.data.cart.length });
+        // if (state.cartBtnName === "Add to Cart") {
+        //   dispatch({
+        //     type: "cartBtnName",
+        //     payload: state.cartBtnName === "Remove from Cart",
+        //   });
+        // }
         setCartBtnName("Remove from Cart");
       }
     }
@@ -118,10 +123,37 @@ export const ProductDemoCard3 = (props) => {
 
       if (response.status === 200 || 201) {
         dispatch({ type: "Get_cartItem", payload: response.data.cart.length });
+        // if (state.cartBtnName === "Remove from Cart") {
+        //   dispatch({
+        //     type: "cartBtnName",
+        //     payload: state.cartBtnName,
+        //   });
+        // }
         setCartBtnName("Add to Cart");
       }
     }
   };
+  // useEffect(() => {
+  //   const cartGetEndPoin = "/api/user/cart";
+  //   const encodedToken = localStorage.getItem("encodedToken");
+  //   const headers = {
+  //     headers: {
+  //       authorization: encodedToken,
+  //     },
+  //   };
+  //   async function cartData() {
+  //     dispatch({ type: "cart_Data", payload: state.cart.qty });
+
+  //     if (state.cart.qty === 1) {
+  //       dispatch({
+  //         type: "setBtnName",
+  //         payload: setBtnName("Remove fron Cart"),
+  //       });
+  //     } else {
+  //       dispatch({ type: "setBtnName", payload: setBtnName("Add to Cart") });
+  //     }
+  //   }
+  // });
   return (
     <div className="productListingCard-wrapper">
       <img className="listing-img" alt="listingCard-img" src={src} />

@@ -48,26 +48,32 @@ const reducer = (state, action) => {
         ...state,
         selectedRating: action.payload,
       };
-    case "Complete_cart_Data":
+    case "cart_Data":
       return {
         ...state,
-        completeCartData: action.payload,
+        cart: action.payload,
       };
-    case "total_price":
+    case "cartBtnName":
       return {
         ...state,
-        TotalCartItemPrice: action.payload,
+        cartBtnName: action.payload,
       };
-    case "cart-price":
+    case "wishlistBtnName":
       return {
         ...state,
-        cartItemPrice: action.payload,
+        wishlistBtnName: action.payload,
+      };
+    case "removeCartBtn":
+      return {
+        ...state,
+        removeCartBtn: action.payload,
       };
 
     default:
       return state;
   }
 };
+
 const initialState = {
   countWishItem: 0,
   cartItemCount: 0,
@@ -78,9 +84,10 @@ const initialState = {
   selectedCategories: [],
   sortQuery: "",
   selectedRating: null,
-  TotalCartItemPrice: [],
-  completeCartData: [],
-  cartItemPrice: [],
+  cart: [],
+  cartBtnName: "Add to Cart",
+  wishlistBtnName: "Add to Wishlist",
+  removeCartBtn: "Remove from Cart",
 };
 
 export const AppContextProvider = ({ children }) => {

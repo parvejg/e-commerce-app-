@@ -23,9 +23,13 @@ export const PriceDetailCard = (props) => {
       <h2>PRICE DETAILS</h2>
 
       <div className="cartPrice-container">
-        <h2 className="cart-price-text">
-          Price <span className="priceInWords">{cartPrice}</span>
-        </h2>
+        {cartList.map((item) => {
+          return (
+            <p>
+              {item.title}........,{item.price},,,(item {item.qty})
+            </p>
+          );
+        })}
       </div>
       <div className="cartTotalPrice-container">
         <h2 className="cart-price-text">
