@@ -8,12 +8,12 @@ const reducer = (state, action) => {
         ...state,
         countWishItem: action.payload,
       };
-    case "setCartItem":
+    case "cartItem":
       return {
         ...state,
         cartList: action.payload,
       };
-    case "setWishItem":
+    case "wishlistItem":
       return {
         ...state,
         wishlistList: action.payload,

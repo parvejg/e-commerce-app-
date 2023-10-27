@@ -21,7 +21,7 @@ export const Navbar = ({ cardDetail }) => {
   //     product: cardDetail
   // }
 
-  // const [cartItem, setCartItem] = useState(0)
+  // const [cartItem, cartItem] = useState(0)
   // const [wishlistItem, setWishlistItem] = useState(0)
 
   // const getWishlistHandler = async () => {
@@ -53,7 +53,7 @@ export const Navbar = ({ cardDetail }) => {
   //     const response = await axios.get(cartApiUrl, headers)
   //     if (response.status === 200 || 201) {
   //         const response = await axios.post(cartApiUrl, requestBody, headers)
-  //         setCartItem(response.data.cart.length)
+  //         cartItem(response.data.cart.length)
   //     }
 
   // }

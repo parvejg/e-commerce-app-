@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
 export const CartPage = (props) => {
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItem, setcartItem] = useState([]);
 
   const cartApiUrl = "/api/user/cart";
   const encodedToken = localStorage.getItem("encodedToken");
@@ -28,7 +28,7 @@ export const CartPage = (props) => {
     async function getCartData() {
       const response = await axios.get(cartApiUrl, headers);
       const cartData = response.data.cart;
-      setCartItem(cartData);
+      setcartItem(cartData);
     }
     getCartData();
   }, []);
@@ -40,9 +40,9 @@ export const CartPage = (props) => {
           {cartItem?.map((cartItems) => {
             return (
               <CartProductsCard
-                setCartItem={setCartItem}
-                cartItems={cartItems}
-                deleteCartHandler={() => deleteCartHandler(cartItems._id)}
+                cartItem={cartItems}
+                setcartItem={setcartItem}
+                deleteCartHandler={() => deleteCartHandler(cartItem._id)}
               />
             );
           })}

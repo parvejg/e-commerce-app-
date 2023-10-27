@@ -44,25 +44,24 @@ export const ProductDemoCard3 = (props) => {
   const inWishlist = state.wishlistList?.some(
     (prod) => prod._id === cardDetail._id
   );
-  console.log(state.inWishlist);
   const wishlistApiUrl = "/api/user/wishlist";
 
   const addToWishlistHandler = async () => {
     const response = await axios.post(wishlistApiUrl, requestBody, headers);
     if (response.status === 200 || 201) {
       const res = await axios.get(wishlistApiUrl, headers);
-      dispatch({ type: "setWishItem", payload: res.data.wishlist });
+      dispatch({ type: "wishlistItem", payload: res.data.wishlist });
     }
   };
-
   const removeFromWishlistHandler = async () => {
     const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`;
     const response = await axios.delete(deleteWishlistApiUrl, headers);
     if (response.status === 200 || 201) {
       const res = await axios.get(wishlistApiUrl, headers);
-      dispatch({ type: "setWishItem", payload: res.data.wishlist });
+      dispatch({ type: "wishlistItem", payload: res.data.wishlist });
     }
   };
+
   const requestBody = {
     product: cardDetail,
   };
@@ -79,7 +78,7 @@ export const ProductDemoCard3 = (props) => {
     const response = await axios.post(cartApiUrl, requestBody, headers);
     if (response.status === 200 || 201) {
       const res = await axios.get(cartApiUrl, headers);
-      dispatch({ type: "setCartItem", payload: res.data.cart });
+      dispatch({ type: "cartItem", payload: res.data.cart });
     }
   };
   async function removeFromCartHandler() {
@@ -87,7 +86,7 @@ export const ProductDemoCard3 = (props) => {
     const response = await axios.delete(deleteCartApiUrl, headers);
     if (response.status === 200 || 201) {
       const res = await axios.get(cartApiUrl, headers);
-      dispatch({ type: "setCartItem", payload: res.data.cart });
+      dispatch({ type: "cartItem", payload: res.data.cart });
     }
   }
   return (
