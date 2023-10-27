@@ -24,7 +24,6 @@ export const CartPage = (props) => {
     };
     const response = await axios.delete(deleteCartApiUrl, headers);
   }
-  useEffect(() => {});
   useEffect(() => {
     async function getCartData() {
       const response = await axios.get(cartApiUrl, headers);
@@ -36,7 +35,7 @@ export const CartPage = (props) => {
   return (
     <Layout>
       <div className="cart-ProductsPage-Container">
-        <PriceDetailCard cartList={cartItem} />
+        <PriceDetailCard cartList={cartItem} wishlistList={cartItem} />
         <div className="">
           {cartItem?.map((cartItems) => {
             return (

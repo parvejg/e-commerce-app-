@@ -1,18 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { AppContext } from "./UseContex";
-
 export const PriceDetailCard = (props) => {
   const { cartList } = props;
-  const { cart, price } = cartList;
-  const context = useContext(AppContext);
-  const { state, dispatch } = context;
-
-  const cartPrice = cartList.reduce((initialValue, currEle) => {
-    let { price, qty } = currEle;
-    initialValue = price * qty;
-    return initialValue;
-  }, 0);
-
   let total_price = cartList.reduce((initialValue, currEle) => {
     let { price, qty } = currEle;
     initialValue = initialValue + price * qty;

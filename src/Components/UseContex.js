@@ -8,10 +8,15 @@ const reducer = (state, action) => {
         ...state,
         countWishItem: action.payload,
       };
-    case "Get_cartItem":
+    case "setCartItem":
       return {
         ...state,
-        cartItemCount: action.payload,
+        cartList: action.payload,
+      };
+    case "setWishItem":
+      return {
+        ...state,
+        wishlistList: action.payload,
       };
     case "Delete_wishItem":
       return {
@@ -53,21 +58,6 @@ const reducer = (state, action) => {
         ...state,
         cart: action.payload,
       };
-    case "cartBtnName":
-      return {
-        ...state,
-        cartBtnName: action.payload,
-      };
-    case "wishlistBtnName":
-      return {
-        ...state,
-        wishlistBtnName: action.payload,
-      };
-    case "removeCartBtn":
-      return {
-        ...state,
-        removeCartBtn: action.payload,
-      };
 
     default:
       return state;
@@ -76,7 +66,8 @@ const reducer = (state, action) => {
 
 const initialState = {
   countWishItem: 0,
-  cartItemCount: 0,
+  cartList: [],
+  wishlistList: [],
   deleteWishListItem: 0,
   searchQuery: "",
   searchPrice: "",
@@ -85,11 +76,7 @@ const initialState = {
   sortQuery: "",
   selectedRating: null,
   cart: [],
-  cartBtnName: "Add to Cart",
-  wishlistBtnName: "Add to Wishlist",
-  removeCartBtn: "Remove from Cart",
 };
-
 export const AppContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (

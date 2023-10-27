@@ -22,19 +22,19 @@ export const CartProductsCard = (props) => {
     const response = await axios.post(cartPostendPoint, requestBody, headers);
     setCartItem(response.data.cart);
   }
-  useEffect(() => {
-    const cartGetEndPoin = "/api/user/cart";
-    const encodedToken = localStorage.getItem("encodedToken");
-    const headers = {
-      headers: {
-        authorization: encodedToken,
-      },
-    };
-    async function cartdat() {
-      const response = await axios.get(cartGetEndPoin, headers);
-      dispatch({ type: "cart_Data", payload: response.data.cart });
-    }
-  });
+  // useEffect(() => {
+  //   const cartGetEndPoin = "/api/user/cart";
+  //   const encodedToken = localStorage.getItem("encodedToken");
+  //   const headers = {
+  //     headers: {
+  //       authorization: encodedToken,
+  //     },
+  //   };
+  //   async function cartdat() {
+  //     const response = await axios.get(cartGetEndPoin, headers);
+  //     dispatch({ type: "cart_Data", payload: response.data.cart });
+  //   }
+  // });
   return (
     <div className="cartPage-container">
       <div className="cart-img-container">
