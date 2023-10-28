@@ -1,28 +1,24 @@
 import { useEffect, useState } from "react";
 import "./CardForAPI.css";
-export const CardForApiData = () => {
-  const [cardData, setCardData] = useState({});
-  useEffect(() => {
-    fetch("/api/products")
-      .then((res) => res.json())
-      .then((data) => setCardData(data));
-  }, []);
+export const CardForApiData = ({ wihslistList }) => {
   return (
-    <div className="apiCards">
-      {cardData.products?.map((item) => {
-        return (
-          <div className="apicard-wrapper">
-            <div className="apicard-img-wrapper">
-              <img className="apicard-img" src={item.src} alt="apicard-img" />
-              <h3 className="apicard-item-name">{item.title}</h3>
-              <p className="apicard-description">{item.author}</p>
-              <p className="apicard-price"> Price{item.price}</p>
-              <button className="apicard-btn">Add to cart</button>
-              <button className="apicard-btn">Add to wishlist</button>
-            </div>
+    <div className="wishlist-card-container">
+      <div className="wihslist-card-wrapper">
+        <div className="wishlist-card-img-wrapper">
+          <img
+            className="wishlist-card-img"
+            src={wihslistList.src}
+            alt="wishlistCard-img"
+          />
+          <b className="wishlistCard-title">{wihslistList.title}</b>
+          <p className="wishlistCard-description">{wihslistList.author}</p>
+          <p className="wishlistCard-price"> Price{wihslistList.price}</p>
+          <div className="wishlistCard-wrapper">
+            <button className="wishlistCard-btn">Add to cart</button>
+            <button className="wishlistCard-btn">Add to wishlist</button>
           </div>
-        );
-      })}
+        </div>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,8 @@ import "./WishlistAndCartPage.css";
 import { useEffect, useState } from "react";
 import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
+import { CardForApiData } from "./CardForAPI";
+
 export const CartPage = (props) => {
   const [cartItem, setcartItem] = useState([]);
 
@@ -52,13 +54,28 @@ export const CartPage = (props) => {
   );
 };
 export const WishlistPage = () => {
+  const [wishlistItem, setwishlistItem] = useState([]);
+  const wishlistApiUrl = "/api/user/wishlist";
+  const encodedToken = localStorage.getItem("encodedToken");
+  const headers = {
+    headers: {
+      authorization: encodedToken,
+    },
+  };
+  useEffect(() => {
+    async function getCartData() {
+      const response = await axios.get(wishlistApiUrl, headers);
+      const wishlistData = response.data.wishlist;
+      setwishlistItem(wishlistData);
+    }
+    getCartData();
+  }, []);
   return (
     <Layout>
-      <div className="wishlistPage-wrapper">
-        <div className="wishlist-wrapper">
-          <h3 Wishlist-text>My Wishlist</h3>
-          <h3 Wishlist-text>(0 item)</h3>
-        </div>
+      <div className="wihslist-page-wrapper">
+        {wishlistItem?.map((wishItem) => {
+          return <CardForApiData wihslistList={wishItem} />;
+        })}
       </div>
     </Layout>
   );

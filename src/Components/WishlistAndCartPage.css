@@ -21,7 +21,7 @@
 .cart-ProductsPage-Container {
   display: flex;
   flex-direction: row-reverse;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .cartPage-container {
   background-color: var(--quaternary);
@@ -90,8 +90,7 @@
 
   color: green;
 }
-.cartPrice-container {
-}
+
 .cartTotalPrice-container {
   text-align: center;
 }
@@ -106,4 +105,12 @@
 .proceedTo-shipping-btn:hover {
   background-color: var(--primary);
   cursor: pointer;
+}
+.wihslist-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: inherit;
+  height: 100%;
+  margin: 1rem;
 }
