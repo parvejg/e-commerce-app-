@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ProductPage } from "./Components/ProductPage";
 import { Login, SignUp } from "./Components/ModalPage";
 import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
+import { AddressPage } from "./Components/AddressPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="signUp-page" Component={SignUp} />
           <Route path="cart-page" Component={CartPage} />
           <Route path="wishlist-page" Component={WishlistPage} />
+          <Route path="address-page" Component={AddressPage} />
         </Routes>
       </Router>
     </div>

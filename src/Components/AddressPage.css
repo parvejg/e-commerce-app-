@@ -1,0 +1,20 @@
+.addressPage-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+  min-height: 70%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--quinary);
+}
+.addressPage-input {
+  padding: 5px 1rem;
+}
+.address-save-btn {
+  width: 10rem;
+  height: 2rem;
+  align-items: center;
+  margin: 1rem;
+  background-color: var(--primary);
+}

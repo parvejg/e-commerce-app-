@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const PriceDetailCard = (props) => {
   const { cartList } = props;
   let total_price = cartList.reduce((initialValue, currEle) => {
@@ -23,7 +25,9 @@ export const PriceDetailCard = (props) => {
           Total Price <span className="priceInWords">{total_price}</span>
         </h2>
       </div>
-      <button className="proceedTo-shipping-btn">PROCEED TO SHIPPING</button>
+      <Link className="proceedTo-shipping-btn" to="/address-page">
+        PROCEED TO SHIPPING
+      </Link>
     </div>
   );
 };

@@ -1,37 +1,35 @@
 import axios from "axios";
 import { Layout } from "./Layout";
 import "./WishlistAndCartPage.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
 import { CardForApiData } from "./CardForAPI";
+import { AppContext } from "./UseContex";
 
 export const CartPage = (props) => {
   const [cartItem, setcartItem] = useState([]);
-
-  const cartApiUrl = "/api/user/cart";
+  const contex = useContext(AppContext);
+  const { dispatch, state } = contex;
   const encodedToken = localStorage.getItem("encodedToken");
   const headers = {
     headers: {
       authorization: encodedToken,
     },
   };
+  const cartApiUrl = "api/user/cart/";
   async function deleteCartHandler(_id) {
     const deleteCartApiUrl = `/api/user/cart/${_id}`;
-    const encodedToken = localStorage.getItem("encodedToken");
-    const headers = {
-      headers: {
-        authorization: encodedToken,
-      },
-    };
     const response = await axios.delete(deleteCartApiUrl, headers);
     setcartItem(response.data.cart);
+    dispatch({ type: "cartItem", payload: response.data.cart });
   }
   useEffect(() => {
     async function getCartData() {
       const response = await axios.get(cartApiUrl, headers);
       const cartData = response.data.cart;
       setcartItem(cartData);
+      dispatch({ type: "cartItem", payload: response.data.cart });
     }
     getCartData();
   }, []);
@@ -40,7 +38,7 @@ export const CartPage = (props) => {
       <div className="cart-ProductsPage-Container">
         <PriceDetailCard cartList={cartItem} />
         <div className="">
-          {cartItem?.map((cartItems) => {
+          {state.cartList?.map((cartItems) => {
             return (
               <CartProductsCard
                 cartItem={cartItems}
@@ -55,7 +53,8 @@ export const CartPage = (props) => {
   );
 };
 export const WishlistPage = () => {
-  const [wishlistItem, setwishlistItem] = useState([]);
+  const contex = useContext(AppContext);
+  const { dispatch, state } = contex;
   const wishlistApiUrl = "/api/user/wishlist";
   const encodedToken = localStorage.getItem("encodedToken");
   const headers = {
@@ -67,15 +66,15 @@ export const WishlistPage = () => {
     async function getCartData() {
       const response = await axios.get(wishlistApiUrl, headers);
       const wishlistData = response.data.wishlist;
-      setwishlistItem(wishlistData);
+      dispatch({ type: "wishlistItem", payload: wishlistData });
     }
     getCartData();
   }, []);
   return (
     <Layout>
       <div className="wihslist-page-wrapper">
-        {wishlistItem?.map((wishItem) => {
-          return <CardForApiData wihslistList={wishItem} />;
+        {state.wishlistList?.map((wishItem) => {
+          return <CardForApiData wishlistList={wishItem} />;
         })}
       </div>
     </Layout>

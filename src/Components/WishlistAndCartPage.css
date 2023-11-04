@@ -95,12 +95,13 @@
   text-align: center;
 }
 .proceedTo-shipping-btn {
-  width: 60%;
-  padding: 8px 0;
+  padding: 8px 30px;
   align-items: center;
   font-weight: bold;
   background-color: floralwhite;
   border: solid 1px wheat;
+  text-decoration: none;
+  color: black;
 }
 .proceedTo-shipping-btn:hover {
   background-color: var(--primary);

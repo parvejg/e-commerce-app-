@@ -3,7 +3,7 @@ import { AppContext } from "./UseContex";
 import { useContext } from "react";
 
 export const CartProductsCard = (props) => {
-  const { deleteCartHandler, cartItem, setcartItem } = props;
+  const { cartItem, setcartItem } = props;
   const contex = useContext(AppContext);
   const { dispatch, state } = contex;
   async function cartQtyHandler(_id, type) {
@@ -21,6 +21,7 @@ export const CartProductsCard = (props) => {
     };
     const response = await axios.post(cartPostendPoint, requestBody, headers);
     setcartItem(response.data.cart);
+    dispatch({ type: "cartItem", payload: response.data.cart });
   }
 
   async function removeCartHandler(_id) {
@@ -36,17 +37,17 @@ export const CartProductsCard = (props) => {
     setcartItem(response.data.cart);
     dispatch({ type: "cartItem", payload: response.data.cart });
   }
+  const wishlistPostendPoint = "/api/user/wishlist";
+  const encodedToken = localStorage.getItem("encodedToken");
+  const headers = {
+    headers: {
+      authorization: encodedToken,
+    },
+  };
+  const requestBody = {
+    product: cartItem,
+  };
   async function moveToWishlistHandler() {
-    const wishlistPostendPoint = "/api/user/wishlist";
-    const encodedToken = localStorage.getItem("encodedToken");
-    const headers = {
-      headers: {
-        authorization: encodedToken,
-      },
-    };
-    const requestBody = {
-      product: cartItem,
-    };
     const response = await axios.post(
       wishlistPostendPoint,
       requestBody,
