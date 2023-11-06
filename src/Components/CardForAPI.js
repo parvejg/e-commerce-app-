@@ -62,7 +62,12 @@ export const CardForApiData = (props) => {
           <p className="wishlistCard-price"> Price{wishlistList.price}</p>
           <div className="wishlistCard-wrapper">
             {inCart ? (
-              <button lassName="wishlistCard-btn"></button>
+              <button
+                className="wishlistCard-btn"
+                onClick={() => removeFromWishlistHandler(wishlistList._id)}
+              >
+                Move to cart{" "}
+              </button>
             ) : (
               <button className="wishlistCard-btn" onClick={moveToCartHandler}>
                 Move to cart

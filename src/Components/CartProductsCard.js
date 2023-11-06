@@ -97,7 +97,12 @@ export const CartProductsCard = (props) => {
             Remove from Cart
           </button>
           {inWishlist ? (
-            <button className="cartBtn"></button>
+            <button
+              className="cartBtn"
+              onClick={() => removeCartHandler(cartItem._id)}
+            >
+              Move to Wishlist
+            </button>
           ) : (
             <button className="cartBtn" onClick={moveToWishlistHandler}>
               Move to Wishlist

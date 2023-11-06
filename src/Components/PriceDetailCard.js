@@ -9,6 +9,7 @@ export const PriceDetailCard = (props) => {
   }, 0);
   return (
     <div className="price-details-container">
+      <Link className="sele-address-btn">Select Address</Link>
       <h2>PRICE DETAILS</h2>
 
       <div className="cartPrice-container">
