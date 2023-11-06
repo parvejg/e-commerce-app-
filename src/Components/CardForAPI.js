@@ -30,7 +30,6 @@ export const CardForApiData = (props) => {
   const removeFromWishlistHandler = async (_id) => {
     const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`;
     const response = await axios.delete(deleteWishlistApiUrl, headers);
-    console.log("remove from wishlist", response);
     if (response.status === 200 || 201) {
       const res = await axios.get(wishlistApiUrl, headers);
       dispatch({ type: "wishlistItem", payload: res.data.wishlist });
@@ -40,7 +39,6 @@ export const CardForApiData = (props) => {
 
   const moveToCartHandler = async () => {
     const res = await axios.post(cartApiUrl, requestBody, headers);
-    console.log("move to cart", res);
     dispatch({ type: "cartItem", payload: res.data.cart });
     if (res.status === 201) {
       removeFromWishlistHandler(wishlistList._id);
