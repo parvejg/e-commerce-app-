@@ -2,21 +2,21 @@
   background-color: var(--sector);
   display: flex;
   flex-direction: column;
-  height: 300px;
-  width: 300px;
-  align-items: center;
+  min-height: 200px;
+  min-width: 400px;
   justify-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 .address-link {
   text-decoration: none;
-  font-size: 15px;
+  font-size: large;
   color: black;
   border: 1px solid var(--primary);
   padding: 2px 2px;
-  width: 13rem;
+  width: 16rem;
   margin: 2rem;
+  font-style: oblique;
+  font-weight: 500;
 }
 .address-link:hover {
   background-color: var(--primary);

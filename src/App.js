@@ -6,6 +6,7 @@ import { Login, SignUp } from "./Components/ModalPage";
 import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
 import { AddressPage } from "./Components/AddressPage";
 import { SelectAddress } from "./Components/SelectAddress";
+import { SelectRadioAddress } from "./Components/SelectRadioAddressPage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="cart-page" Component={CartPage} />
           <Route path="wishlist-page" Component={WishlistPage} />
           <Route path="address-page" Component={AddressPage} />
-          <Route path="select-address-page" Component={SelectAddress} />
+          <Route path="select-address-page" Component={SelectRadioAddress} />
         </Routes>
       </Router>
     </div>

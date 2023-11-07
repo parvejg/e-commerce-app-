@@ -1,0 +1,60 @@
+.radioAddress-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sector);
+  min-width: 400px;
+  min-height: 350px;
+  gap: 20px;
+}
+.address-btn-wrapper {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.address-edit-btn {
+  padding: 5px 30px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 14px;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.address-edit-btn:hover {
+  background-color: var(--sector);
+  color: black;
+}
+
+.remove-address-btn {
+  padding: 5px 16px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 14px;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.remove-address-btn:hover {
+  background-color: var(--sector);
+  color: black;
+}
+.close-btn-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.addressPage-closeBtn {
+  font-size: 14px;
+  border: solid 1px black;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: var(--sector);
+  cursor: pointer;
+}
+.addressPage-closeBtn:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
