@@ -7,6 +7,7 @@ import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
 import { AddressPage } from "./Components/AddressPage";
 import { SelectAddress } from "./Components/SelectAddress";
 import { SelectRadioAddress } from "./Components/SelectRadioAddressPage";
+import { MyAccount } from "./Components/AddressDetailsPage";
 
 function App() {
   return (

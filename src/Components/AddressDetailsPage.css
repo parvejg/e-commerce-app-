@@ -1,0 +1,16 @@
+.account-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--sector);
+  min-width: 300px;
+  min-height: 250px;
+}
+.accountDetail-page-link {
+  text-decoration: none;
+  font-size: larger;
+  align-items: self-start;
+  color: var(--tertiray);
+  margin: 0.5rem;
+}
