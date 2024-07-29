@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" Component={LandingPage} />
+          <Route path="/home-page" Component={LandingPage} />
           <Route path="landing-page" Component={LandingPage} />
           <Route path="product-page" Component={ProductPage} />
           <Route path="login-page" Component={Login} />

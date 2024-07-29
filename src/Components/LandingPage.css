@@ -1,18 +1,19 @@
 .detail-card-in-landing-page {
   display: flex;
-  gap: 2px;
+  justify-content: space-between;
 }
 @media (max-width: 800px) {
   .detail-card-in-landing-page {
     display: flex;
     gap: 0.5rem;
   }
-
+  .detail-card-wrapper{
+    width: 100%;
+  }
   .detail-card-in-landing-page {
     display: flex;
-    flex-wrap: wrap;
-    height: 100%;
     padding: 0 7px;
+    flex-direction: column;
     padding-top: 7px;
   }
   .detail-card-content {

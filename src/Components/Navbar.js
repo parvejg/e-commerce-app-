@@ -116,42 +116,15 @@ export const NavbarLinks = () => {
           </Link>
         );
       })}
-      {/* <Link className="navbar-bottom-links" to="/Men-page">
-        Men
-      </Link>
-      <Link className="navbar-bottom-links" to="/Women-page">
-        Women
-      </Link>
-      <Link className="navbar-bottom-links" to="/Kids-page">
-        Kids
-      </Link>
-      <Link className="navbar-bottom-links" to="/Mobile-page">
-        Mobile
-      </Link>
-      <Link
-        className=" electronics navbar-bottom-links "
-        to="/Electronics-page"
-      >
-        Electronics
-      </Link>
-      <Link className=" beauty navbar-bottom-links " to="/Beauty-page">
-        Beauty
-      </Link>
-      <Link className=" fashion navbar-bottom-links " to="/Fashion-page">
-        Fashion
-      </Link>
-      <Link className=" plant navbar-bottom-links " to="/Plant-page">
-        Plant
-      </Link> */}{" "}
     </div>
   );
 };
 export const ResponsiveNavbar = () => {
   const contex = useContext(AppContext);
   const { dispatch } = contex;
-  const inputValueHandler = (e) => {
-    dispatch({ type: "search_query", payload: e.target.value });
-  };
+  // const inputValueHandler = (e) => {
+  //   dispatch({ type: "search_query", payload: e.target.value });
+  // };
   return (
     <nav className="responsiveNavbar">
       <div className="phone-view-input-wrapper">
@@ -162,7 +135,7 @@ export const ResponsiveNavbar = () => {
         <Link className="navbar-products-link-ph" to="/product-page">
           Products
         </Link>
-        <input
+        {/* <input
           type="text"
           placeholder="search flicart"
           className="phn-view-input"
@@ -170,7 +143,15 @@ export const ResponsiveNavbar = () => {
         />
         <span className="search-icon-ph-wrapper">
           <ImSearch className="search-icon-ph" />
-        </span>
+        </span> */}
+          <div className="responsive-navbar-icon-links-wrapper">
+          <Link className="navbar-links sign-up" to="/login-page">
+            Sign In{" "}
+          </Link>{" "}
+          <Cart />
+          <Wishlist />
+          
+        </div>{" "}
       </div>
     </nav>
   );
