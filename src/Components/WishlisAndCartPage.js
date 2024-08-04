@@ -54,7 +54,9 @@ export const CartPage = (props) => {
 };
 export const WishlistPage = () => {
   const contex = useContext(AppContext);
+
   const { dispatch, state } = contex;
+  const {wishlistList} = state;
   const wishlistApiUrl = "/api/user/wishlist";
   const encodedToken = localStorage.getItem("encodedToken");
   const headers = {
@@ -72,11 +74,13 @@ export const WishlistPage = () => {
   }, []);
   return (
     <Layout>
+      {!wishlistList?.length? <div className="wihlistEmpty-page-container">your wishlist is empty</div> : 
       <div className="wihslist-page-wrapper">
         {state.wishlistList?.map((wishItem) => {
           return <CardForApiData wishlistList={wishItem} />;
         })}
       </div>
+}
     </Layout>
   );
 };
