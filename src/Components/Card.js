@@ -1,9 +1,10 @@
-import { AiOutlineStar } from "react-icons/ai";
-import { FiStar } from "react-icons/fi";
 import "./Card.css";
-import { createContext, useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import axios from "axios";
 import { AppContext, useAppContex } from "./UseContex";
+import { CART_ENDPOINT } from "../Endpoints";
+import { fetchCart, postCart } from "../ApiMethods";
+import { CART_DATA } from "../Constants";
 export const ProductDemoCard1 = (props) => {
   const { src, alt } = props;
   return (
@@ -70,23 +71,23 @@ export const ProductDemoCard3 = (props) => {
   const headers = {
     headers: {
       authorization: encodedToken,
-    }
+    },
   };
-  const cartApiUrl = "/api/user/cart";
   const addToCartHandler = async () => {
-    const response = await axios.post(cartApiUrl,requestBody, headers );
-    if (response.status === 200 || 201) {
-      const res = await axios.get(cartApiUrl, headers);
-      dispatch({ type: "cartItem", payload: res.data.cart });
+    const response = await postCart(requestBody);
+    if (response?.status === 200 || response?.status === 201) {
+      const res = await fetchCart();
+      if (res?.status === 200 || res?.status === 201) {
+        dispatch({ type: CART_DATA, payload: res.data.cart });
+      }
     }
-    console.log({headers , requestBody })
   };
   async function removeFromCartHandler() {
-    const deleteCartApiUrl = `/api/user/cart/${_id}`;
+    const deleteCartApiUrl = `${CART_ENDPOINT}/${_id}`;
     const response = await axios.delete(deleteCartApiUrl, headers);
     if (response.status === 200 || 201) {
-      const res = await axios.get(cartApiUrl, headers);
-      dispatch({ type: "cartItem", payload: res.data.cart });
+      const res = await axios.get(CART_ENDPOINT, headers);
+      dispatch({ type: CART_DATA, payload: res.data.cart });
     }
   }
   return (

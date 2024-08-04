@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { CART_DATA } from "../Constants";
 
 export const AppContext = createContext();
 const reducer = (state, action) => {
@@ -8,7 +9,7 @@ const reducer = (state, action) => {
         ...state,
         countWishItem: action.payload,
       };
-    case "cartItem":
+    case CART_DATA:
       return {
         ...state,
         cartList: action.payload,

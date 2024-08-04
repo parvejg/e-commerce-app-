@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./CardForAPI.css";
 import axios from "axios";
 import { AppContext } from "./UseContex";
+import { CART_DATA } from "../Constants";
 export const CardForApiData = (props) => {
   const { wishlistList, cardDetail } = props;
   const context = useContext(AppContext);
@@ -25,7 +26,7 @@ export const CardForApiData = (props) => {
   async function getCartData() {
     const response = await axios.get(cartApiUrl, headers);
     const cartData = response.data.cart;
-    dispatch({ type: "cartItem", payload: cartData });
+    dispatch({ type: CART_DATA, payload: cartData });
   }
   const removeFromWishlistHandler = async (_id) => {
     const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`;
@@ -39,7 +40,7 @@ export const CardForApiData = (props) => {
 
   const moveToCartHandler = async () => {
     const res = await axios.post(cartApiUrl, requestBody, headers);
-    dispatch({ type: "cartItem", payload: res.data.cart });
+    dispatch({ type: CART_DATA, payload: res.data.cart });
     if (res.status === 201) {
       removeFromWishlistHandler(wishlistList._id);
       getCartData();

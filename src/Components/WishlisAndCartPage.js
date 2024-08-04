@@ -6,6 +6,7 @@ import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
 import { CardForApiData } from "./CardForAPI";
 import { AppContext } from "./UseContex";
+import { CART_DATA } from "../Constants";
 
 export const CartPage = (props) => {
   const [cartItem, setcartItem] = useState([]);
@@ -22,14 +23,14 @@ export const CartPage = (props) => {
     const deleteCartApiUrl = `/api/user/cart/${_id}`;
     const response = await axios.delete(deleteCartApiUrl, headers);
     setcartItem(response.data.cart);
-    dispatch({ type: "cartItem", payload: response.data.cart });
+    dispatch({ type: CART_DATA, payload: response.data.cart });
   }
   useEffect(() => {
     async function getCartData() {
       const response = await axios.get(cartApiUrl, headers);
       const cartData = response.data.cart;
       setcartItem(cartData);
-      dispatch({ type: "cartItem", payload: response.data.cart });
+      dispatch({ type: CART_DATA, payload: response.data.cart });
     }
     getCartData();
   }, []);

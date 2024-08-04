@@ -1,6 +1,7 @@
 import axios from "axios";
 import { AppContext } from "./UseContex";
 import { useContext } from "react";
+import { CART_DATA } from "../Constants";
 
 export const CartProductsCard = (props) => {
   const { cartItem, setcartItem } = props;
@@ -21,7 +22,7 @@ export const CartProductsCard = (props) => {
     };
     const response = await axios.post(cartPostendPoint, requestBody, headers);
     setcartItem(response.data.cart);
-    dispatch({ type: "cartItem", payload: response.data.cart });
+    dispatch({ type: CART_DATA, payload: response.data.cart });
   }
 
   async function removeCartHandler(_id) {
@@ -35,7 +36,7 @@ export const CartProductsCard = (props) => {
     };
     const response = await axios.delete(deleteCartApiUrl, headers);
     setcartItem(response.data.cart);
-    dispatch({ type: "cartItem", payload: response.data.cart });
+    dispatch({ type: CART_DATA, payload: response.data.cart });
   }
   const wishlistPostendPoint = "/api/user/wishlist";
   const encodedToken = localStorage.getItem("encodedToken");
