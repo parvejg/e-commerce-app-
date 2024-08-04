@@ -70,16 +70,16 @@ export const ProductDemoCard3 = (props) => {
   const headers = {
     headers: {
       authorization: encodedToken,
-    },
+    }
   };
   const cartApiUrl = "/api/user/cart";
-
   const addToCartHandler = async () => {
-    const response = await axios.post(cartApiUrl, requestBody, headers);
+    const response = await axios.post(cartApiUrl,requestBody, headers );
     if (response.status === 200 || 201) {
       const res = await axios.get(cartApiUrl, headers);
       dispatch({ type: "cartItem", payload: res.data.cart });
     }
+    console.log({headers , requestBody })
   };
   async function removeFromCartHandler() {
     const deleteCartApiUrl = `/api/user/cart/${_id}`;
