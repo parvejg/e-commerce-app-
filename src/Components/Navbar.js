@@ -101,8 +101,32 @@ export const Navbar = ({ cardDetail }) => {
     </nav>
   );
 };
+// export const SeachInputForProduct = () => {
+//   const contex = useContext(AppContext);
+//   const { dispatch } = contex;
+//   const inputValueHandler = (e) => {
+//     dispatch({ type: "search_query", payload: e.target.value });
+//   };
+//   return (
+//     <div className="product-input-wrapper">
+//       <input
+//         placeholder="Seach Flipcart.."
+//         className="product-input"
+//         type="text"
+//         onChange={(e) => inputValueHandler(e)}
+//       />
+//       <span className="input-search-icon-wrapper">
+//         <a className="input-search-icon" href="/">
+//           <ImSearch />
+//         </a>
+//       </span>
+//     </div>
+//   );
+// };
 export const NavbarLinks = () => {
   const [categoryData, setCategoryData] = useState({});
+  const context = useContext(AppContext);
+  const { dispatch } = context;
   const categoryApi = "/api/categories";
   useEffect(() => {
     getData(categoryApi, setCategoryData);
@@ -111,7 +135,14 @@ export const NavbarLinks = () => {
     <div className="navbarLinks-wrapper">
       {categoryData.categories?.map((item) => {
         return (
-          <Link className="navbar-bottom-links" key={item.id} to="/Brand-page">
+          <Link className="navbar-bottom-links"
+          onClick={()=>{
+            dispatch({
+              type: "SelectedCategories",
+              payload: [item.categoryName],
+            });
+          }}
+          key={item.id} to="/product-page">
             {item.categoryName}{" "}
           </Link>
         );
@@ -122,9 +153,9 @@ export const NavbarLinks = () => {
 export const ResponsiveNavbar = () => {
   const contex = useContext(AppContext);
   const { dispatch } = contex;
-  // const inputValueHandler = (e) => {
-  //   dispatch({ type: "search_query", payload: e.target.value });
-  // };
+  const inputValueHandler = (e) => {
+    dispatch({ type: "search_query", payload: e.target.value });
+  };
   return (
     <nav className="responsiveNavbar">
       <div className="phone-view-input-wrapper">
@@ -144,13 +175,12 @@ export const ResponsiveNavbar = () => {
         <span className="search-icon-ph-wrapper">
           <ImSearch className="search-icon-ph" />
         </span> */}
-          <div className="responsive-navbar-icon-links-wrapper">
+        <div className="responsive-navbar-icon-links-wrapper">
           <Link className="navbar-links sign-up" to="/login-page">
             Sign In{" "}
           </Link>{" "}
           <Cart />
           <Wishlist />
-          
         </div>{" "}
       </div>
     </nav>
