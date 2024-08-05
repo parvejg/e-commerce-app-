@@ -75,7 +75,12 @@ export const WishlistPage = () => {
   }, []);
   return (
     <Layout>
-      {!wishlistList?.length? <div className="wihlistEmpty-page-container">your wishlist is empty</div> : 
+      {!wishlistList?.length? <div className="wihlistEmpty-page-container">
+    <div className="empty-wishlist-img-container">
+      <h2>Empty your wishlist</h2>
+    <img src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1722844624~exp=1722848224~hmac=ab94b272111f2b24b2be559dff700e5815bdfeb0e4b6109ac81c3c1d70c0a91a&w=740" />
+    </div>
+        </div> : 
       <div className="wihslist-page-wrapper">
         {state.wishlistList?.map((wishItem) => {
           return <CardForApiData wishlistList={wishItem} />;
