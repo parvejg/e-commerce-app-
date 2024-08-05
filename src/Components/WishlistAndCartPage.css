@@ -79,11 +79,13 @@
 .price-details-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--sector);
+  background-color: var(--quaternary);
   border-radius: 6px;
-  min-width: 360px;
+  min-width: 315px;
+  font-family: fantasy;
   min-height: 300px;
   margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .cart-price-text {
   margin-right: 5px;
@@ -98,31 +100,32 @@
   text-align: center;
 }
 .proceedTo-shipping-btn {
-  width: 14rem;
-  height: 2rem;
+  padding: 5px 12px;
   align-self: center;
   font-weight: bold;
   background-color: floralwhite;
   border: solid 1px wheat;
   text-decoration: none;
-  color: black;
+  box-shadow: 2px 2px 6px darkgreen;
+  color: #463b3b;
 }
 .proceedTo-shipping-btn:hover {
   background-color: var(--primary);
   cursor: pointer;
+  color: wheat;
 }
 
 .sele-address-btn {
-  width: 11rem;
-  height: 2rem;
+ 
   align-self: flex-start;
-  font-weight: bold;
+  padding: 6px 12px;
   border: solid 1px wheat;
   text-decoration: none;
-  color: black;
+  color: rgb(24, 23, 23);
   font-size: large;
+  border-radius: 3px 4px 6px;
+  align-items: center;
   cursor: pointer;
-  background-color: var(--sector);
   border: 1px solid var(--primary);
 }
 .sele-address-btn:hover {
