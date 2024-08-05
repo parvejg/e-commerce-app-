@@ -135,9 +135,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  width: inherit;
-  height: 100%;
   margin: 1rem;
+  justify-content: center;
 }
 .wihlistEmpty-page-container{
   display: flex;
@@ -151,4 +150,33 @@
 .empty-wishlist-img-container img{
   width: 500px;
   height: 400px;
+}
+@media (max-width: 500px) {
+  .wihlistEmpty-page-container{
+    width: 100%;
+  }
+  .empty-wishlist-img-container img{
+    width: 300px;
+    height: 300px;
+  }
+  .cartPage-img{
+    height: 300px;
+    width: 150px;
+  }
+  .cartBtn-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cartBtn{
+    margin: 0;
+  }
+  .cartPage-container{
+    height: 300px;
+    width: 350px;
+  }
+ .price-details-container{
+  width: 200px;
+ }
+ 
 }

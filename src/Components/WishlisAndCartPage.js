@@ -38,7 +38,7 @@ export const CartPage = (props) => {
     <Layout>
       <div className="cart-ProductsPage-Container">
         <PriceDetailCard cartList={cartItem} />
-        <div className="">
+        <div className="cart-product-list-container">
           {state.cartList?.map((cartItems) => {
             return (
               <CartProductsCard
