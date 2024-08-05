@@ -1,13 +1,9 @@
-import { DetailCard, DetailCard2, ProductDemoCard3 } from "./Card";
 import "./LandingPage.css";
+import { DetailCard, DetailCard2 } from "./Card";
 import { TopWebShoesImg } from "./Images";
 import { Layout } from "./Layout";
-import {  useState } from "react";
-import { Sidebar } from "./Sidebar";
 import { NavbarLinks } from "./Navbar";
-
 export const LandingPage = () => {
-
   return (
     <Layout>
       <NavbarLinks/>

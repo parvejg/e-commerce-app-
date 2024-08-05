@@ -2,9 +2,9 @@ import "./Card.css";
 import { useContext } from "react";
 import axios from "axios";
 import { AppContext, useAppContex } from "./UseContex";
-import { CART_ENDPOINT } from "../Endpoints";
-import { fetchCart, postCart } from "../ApiMethods";
-import { CART_DATA } from "../Constants";
+import { CART_ENDPOINT, WISHLIST_ENDPOINT } from "../Endpoints";
+import { fetchCart, fetchWishlist, postCart, postWishlist } from "../ApiMethods";
+import { CART_DATA, WISHLIST_DATA } from "../Constants";
 export const ProductDemoCard1 = (props) => {
   const { src, alt } = props;
   return (
@@ -45,21 +45,20 @@ export const ProductDemoCard3 = (props) => {
   const inWishlist = state.wishlistList?.some(
     (prod) => prod._id === cardDetail._id
   );
-  const wishlistApiUrl = "/api/user/wishlist";
 
   const addToWishlistHandler = async () => {
-    const response = await axios.post(wishlistApiUrl, requestBody, headers);
-    if (response.status === 200 || 201) {
-      const res = await axios.get(wishlistApiUrl, headers);
-      dispatch({ type: "wishlistItem", payload: res.data.wishlist });
+    const response = await  postWishlist(requestBody)
+    if (response?.status === 200 || response?.status === 201) {
+      const res = await fetchWishlist();
+      dispatch({ type:  WISHLIST_DATA, payload: res.data.wishlist });
     }
   };
   const removeFromWishlistHandler = async () => {
-    const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`;
+    const deleteWishlistApiUrl = `${WISHLIST_ENDPOINT}/${_id}`;
     const response = await axios.delete(deleteWishlistApiUrl, headers);
-    if (response.status === 200 || 201) {
-      const res = await axios.get(wishlistApiUrl, headers);
-      dispatch({ type: "wishlistItem", payload: res.data.wishlist });
+    if (response?.status === 200 || response?.status === 201) {
+      const res = await fetchWishlist()
+      dispatch({ type:  WISHLIST_DATA, payload: res.data.wishlist });
     }
   };
 
@@ -85,7 +84,7 @@ export const ProductDemoCard3 = (props) => {
   async function removeFromCartHandler() {
     const deleteCartApiUrl = `${CART_ENDPOINT}/${_id}`;
     const response = await axios.delete(deleteCartApiUrl, headers);
-    if (response.status === 200 || 201) {
+    if (response?.status === 200 || response?.status === 201) {
       const res = await axios.get(CART_ENDPOINT, headers);
       dispatch({ type: CART_DATA, payload: res.data.cart });
     }

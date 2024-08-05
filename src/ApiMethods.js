@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CART_ENDPOINT } from "./Endpoints";
+import { CART_ENDPOINT, WISHLIST_ENDPOINT } from "./Endpoints";
 
 const encodedToken = localStorage.getItem("encodedToken");
 const headers = {
@@ -16,3 +16,15 @@ export const fetchCart = async () => {
   const response = await axios.get(CART_ENDPOINT, headers);
   return response;
 };
+export const postWishlist = async (requestBody) => {
+  const response = await axios.post(WISHLIST_ENDPOINT, requestBody, headers);
+  return response;
+};
+export const fetchWishlist = async () => {
+  const response = await axios.get(WISHLIST_ENDPOINT, headers);
+  return response;
+};
+// export const removeWishlist = async (id) => {
+//   const response = await axios.get(REMOVE_WISHLIST_ENDPOINT, headers);
+//   return response;
+// };
