@@ -24,7 +24,3 @@ export const fetchWishlist = async () => {
   const response = await axios.get(WISHLIST_ENDPOINT, headers);
   return response;
 };
-// export const removeWishlist = async (id) => {
-//   const response = await axios.get(REMOVE_WISHLIST_ENDPOINT, headers);
-//   return response;
-// };

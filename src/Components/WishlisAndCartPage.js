@@ -4,9 +4,12 @@ import "./WishlistAndCartPage.css";
 import { useContext, useEffect, useState } from "react";
 import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
-import { CardForApiData } from "./CardForAPI";
+import { WishlistCard } from "./WishlistCard";
 import { AppContext } from "./UseContex";
-import { CART_DATA } from "../Constants";
+import { CART_DATA, WISHLIST_DATA } from "../Constants";
+import { CART_PAGE_IMG, WISHLIST_PAGE_IMG } from "../ImageUrl";
+import { fetchCart, fetchWishlist } from "../ApiMethods";
+import { CART_ENDPOINT } from "../Endpoints";
 
 export const CartPage = (props) => {
   const [cartItem, setcartItem] = useState([]);
@@ -18,16 +21,15 @@ export const CartPage = (props) => {
       authorization: encodedToken,
     },
   };
-  const cartApiUrl = "api/user/cart/";
   async function deleteCartHandler(_id) {
-    const deleteCartApiUrl = `/api/user/cart/${_id}`;
-    const response = await axios.delete(deleteCartApiUrl, headers);
+    const endpoint = `${CART_ENDPOINT}/${_id}`;
+    const response = await axios.delete(endpoint, headers);
     setcartItem(response.data.cart);
     dispatch({ type: CART_DATA, payload: response.data.cart });
   }
   useEffect(() => {
     async function getCartData() {
-      const response = await axios.get(cartApiUrl, headers);
+      const response = await fetchCart()
       const cartData = response.data.cart;
       setcartItem(cartData);
       dispatch({ type: CART_DATA, payload: response.data.cart });
@@ -39,7 +41,7 @@ export const CartPage = (props) => {
       {!cartItem?.length ? (
         <div className="empty-cart-container">
           <h1>Your cart is empty</h1>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD2Zk2-NugZ4VqyLyvhWXIrBeS59uTaYXYkg&usqp=CAU" />
+          <img src={CART_PAGE_IMG} />
         </div>
       ) : (
         <div className="cart-ProductsPage-Container">
@@ -62,10 +64,8 @@ export const CartPage = (props) => {
 };
 export const WishlistPage = () => {
   const contex = useContext(AppContext);
-
   const { dispatch, state } = contex;
   const { wishlistList } = state;
-  const wishlistApiUrl = "/api/user/wishlist";
   const encodedToken = localStorage.getItem("encodedToken");
   const headers = {
     headers: {
@@ -74,9 +74,9 @@ export const WishlistPage = () => {
   };
   useEffect(() => {
     async function getCartData() {
-      const response = await axios.get(wishlistApiUrl, headers);
+      const response = await fetchWishlist();
       const wishlistData = response.data.wishlist;
-      dispatch({ type: "wishlistItem", payload: wishlistData });
+      dispatch({ type: WISHLIST_DATA, payload: wishlistData });
     }
     getCartData();
   }, []);
@@ -86,13 +86,13 @@ export const WishlistPage = () => {
         <div className="wihlistEmpty-page-container">
           <div className="empty-wishlist-img-container">
             <h2> your wishlist is empty</h2>
-            <img src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1722844624~exp=1722848224~hmac=ab94b272111f2b24b2be559dff700e5815bdfeb0e4b6109ac81c3c1d70c0a91a&w=740" />
+            <img src={WISHLIST_PAGE_IMG} />
           </div>
         </div>
       ) : (
         <div className="wihslist-page-wrapper">
           {state.wishlistList?.map((wishItem) => {
-            return <CardForApiData wishlistList={wishItem} />;
+            return <WishlistCard wishlistList={wishItem} />;
           })}
         </div>
       )}

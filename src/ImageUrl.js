@@ -1,1 +1,3 @@
 export const PRODUCT_IMAGE = "https://media.istockphoto.com/id/679539190/photo/indian-made-mens-shoes.jpg?s=612x612&w=0&k=20&c=1wTYVNCgSpNcnzfLxPzjfd1swEWXnUZHKzikNupEaWk="
+export const WISHLIST_PAGE_IMG = "https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1722844624~exp=1722848224~hmac=ab94b272111f2b24b2be559dff700e5815bdfeb0e4b6109ac81c3c1d70c0a91a&w=740"
+export const CART_PAGE_IMG = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD2Zk2-NugZ4VqyLyvhWXIrBeS59uTaYXYkg&usqp=CAU"

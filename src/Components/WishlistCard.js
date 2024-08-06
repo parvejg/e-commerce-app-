@@ -1,10 +1,13 @@
-import { useContext } from "react";
-import "./CardForAPI.css";
 import axios from "axios";
+import "./WishlistCard.css";
+import { useContext } from "react";
 import { AppContext } from "./UseContex";
-import { CART_DATA } from "../Constants";
-export const CardForApiData = (props) => {
-  const { wishlistList, cardDetail } = props;
+import { WISHLIST_ENDPOINT } from "../Endpoints";
+import { CART_DATA, WISHLIST_DATA } from "../Constants";
+import { fetchCart, fetchWishlist, postCart } from "../ApiMethods";
+
+export const WishlistCard = (props) => {
+  const { wishlistList } = props;
   const context = useContext(AppContext);
   const { dispatch, state } = context;
 
@@ -21,27 +24,25 @@ export const CardForApiData = (props) => {
   const inCart = state.cartList?.some(
     (product) => product._id === wishlistList._id
   );
-  const cartApiUrl = "/api/user/cart";
-  const wishlistApiUrl = "/api/user/wishlist";
+
   async function getCartData() {
-    const response = await axios.get(cartApiUrl, headers);
+    const response = await fetchCart();
     const cartData = response.data.cart;
     dispatch({ type: CART_DATA, payload: cartData });
   }
   const removeFromWishlistHandler = async (_id) => {
-    const deleteWishlistApiUrl = `/api/user/wishlist/${_id}`;
-    const response = await axios.delete(deleteWishlistApiUrl, headers);
-    if (response.status === 200 || 201) {
-      const res = await axios.get(wishlistApiUrl, headers);
-      dispatch({ type: "wishlistItem", payload: res.data.wishlist });
+    const endpoint = `${WISHLIST_ENDPOINT}/${_id}`;
+    const response = await axios.delete(endpoint, headers);
+    if (response?.status === 200 || response?.status === 201) {
+      const res = await fetchWishlist();
+      dispatch({ type: WISHLIST_DATA, payload: res.data.wishlist });
     }
-    // dispatch({ type: "wishlistItem", payload: res.data.wishlist });
   };
 
   const moveToCartHandler = async () => {
-    const res = await axios.post(cartApiUrl, requestBody, headers);
+    const res = await postCart(requestBody);
     dispatch({ type: CART_DATA, payload: res.data.cart });
-    if (res.status === 201) {
+    if (res?.status === 201 || res?.status === 200) {
       removeFromWishlistHandler(wishlistList._id);
       getCartData();
     }
