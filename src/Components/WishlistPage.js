@@ -6,11 +6,14 @@ import { WISHLIST_DATA } from "../Constants";
 import { fetchWishlist } from "../ApiMethods";
 import { WishlistCard } from "./WishlistCard";
 import { WISHLIST_PAGE_IMG } from "../ImageUrl";
+import { useNavigate } from "react-router-dom";
 
 export const WishlistPage = () => {
     const contex = useContext(AppContext);
     const { dispatch, state } = contex;
     const { wishlistList } = state;
+  let navigate = useNavigate();
+
     const encodedToken = localStorage.getItem("encodedToken");
     const headers = {
       headers: {
@@ -30,9 +33,10 @@ export const WishlistPage = () => {
         {!wishlistList?.length ? (
           <div className="wihlistEmpty-page-container">
             <div className="empty-wishlist-img-container">
-              <h2> your wishlist is empty</h2>
               <img src={WISHLIST_PAGE_IMG} />
             </div>
+              <snap className="wishlist-content">Wishlist is empty: start shopping now and discover our latest deals:</snap>
+              <button onClick={()=>{navigate("/product-page")}} >Ready to shop?</button>
           </div>
         ) : (
           <div className="wihslist-page-wrapper">

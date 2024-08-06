@@ -116,7 +116,6 @@
 }
 
 .sele-address-btn {
- 
   align-self: flex-start;
   padding: 6px 12px;
   border: solid 1px wheat;
@@ -138,53 +137,86 @@
   margin: 1rem;
   justify-content: center;
 }
-.wihlistEmpty-page-container{
+.wihlistEmpty-page-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 
+  align-items: center;
 }
-.empty-wishlist-img-container img{
+.empty-wishlist-img-container img {
   width: 500px;
   height: 400px;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem 0;
 }
 @media (max-width: 500px) {
-  .wihlistEmpty-page-container{
+  .wihlistEmpty-page-container {
     width: 100%;
   }
-  .empty-wishlist-img-container img{
+  .empty-wishlist-img-container img {
     width: 300px;
     height: 300px;
   }
-  .cartPage-img{
+  .cartPage-img {
     height: 300px;
     width: 150px;
   }
-  .cartBtn-container{
+  .cartBtn-container {
     display: flex;
     flex-direction: column;
     gap: 6px;
   }
-  .cartBtn{
+  .cartBtn {
     margin: 0;
   }
-  .cartPage-container{
+  .cartPage-container {
     height: 300px;
     width: 350px;
   }
- .price-details-container{
-  width: 200px;
- }
- 
+  .price-details-container {
+    width: 200px;
+  }
 }
-.empty-cart-container{
-display: flex;
-flex-direction: column;
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   height: fit-content;
 }
-
+.cartPage-content {
+  display: block;
+  font-size: 24px;
+  background-color: yellow;
+  font-family: fantasy;
+  font-weight: 700;
+  margin: 1.5rem;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px 5px;
+}
+.cartPage-content + button,
+.wishlist-content + button {
+  background-color: var(--primary);
+  padding: 8px 16px;
+  border: hidden;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+.wishlist-content {
+  display: block;
+  font-size: 24px;
+  background-color: yellow;
+  font-family: fantasy;
+  font-weight: 700;
+  margin: 1.5rem;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px 5px;
+}
