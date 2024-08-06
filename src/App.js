@@ -1,11 +1,13 @@
 import "./App.css";
+import { CartPage } from "./Components/CartPage";
 import { LandingPage } from "./Components/LandingPage";
 import { ProductPage } from "./Components/ProductPage";
 import { Login, SignUp } from "./Components/ModalPage";
 import { AddressPage } from "./Components/AddressPage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { CartPage, WishlistPage } from "./Components/WishlisAndCartPage";
+import { WishlistPage } from "./Components/WishlistPage";
 import { SelectRadioAddress } from "./Components/SelectRadioAddressPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (

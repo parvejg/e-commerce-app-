@@ -1,17 +1,18 @@
 import axios from "axios";
 import { Layout } from "./Layout";
 import "./WishlistAndCartPage.css";
-import { useContext, useEffect, useState } from "react";
+import { AppContext } from "./UseContex";
+import { CART_ENDPOINT } from "../Endpoints";
+import { WishlistCard } from "./WishlistCard";
 import { PriceDetailCard } from "./PriceDetailCard";
 import { CartProductsCard } from "./CartProductsCard";
-import { WishlistCard } from "./WishlistCard";
-import { AppContext } from "./UseContex";
+import { useContext, useEffect, useState } from "react";
 import { CART_DATA, WISHLIST_DATA } from "../Constants";
-import { CART_PAGE_IMG, WISHLIST_PAGE_IMG } from "../ImageUrl";
 import { fetchCart, fetchWishlist } from "../ApiMethods";
-import { CART_ENDPOINT } from "../Endpoints";
+import { CART_PAGE_IMG, WISHLIST_PAGE_IMG } from "../ImageUrl";
 
-export const CartPage = (props) => {
+
+export const CartPage = () => {
   const [cartItem, setcartItem] = useState([]);
   const contex = useContext(AppContext);
   const { dispatch, state } = contex;
@@ -57,43 +58,6 @@ export const CartPage = (props) => {
               );
             })}
           </div>
-        </div>
-      )}
-    </Layout>
-  );
-};
-export const WishlistPage = () => {
-  const contex = useContext(AppContext);
-  const { dispatch, state } = contex;
-  const { wishlistList } = state;
-  const encodedToken = localStorage.getItem("encodedToken");
-  const headers = {
-    headers: {
-      authorization: encodedToken,
-    },
-  };
-  useEffect(() => {
-    async function getCartData() {
-      const response = await fetchWishlist();
-      const wishlistData = response.data.wishlist;
-      dispatch({ type: WISHLIST_DATA, payload: wishlistData });
-    }
-    getCartData();
-  }, []);
-  return (
-    <Layout>
-      {!wishlistList?.length ? (
-        <div className="wihlistEmpty-page-container">
-          <div className="empty-wishlist-img-container">
-            <h2> your wishlist is empty</h2>
-            <img src={WISHLIST_PAGE_IMG} />
-          </div>
-        </div>
-      ) : (
-        <div className="wihslist-page-wrapper">
-          {state.wishlistList?.map((wishItem) => {
-            return <WishlistCard wishlistList={wishItem} />;
-          })}
         </div>
       )}
     </Layout>
