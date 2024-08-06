@@ -36,20 +36,27 @@ export const CartPage = (props) => {
   }, []);
   return (
     <Layout>
-      <div className="cart-ProductsPage-Container">
-        <PriceDetailCard cartList={cartItem} />
-        <div className="cart-product-list-container">
-          {state.cartList?.map((cartItems) => {
-            return (
-              <CartProductsCard
-                cartItem={cartItems}
-                setcartItem={setcartItem}
-                deleteCartHandler={() => deleteCartHandler(cartItem._id)}
-              />
-            );
-          })}
+      {!cartItem?.length ? (
+        <div className="empty-cart-container">
+          <h1>Your cart is empty</h1>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD2Zk2-NugZ4VqyLyvhWXIrBeS59uTaYXYkg&usqp=CAU" />
         </div>
-      </div>
+      ) : (
+        <div className="cart-ProductsPage-Container">
+          <PriceDetailCard cartList={cartItem} />
+          <div className="cart-product-list-container">
+            {state.cartList?.map((cartItems) => {
+              return (
+                <CartProductsCard
+                  cartItem={cartItems}
+                  setcartItem={setcartItem}
+                  deleteCartHandler={() => deleteCartHandler(cartItem._id)}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
     </Layout>
   );
 };
@@ -57,7 +64,7 @@ export const WishlistPage = () => {
   const contex = useContext(AppContext);
 
   const { dispatch, state } = contex;
-  const {wishlistList} = state;
+  const { wishlistList } = state;
   const wishlistApiUrl = "/api/user/wishlist";
   const encodedToken = localStorage.getItem("encodedToken");
   const headers = {
@@ -75,18 +82,20 @@ export const WishlistPage = () => {
   }, []);
   return (
     <Layout>
-      {!wishlistList?.length? <div className="wihlistEmpty-page-container">
-    <div className="empty-wishlist-img-container">
-      <h2>Empty your wishlist</h2>
-    <img src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1722844624~exp=1722848224~hmac=ab94b272111f2b24b2be559dff700e5815bdfeb0e4b6109ac81c3c1d70c0a91a&w=740" />
-    </div>
-        </div> : 
-      <div className="wihslist-page-wrapper">
-        {state.wishlistList?.map((wishItem) => {
-          return <CardForApiData wishlistList={wishItem} />;
-        })}
-      </div>
-}
+      {!wishlistList?.length ? (
+        <div className="wihlistEmpty-page-container">
+          <div className="empty-wishlist-img-container">
+            <h2> your wishlist is empty</h2>
+            <img src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1188.jpg?t=st=1722844624~exp=1722848224~hmac=ab94b272111f2b24b2be559dff700e5815bdfeb0e4b6109ac81c3c1d70c0a91a&w=740" />
+          </div>
+        </div>
+      ) : (
+        <div className="wihslist-page-wrapper">
+          {state.wishlistList?.map((wishItem) => {
+            return <CardForApiData wishlistList={wishItem} />;
+          })}
+        </div>
+      )}
     </Layout>
   );
 };
