@@ -1,23 +1,25 @@
 import "./Card.css";
-import { useContext } from "react";
 import axios from "axios";
-import { AppContext, useAppContex } from "./UseContex";
-import { CART_ENDPOINT, WISHLIST_ENDPOINT } from "../Endpoints";
-import { fetchCart, fetchWishlist, postCart, postWishlist } from "../ApiMethods";
+import { useContext } from "react";
+import { AppContext } from "./UseContex";
 import { CART_DATA, WISHLIST_DATA } from "../Constants";
-export const ProductDemoCard1 = (props) => {
-  const { src, alt } = props;
+import { CART_ENDPOINT, WISHLIST_ENDPOINT } from "../Endpoints";
+import {
+  fetchCart,
+  fetchWishlist,
+  postCart,
+  postWishlist,
+} from "../ApiMethods";
+import { PRODUCT_IMAGE } from "../ImageUrl";
+
+export const ProductDemoCard1 = ({ src, alt }) => {
   return (
     <selection className="product-demo-container">
       <div className="product-img-container">
         <img
           className="product-img"
           alt={`product-img ${alt}`}
-          src={
-            src
-              ? src
-              : "https://media.istockphoto.com/id/679539190/photo/indian-made-mens-shoes.jpg?s=612x612&w=0&k=20&c=1wTYVNCgSpNcnzfLxPzjfd1swEWXnUZHKzikNupEaWk="
-          }
+          src={src ? src : PRODUCT_IMAGE}
         />
       </div>
       <div className="product-price-container">
@@ -47,18 +49,18 @@ export const ProductDemoCard3 = (props) => {
   );
 
   const addToWishlistHandler = async () => {
-    const response = await  postWishlist(requestBody)
+    const response = await postWishlist(requestBody);
     if (response?.status === 200 || response?.status === 201) {
       const res = await fetchWishlist();
-      dispatch({ type:  WISHLIST_DATA, payload: res.data.wishlist });
+      dispatch({ type: WISHLIST_DATA, payload: res.data.wishlist });
     }
   };
   const removeFromWishlistHandler = async () => {
-    const deleteWishlistApiUrl = `${WISHLIST_ENDPOINT}/${_id}`;
-    const response = await axios.delete(deleteWishlistApiUrl, headers);
+    const endpoint = `${WISHLIST_ENDPOINT}/${_id}`;
+    const response = await axios.delete(endpoint, headers);
     if (response?.status === 200 || response?.status === 201) {
-      const res = await fetchWishlist()
-      dispatch({ type:  WISHLIST_DATA, payload: res.data.wishlist });
+      const res = await fetchWishlist();
+      dispatch({ type: WISHLIST_DATA, payload: res.data.wishlist });
     }
   };
 
