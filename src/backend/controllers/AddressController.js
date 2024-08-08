@@ -26,7 +26,6 @@ export const GET_ADDRESSHandler = function (schema, request) {
   const userAddress = schema.users.findBy({
     _id: userId,
   }).address;
-  console.log({ userAddress });
   return new Response(
     200,
     {},

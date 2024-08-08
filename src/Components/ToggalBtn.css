@@ -30,6 +30,7 @@
     position: absolute;
     width: 100% ;
     left: -300px;
+    transition: all 0.3s linear;
 
 }
 .btns-wrapper{
@@ -39,22 +40,27 @@
     height: 50px;
     position: absolute;
     z-index: 1;
+
 }
 .cross-btn{
     position: absolute;
     right: 2px;
     top: -1px;
     opacity: 0;
+    transition: all 0.3s linear;
+
 }
 #check{
     display: none;
 }
 #check:checked ~  .btns-wrapper .btn-two-wrapper .cross-btn {
     opacity: 1;
+    transition: all 0.3s linear;
 }
 #check:checked ~ .toggal-btn-sidebar-wrapper {
     left: 0;
     opacity: 1;
+    transition: all 0.3s linear;
 }
 @media (max-width: 800px) {
     .product-page-sidebar-wrapper {

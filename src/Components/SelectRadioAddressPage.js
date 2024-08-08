@@ -15,12 +15,10 @@ export const SelectRadioAddress = () => {
     async function fetchData() {
       const getAddressData = await axios.get(addressAPi, requestHeaders);
       setAddressData(getAddressData);
-      console.log(getAddressData);
     }
     fetchData();
   }, []);
 
-  console.log(addressdata);
   return (
     <Layout>
       <div className="radioAddress-container">

@@ -11,7 +11,6 @@ export const Sidebar = () => {
   const { dispatch, state } = context;
 
   const selectCategoryHandler = (e, categoryObj) => {
-    console.log(e.target.value)
     if (e.target.checked) {
       dispatch({
         type: "SelectedCategories",
