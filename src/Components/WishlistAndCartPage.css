@@ -106,7 +106,7 @@
   background-color: floralwhite;
   border: solid 1px wheat;
   text-decoration: none;
-  box-shadow: 2px 2px 6px darkgreen;
+  box-shadow: 2px 2px 6px darkgray;
   color: #463b3b;
 }
 .proceedTo-shipping-btn:hover {
@@ -145,11 +145,11 @@
   align-items: center;
 }
 .empty-wishlist-img-container img {
-  width: 500px;
-  height: 400px;
+  width: 346px;
+  height: 320px;
   text-align: center;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 0.6rem 0;
 }
 @media (max-width: 500px) {
   .wihlistEmpty-page-container {
@@ -189,10 +189,8 @@
 .cartPage-content {
   display: block;
   font-size: 24px;
-  background-color: yellow;
   font-family: fantasy;
   font-weight: 700;
-  margin: 1.5rem;
   width: fit-content;
   border-radius: 6px;
   padding: 5px 5px;
@@ -212,10 +210,8 @@
 .wishlist-content {
   display: block;
   font-size: 24px;
-  background-color: yellow;
   font-family: fantasy;
   font-weight: 700;
-  margin: 1.5rem;
   width: fit-content;
   border-radius: 6px;
   padding: 5px 5px;

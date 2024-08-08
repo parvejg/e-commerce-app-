@@ -36,7 +36,7 @@ export const WishlistPage = () => {
             <img src={WISHLIST_PAGE_IMG} />
           </div>
           <snap className="wishlist-content">
-            Wishlist is empty: start shopping now and discover our latest deals:
+            Wishlist is empty: start shopping now and discover our latest deals
           </snap>
           <button
             onClick={() => {
