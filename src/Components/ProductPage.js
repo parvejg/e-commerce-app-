@@ -49,7 +49,10 @@ export const ProductPage = () => {
     <Layout>
       <ToggalBtn />
       <div className="sidebar-and-productContent-wrapper">
+        <div className="product-page-sidebar-wrapper">
         <Sidebar />
+
+        </div>
         <div className="product-content-wrapper">
           {productListsortedByRating?.map((cardDetail) => {
             return (
