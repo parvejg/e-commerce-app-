@@ -139,7 +139,6 @@
 }
 .wihlistEmpty-page-container {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -208,6 +207,7 @@
   font-weight: bold;
   cursor: pointer;
   text-align: center;
+  margin: 1rem 0;
 }
 .wishlist-content {
   display: block;

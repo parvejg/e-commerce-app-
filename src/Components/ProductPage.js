@@ -1,11 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import "./ProductPage.css";
 import { Layout } from "./Layout";
 import { Sidebar } from "./Sidebar";
-import { ProductDemoCard3 } from "./Card";
-import "./ProductPage.css";
 import { ToggalBtn } from "./ToggalBtn";
-import { getData } from "./reusableFunction";
 import { AppContext } from "./UseContex";
+import { ProductDemoCard3 } from "./Card";
+import { getData } from "./reusableFunction";
+import { useContext, useEffect, useState } from "react";
+
 
 export const ProductPage = () => {
   const contex = useContext(AppContext);
