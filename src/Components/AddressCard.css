@@ -1,0 +1,34 @@
+.address-card-container{
+    width: 300px;
+    height: 200px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+.address-card{
+    height: 300px;
+
+}
+.addressCard-edit-delete-btns{
+    display: flex;
+    justify-content: space-around;
+
+}
+.addressCard-edit-delete-btns button{
+    padding: 5px 12px;
+    background-color: var(--primary);
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.addressCard-name{
+    font-size: large;
+    color: tomato;
+    font-weight: 500;
+}
+.cross-btnIcon-addressCard{
+    font-size: 4rem;
+    font-weight: 500;
+    
+}

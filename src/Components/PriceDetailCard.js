@@ -9,7 +9,7 @@ export const PriceDetailCard = (props) => {
   }, 0);
   return (
     <div className="price-details-container">
-      <Link className="sele-address-btn" to="/select-address-page">
+      <Link className="sele-address-btn" to="/account-details-page">
         Select Address
       </Link>
       <h2>PRICE DETAILS</h2>
