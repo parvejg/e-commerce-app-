@@ -1,0 +1,12 @@
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: start;
+    text-align: center
+  }
+  .name-txt,
+  .gmail-txt {
+    font-size: large;
+    font-weight: 500;
+  }
