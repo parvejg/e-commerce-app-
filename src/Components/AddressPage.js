@@ -3,6 +3,7 @@ import { Layout } from "./Layout";
 export const AddressPage = () => {
   return (
     <Layout>
+      <div className="addressPage-main-wrapper">
       <div className="addressPage-container">
         <h3>Address</h3>
         <div>
@@ -48,6 +49,8 @@ export const AddressPage = () => {
         </div>
         <button className="address-save-btn">Save</button>
       </div>
+      </div>
+     
     </Layout>
   );
 };
