@@ -17,6 +17,7 @@ export const AddressCard = () => {
           <button>Delete</button>
         </div>
       </div>
+
     </div>
   );
 };
