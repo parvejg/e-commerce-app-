@@ -1,49 +1,37 @@
+import { useState } from "react";
 import { Layout } from "../Components/Layout";
 import "./AccountDetailPage.css";
+import { PersonalInfo } from "./PersonalInformation";
+import { OrderDetails } from "./OrderDetails";
+import { AddressDetails } from "./AddressDetails";
+import { MySettings } from "./MySettings";
 import { AddressCard } from "./AddressCard";
 export const AccountDetails = () => {
+  const [activeKey, setactiveKey] = useState(1);
   return (
     <Layout>
       <div className="account-details-main-wrapper">
         <div className="accountDetails-wrapper">
-          <a href="#">My Account</a>
-          <a href="#">Orders</a>
-          <a href="#">Address</a>
-          <a href="#">Settings</a>
+          <a href="#" onClick={() => setactiveKey(1)}>
+            My Account
+          </a>
+          <a href="#" onClick={() => setactiveKey(2)}>
+            Orders
+          </a>
+          <a href="#" onClick={() => setactiveKey(3)}>
+            Address
+          </a>
+          <a href="#" onClick={() => setactiveKey(4)}>
+            Settings
+          </a>
         </div>
-        <div className="display-Account-details-container">
-          <div className="personal-info">
-            <h2>personal information</h2>
-            <p className="name-txt"> Name: Parvez</p>
-            <p className="gmail-txt"> Gmail: xyz@gmail.com</p>
-          </div>
-          <div className="order-info">
-            <h2>My order</h2>
-            <p>No order Available!</p>
-          </div>
-          <div className="address-info">
-            <button>Click to add new address</button>
-          </div>
-          <div className="settings-info">
-            <p>My settings</p>
-            <button>Logout</button>
-          </div>
-          <div className="old-address-info">
-            <button>Click to add new address</button>
-
-            <p>Name</p>
-            <p>6398823209</p>
-            <p>District</p>
-            <p>Land mark</p>
-            <p>district state</p>
-            <div className="address-edit-delete-btns">
-              <button>Edit</button>
-              <button>Delete</button>
-            </div>
-          </div>
-          <AddressCard />
+    <div className="display-Account-details-container">
+      <h3 style={{color: "#f94f39"}}>My Account Details</h3>
+     { activeKey === 1 &&  <PersonalInfo />}
+     { activeKey === 2 &&  <OrderDetails/>}
+     { activeKey === 3 && <AddressDetails/>}
+     { activeKey === 4 &&  <MySettings/>}
         </div>
-        <h3>My Account Details</h3>
       </div>
     </Layout>
   );
