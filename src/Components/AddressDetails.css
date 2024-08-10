@@ -1,0 +1,15 @@
+.address-details-wrapper{
+   display: flex;
+   width: 100%;
+   height: fit-content;
+   flex-wrap: wrap;
+   gap:0.5rem;
+   justify-content:baseline
+   
+}
+.address-info{
+   display: flex;
+   flex-direction: column;
+flex-wrap: wrap;
+
+}

@@ -1,0 +1,17 @@
+.settings-info button {
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--primary);
+    margin-top: 1rem;
+    width: 7rem;
+    height: 2rem;
+ 
+  }
+  .settings-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
