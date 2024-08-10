@@ -1,0 +1,23 @@
+.confirmedOrderCard{
+   display: flex;
+   width: 500px;
+   background-color: rgb(253, 226, 221);
+   height: 200px;
+  
+}
+.orderedCardImg-wrapper{
+   background-color: white;
+   width: 40%;
+   height: 100%;
+   height: fit-content;
+}
+.orderedCardImg-wrapper img{
+width: 100%;
+height: 200px;
+}
+.confirmed-order-content-wrapper{
+   text-align: start;
+}
+.total-price-container{
+   text-align: start;
+}
