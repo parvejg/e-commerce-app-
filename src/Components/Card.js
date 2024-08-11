@@ -72,7 +72,7 @@ export const ProductDemoCard3 = (props) => {
   const headers = {
     headers: {
       authorization: encodedToken,
-    },
+    }
   };
   const addToCartHandler = async () => {
     const response = await postCart(requestBody);
@@ -82,6 +82,7 @@ export const ProductDemoCard3 = (props) => {
         dispatch({ type: CART_DATA, payload: res.data.cart });
       }
     }
+    console.log({headers , requestBody })
   };
   async function removeFromCartHandler() {
     const deleteCartApiUrl = `${CART_ENDPOINT}/${_id}`;
