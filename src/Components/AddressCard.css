@@ -1,13 +1,19 @@
 .address-card-container{
     width: 300px;
+    height: 300px;
     height: fit-content;
     background-color: gainsboro;
     display: flex;
-    flex-direction: column;
+    position: relative;
+    display: flex;
+    margin: 1rem;
 }
 .address-card{
     height: fit-content;
     padding: 1rem;
+    width: 100%;
+    margin: 1rem;
+
 
 }
 .addressCard-edit-delete-btns{
@@ -33,5 +39,7 @@
 .cross-btnIcon-addressCard{
     font-size: 1.5rem;
     font-weight: 500;
+    position: absolute;
+    right: 0;
     
 }

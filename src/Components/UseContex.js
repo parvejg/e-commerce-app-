@@ -59,7 +59,11 @@ const reducer = (state, action) => {
         ...state,
         cart: action.payload,
       };
-
+      case "address_list":
+        return {
+        ...state,
+        addressList: action.payload,
+    }
     default:
       return state;
   }
@@ -77,6 +81,7 @@ const initialState = {
   sortQuery: "",
   selectedRating: null,
   cart: [],
+  addressList: []
 };
 export const AppContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
