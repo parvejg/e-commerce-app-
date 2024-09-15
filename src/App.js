@@ -8,6 +8,8 @@ import { WishlistPage } from "./Components/WishlistPage";
 import { AccountDetails } from "./Components/AccountDetailPaage";
 import { SelectRadioAddress } from "./Components/SelectRadioAddressPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AddressCard } from "./Components/AddressCard";
+import { DeletePopup } from "./Components/Popups";
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
           <Route path="createNewAccount-page" Component={SignUp} />
           <Route path="select-address-page" Component={SelectRadioAddress} />
           <Route path="account-details-page" Component={AccountDetails} />
+          <Route path="delete-popup-page" Component={DeletePopup}/>
         </Routes>
       </Router>
     </div>

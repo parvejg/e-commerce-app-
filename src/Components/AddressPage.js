@@ -2,10 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import "./AddressPage.css";
 import { Layout } from "./Layout";
 import { AppContext } from "./UseContex";
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const AddressPage = () => {
   const contex = useContext(AppContext);
   const { state, dispatch } = contex;
+  const navigate = useNavigate()
 
   const address = state.addressList.find((addre) => addre.id === Number(state.selectedAddressId));
   const [newAddress, setNewAddress] = useState({
@@ -108,7 +109,7 @@ export const AddressPage = () => {
           </div>
           <div>
             <input
-              value={ newAddress.district}
+              value={ newAddress?.district}
               onChange={(e) =>
                 setNewAddress({ ...newAddress, district: e.target.value })
               }
@@ -118,7 +119,7 @@ export const AddressPage = () => {
           </div>
           <div>
             <input
-              value={newAddress.landMark}
+              value={newAddress?.landMark}
               onChange={(e) =>
                 setNewAddress({ ...newAddress, landMark: e.target.value })
               }
@@ -129,7 +130,7 @@ export const AddressPage = () => {
 
           <div>
             <input
-              value={newAddress.state}
+              value={newAddress?.state}
               onChange={(e) =>
                 setNewAddress({ ...newAddress, state: e.target.value })
               }

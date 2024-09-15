@@ -45,7 +45,7 @@ export const AddressCard = () => {
                     Edit
                   </button>
                   <button 
-                onClick={() => addressDeleteHandler(address.id)}
+                onClick={() =>{  navigate("/delete-popup-page")}}
                   
                   >Delete</button>
                 </div>

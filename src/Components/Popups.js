@@ -1,7 +1,9 @@
 import { FcOk } from "react-icons/fc";
 import "./Popup.css"
+import { Layout } from "./Layout";
 export const DeletePopup = ()=>{
-   return<div className="delete-popup-wrapper">
+   return<Layout>
+   <div className="delete-popup-wrapper">
       <div className="delete-popup">
          <h3>Are you sure you want to delete?</h3>
          <div className="delete-cancel-btn-wrapper">
@@ -10,6 +12,7 @@ export const DeletePopup = ()=>{
          </div>
       </div>
    </div>
+   </Layout>
 }
 export const SuccessfullOrderPopup = () =>{
    return <div className="orderPopup-wrapper">
